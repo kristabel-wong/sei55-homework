@@ -6,7 +6,7 @@
 2. Do your homework.
 3. Submit your homework.
 
-### Set up your repository
+## Set up your repository
 
 You only need to do this _**once**_, not every time you're submitting homework!
 
