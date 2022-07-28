@@ -40,9 +40,9 @@ _Adding an upstream repository links the local repository on your computer to th
     upstream    https://github.com/{ORIGINAL_USER}/sei55-homework.git   (push)
     ```
 
-**4. Connecting your GitHub Account**
+**4. Displaying your GitHub Account**
 
-_Add your GitHub account to the remote_
+_Set your display name from your GitHub account to the remote._
 
 *   `git config --global user.email "email@example.com"`
 * `git config --global user.name "Yourfirstname Yourlastname"`
