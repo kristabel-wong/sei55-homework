@@ -64,7 +64,7 @@ const wheelGuesses = ["_", "_", "_" , "_"];
 let reward = 0;
 
 const wheelOfFortune = ( guess ) => {
-    const randomReward = Math.floor(Math.random() * 100);
+    const randomReward = Math.floor(Math.random() * 100); //generates reward or penalty
    
     if (wheelWord.includes( guess )) { //is the letter somewhere in the word? 
         
@@ -228,7 +228,7 @@ console.log(`multiplyArray test [6, 7, 3]: ${multiplyArray(testArray)}`); // exp
 // Bonus
 // Define a function reverseString that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
 const userString = "welcome to hollywood"; //testing string
-const reverseString = (string) => {
+const reverseString = ( string ) => {
     let reversedString  = "";
     for (let i = string.length - 1; i >= 0; i-- ){ //iterate each letter in reverse;
         reversedString += string[i];
