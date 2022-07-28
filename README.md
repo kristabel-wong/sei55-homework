@@ -65,7 +65,8 @@ The following will show in your terminal
 
 ```
 Username for "https://github.com": [your username] (what it looks like in your URL)
-Password: [enter Personal Access Token] (this will remain blank when you paste --> then press Enter)
+Password: [enter Personal Access Token] (this will remain blank when you paste 
+--> then press Enter)
 ```  
 To get your Personal Access Token
 * Click on your User (right hand corner) 
