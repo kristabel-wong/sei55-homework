@@ -68,7 +68,7 @@ Username for "https://github.com": [your username] (what it looks like in your U
 Password: [enter Personal Access Token] (this will remain blank when you paste 
 --> then press Enter)
 ```  
-To get your Personal Access Token
+To get your Personal Access Token:
 * Click on your User (right hand corner) 
 * Settings (down the bottom of menu)
 * Developer Settings (bottom of menu)
@@ -81,8 +81,10 @@ To get your Personal Access Token
 
 Time to enter your token. Keep this somewhere safe
 
+<br/>
+<br/>
 
-### Do your homework
+## Do your homework
 
 You should put each night's homework in a new folder within the appropriate directory of your homework repo. So, for day two, where you have two tasks ("Calculator" and "Strings"), you might do something like this:
 
