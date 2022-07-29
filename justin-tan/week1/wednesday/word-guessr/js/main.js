@@ -4,7 +4,7 @@
 // Create two global arrays: one to hold the letters of the word (e.g. 'F', 'O', 'X'), and one to hold the current guessed letters (e.g. it would start with '_', '_', '_' and end with 'F', 'O', 'X').
 
 
-const string = "proper"; //place word selection here
+const string = "hangman"; //place word selection here
 const wordChoice = string.split("");
 console.log(wordChoice)
 
@@ -16,6 +16,7 @@ console.log(wordGuess)
 
 const remainingLetters = wordChoice.length
 
+
 // Write a function called guessLetter that will:
 // Take one argument, the guessed letter.
 // Iterate through the word letters and see if the guessed letter is in there.
@@ -25,33 +26,40 @@ const remainingLetters = wordChoice.length
 // Pretend you don't know the word, and call guessLetter multiple times with various letters to check that your program works.
 
 
-const letterInput = "e"  // guess your letter here
+
 
 
 
 const guessLetter = function(letter) {
-    for (let k = remainingLetters; k > 0; k--) {
-        console.log
-        for (let j = 0; j < wordChoice.length; j++) {
+    for (let j = 0; j < wordChoice.length; j++) {
             console.log(j)
-            if ( wordChoice[j] === letter ) {
-                wordGuess[j] = letter
-                console.log (`${wordGuess} Congratulations you guessed a letter!`)
-            } 
-        }
+        if ( wordChoice[j] === letter ) {
+            wordGuess[j] = letter
+            console.log (`${wordGuess} Congratulations you guessed a letter!`)
+        } 
     }
-
-
-    
 }
+        
 
 
 
-const test = guessLetter(letterInput)
-console.log(test)
+guessLetter("a")
+guessLetter("n")
+guessLetter("h")
+guessLetter("a")
 
 
 
+
+
+
+// for (k = remainingLetters; k > 0; k--) {
+//     if (remainingLetters > 0) {
+//     guessLetter(letterInput);
+//     } else {
+//         console.log (`you win the game!`)
+//     }
+// }
 
 
 
@@ -82,3 +90,6 @@ console.log(test)
 // Define a function reverseString that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
 // Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 // Write a function filterLongWords that takes an array of words and an number i and returns the array of words that are longer than i.
+
+
+
