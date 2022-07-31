@@ -11,12 +11,12 @@
 //   DrEvil(10): 10 dollars
 //   DrEvil(1000000): 1000000 dollars (pinky)
 const DrEvil = (amount) => {
-    if (amount !== 1000000) {
-        return `${amount} dollars`;
+    if (amount === 1000000) {
+        return `${amount} dollars (pinky)`;
     } else {
-        return `${amount} dollars (pinky).`
+        return `${amount} dollars.`
     }
-} //end DrEvil
+}; //end DrEvil
 
 //testing 
 const evilTest = DrEvil(100);
@@ -35,11 +35,11 @@ console.log(`Truly evil test: ${trulyEvil}`);
 // Look up the JavaScript string reference to find methods which may be useful!
 
 const mixUp = (stringOne, stringTwo) => {
-    const firstLetterOne = stringOne[0];
-    const firstLetterTwo = stringTwo[0];
-    const sliceOne = firstLetterTwo + stringOne.slice(1);
-    const sliceTwo = firstLetterOne + stringTwo.slice(1);
-    return sliceOne + " " + sliceTwo;
+    const firstLetterOne = stringOne[0]; //id first letter of string 1
+    const firstLetterTwo = stringTwo[0]; //id first letter of string 2
+    const sliceOne = firstLetterTwo + stringOne.slice(1); //'cut out' remiander and add 1st letter
+    const sliceTwo = firstLetterOne + stringTwo.slice(1); //cut out' remainder and add 1st letter
+    return sliceOne + " " + sliceTwo; 
 }; // end of mixUp
 
 //mixUp testing
@@ -49,13 +49,12 @@ const mixTest = mixUp(testStringOne, testStringTwo);
 console.log(`mixTest result: ${mixTest}`);
 
 
-
 // FixStart
 
 // Create a function called fixStart. It should take a single argument, a string, and return a version where all occurences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:
 
 // fixStart('babble'): 'ba**le'
-const fixStart = (str) => {
+const fixStart = ( str ) => {
     let newWord = ""; //establish empty string to be returned
     newWord += str[0]; //add the first letter to the final string
     for (let i = 1; i < str.length; i++) { //iterate over remaining letters
@@ -80,18 +79,17 @@ console.log(`fixStart test: ${fixStartTest}`);
 //   verbing('swimming'): 'swimmingly'
 //   verbing('go'): 'go'
 
-const verbing = (str) => {
+const verbing = ( str ) => {
     if (str.length < 3) {
         return str;
     } else {
-        if (str.slice(str.length - 3, str.length) === 'ing') {
-            return str + 'ly';
+        if (str.slice(str.length - 3, str.length) === 'ing') { //identify -ing words
+            return str + 'ly'; //add +ly
         } else {
-            return str + 'ing';
+            return str + 'ing'; //add +ing
         }
 
     }
-
 
 }; //end of verbing
 
@@ -118,19 +116,18 @@ console.log(`Verb test three: ${verbTestThree}`);
 //   notBad('This movie is not so bad!'): 'This movie is good!'
 //   notBad('This dinner is bad!'): 'This dinner is bad!'
 
-const notBad = (str) => {
+const notBad = ( str ) => {
     const notLocation = str.search("not");
     const badLocation = str.search("bad");
 
     if (notLocation < badLocation && notLocation != -1) { //bad follows not, so replace with good
         let cutString = str.slice(0, notLocation); //cut out everything up to not
         cutString += "good!";
-        
         return cutString;
-    } else { //-1 is not found in .search
+    } else { //p.s. -1 is not found in .search()
         return str;
     };
-} //end notBad
+}; //end notBad
 
 //notBad testing
 const notBadTestOne = notBad('This dinner is not that bad!');
