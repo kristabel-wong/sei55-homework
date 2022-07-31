@@ -1,5 +1,5 @@
 //https://gist.github.com/textchimp/7c83f4458f6b45ba5d31b0d21607c87a
-// MTA Lab
+// MTA Lab -- version 1
 
 const intersection = 'Union Square';
 const subwayLines = [
