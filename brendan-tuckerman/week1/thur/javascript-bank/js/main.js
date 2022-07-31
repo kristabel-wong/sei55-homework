@@ -61,8 +61,8 @@ const bank = {
     findIndex: function (accountNumber) { //returns an index of a customer's last name
         for (let i = 0; i < this.accounts.length; i++) {
             const singleAccount = this.accounts[i];
-            if (singleAccount['accountNumber'] === accountNumber) {
-                return i;
+            if (singleAccount.accountNumber === accountNumber) {
+                return i; //refactor to return enire object (account)
             }
 
         }
@@ -85,7 +85,7 @@ const bank = {
             this.accounts[whichAccount].currentBalance = finalBalance; //dont know why but this does not work using 'balance'
             return true;
         } else {
-            console.log(`Insufficient Funds`);
+            console.log(`*****Insufficient Funds******`);
             return false;
         }
     },
@@ -95,7 +95,7 @@ const bank = {
             this.depositFunds(destinationAccountNum, transferAmount); //deposit the money
         } else {
             console.log(`There are insufficient funds in account ${originalAccountNum} to procceed.`);
-            return;
+            
         }
 
     }, //end xferfunds  
@@ -108,7 +108,7 @@ const bank = {
 
 //Testing
 
-console.log(`The total number of finds in the bank is ${bank.calculateTotalFunds()}`)
+console.log(`The total number of funds in the bank is ${bank.calculateTotalFunds()}`)
 
 //Add new account
 bank.addNewAccount(499, 'James', "Joyce", 10000000)
@@ -127,8 +127,8 @@ bank.withdrawFund(202, 8)
 console.log(`Tontino's account should now total $2 `, bank.accounts[1]['currentBalance']);
 
 //Try to withdraw $1000 from Tontino. Insufficient funds
-bank.withdrawFund(202, 1000)
 console.log(`Tontino's account should now be overdrawn. `);
+bank.withdrawFund(202, 1000)
 // Tips
 // Don't overthink this. Shorter code is probably the answer.
 
@@ -141,7 +141,7 @@ bank.transferFunds(323, 101, 1000)
 console.log(`Testing valid xfer. Account 101 should be 11000, Account 323 should be 10000:`, bank.accounts[0]['currentBalance'], bank.accounts[2]['currentBalance']);
 
 //invalid xfer
-console.log(`Testing invvalid xfer:`);
+console.log(`Testing invalid xfer:`);
 bank.transferFunds(202, 101, 1000)  //expect "Insufficient funds"
 
 
@@ -179,8 +179,6 @@ bank.transferFunds(202, 101, 1000)  //expect "Insufficient funds"
 // Double Bonus: Make your credit card scheme even more advanced! What are the rules, and what are some numbers that pass or fail? Ideas: check expiration date! Check out the Luhn Algorithm for inspiration.
 console.log(`=========CC Validation=========`);
 
-
-
 const makeStringIntoArray = (str) => { //there is probably a built in method for this
     finalArray = [];
     for (letters in str) {
@@ -188,7 +186,7 @@ const makeStringIntoArray = (str) => { //there is probably a built in method for
             finalArray.push(parseInt(str[letters])) //turns strings into numbners
         }
     } return finalArray;
-}
+};
 
 const oneNumberTypeCheck = (arr) => {
     return new Set(Object.values(arr)).size > 1;  //is there more than one type of number?
@@ -196,14 +194,14 @@ const oneNumberTypeCheck = (arr) => {
 
 const lastDigitIsEven = (arr) => {
     return arr[arr.length-1] %2 === 0
-}
+};
 
 const isSumAboveSixteen = (arr) => {
     return arr.reduce((x,y) => x+y) > 16;
 };
 
 const areCharactersValid = (arr) =>{
-    const validChars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    const validChars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] //harcoding :(
     let valid = true;  //probs a shorthand way to do this
     for (let i = 0; i < arr.length; i++) {
         const character = arr[i];
@@ -224,9 +222,7 @@ const validateCreditCard = (creditCardNum) => {
 
 };
 
-
 // Bonus: Return an object indicating whether the credit card is valid, and if not, what the error is
-
 // { valid: true, number: 'a923-3211-9c01-1112' } 
 // { valid: false, number: 'a923-3211-9c01-1112', error: ‘wrong_length’ }
 const createCardRecord = (creditCardNum) => {
