@@ -25,9 +25,8 @@ const mta = {
       `23rd`, 
       `Union Square`, 
       `Astor Place`
-    ],
-    const getRoutingInfo =function(line,origin,destination){
-       let startIndex = mta[line].indexOf(origin);
+    ], // when refactoring could look at 'switch' as a separate key??
+    getRoutingInfo: function(line,origin,destination){  // why can't it be written as " const getRoutingInfo =function(line,origin,destination)""
        let destinationIndex = mta[line].indexOf(destination);
   
        if(startIndex > destinationIndex){
@@ -41,18 +40,18 @@ const mta = {
        }
   
     },
-    const planTrip = function(line1,start,line2,destination){
+    planTrip:function(line1,start,line2,destination){ // why can't it be written as "const planTrip = function(line1,start,line2,destination){""
       if (line1 === line2){
         this.getRoutingInfo(line1,start,destination);
         console.log(`You must travel through the following stops on the ${line1} line: ${this.routinginfo.join(`, `)}.`);
         console.log(this.routinginfo.length + ` stops in total.`);
       }else{
-        let switch = 'Union Square'
+        let switch = 'Union Square';
         let numberOfStops;
         if(start === switch){
-          console.log( "Change at Union Square.");
+          console.log( "Change at Union Square."); // this is hard coded but if its a separate key I might not need to
           this.getRoutingInfo(line2,switch,destination);
-          numberOfStops = this.routinginfo.length) + 1;
+          numberOfStops = this.routinginfo.length + 1;
           console.log(`Your journey continues through the following stops: ${this.routinginfo.join(`, `)} .`);
           console.log(`${numberOfStops} stops in total.`);
         }else if(destination === switch){
@@ -82,16 +81,24 @@ const mta = {
 //same line start/stop
 mta.planTrip(`nLine`,`34th`,`nLine`,`8th`);
 
-console.log(`-----------------------`)
+console.log(`-----------------------`);
 
 //switch at Union Square but result not counting Union Square as a stop #??
 mta.planTrip("nLine", "Times Square", "sixLine", "Astor Place");
+
+
+
+
+
 
  
 /// BONUS 
 //spellcheck = invalid station 
 //upper lower case conditions 
 //differentiate same names of different line  - change const data 
+
+
+
 
 
 
