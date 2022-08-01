@@ -1,8 +1,8 @@
-/*
- * Homework 1
- */
 
-/* Part 1 */
+ // Homework 1
+
+
+// Part 1 
 
 
 // a).
@@ -50,7 +50,7 @@ const squareNumber = function (num) {
   
   
   
-  /* Part 2 */
+  // Part 2 
   
   const cal = function (num) {
     let half = halfNumber(num);
@@ -64,9 +64,8 @@ const squareNumber = function (num) {
   
   
   
-  /*
-   * Homework 2
-   */
+  
+  // Homework 2
   
   // DrEvil
  const DrEvil = function (num) {
