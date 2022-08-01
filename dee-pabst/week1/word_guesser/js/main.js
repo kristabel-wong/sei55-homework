@@ -144,8 +144,8 @@ const hangMan = function(letter){
       correctLetters[i] = letter;
       isGuessCorrect = true;
     }
-    }
-    if(isGuessCorrect === false){
+  }
+  if(isGuessCorrect === false){
       console.log(`Penalty`);
       // penalise the contestant -1 body part of the hangman
       hangManBodyParts = hangManBodyParts - 1;
