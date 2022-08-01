@@ -82,7 +82,7 @@ const metro = {
 } 
 
 console.log (`6: Grand Central to N: 34th\n${metro.planTravel("6", "Grand Central", "N", "34th")}` )
-console.log (`L: 3rd to 6th\n ${metro.planTravel("L", "3rd", "L", "6th")}` )
+console.log (`L: 3rd to 6th\n${metro.planTravel("L", "3rd", "L", "6th")}` )
 console.log (`N: 28th to L: 1st\n${metro.planTravel("N", "28th", "L", "1st")}` )
 
 
