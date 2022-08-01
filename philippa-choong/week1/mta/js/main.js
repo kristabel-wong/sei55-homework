@@ -82,7 +82,7 @@ const stationsTakenOnOneLine = function (startLine,stationStart,stationEnd){
     listStationsTaken.shift() //to take out the first station,b/c listStationsTaken array includes the starting station.
 
     console.log(`You must travel through the following stops on the ${startLine.stations.name} : ${listStationsTaken}`)
-    console.log(`${totalStationsTaken} stops in total.`)
+    console.log(`${listStationsTaken} stops in total.`)
 
     // this is to find total stations taken 
     //array with number of stations(output in arrayform [x,x,x])
