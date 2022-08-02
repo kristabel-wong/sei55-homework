@@ -4,7 +4,14 @@
   
 }
 
+
+@keyframes animate-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+
 
 
 html{
@@ -19,19 +26,26 @@ body {
 }
 
 h1{
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: bold;
     text-shadow: var(--text-shadow);
-    padding: 20px;
+    padding: 10px;
   
 }
 
 h4{
     text-shadow: var(--text-shadow);
-    font-size: 1.6em;
-    padding: 20px;
+    font-size: 1.8em;
+    padding: 10px;
     line-height: 1.4;
+    animation-duration: 1s;
+    animation-name: animate-fade;
+    animation-delay: 3.5s;
+    animation-fill-mode: backwards;
 }
+   
+
+
 
 
 
@@ -71,13 +85,19 @@ li a{
     text-transform: uppercase;
 }
 
+a:hover{
+    border-top: 5px solid rgba(197, 49, 49, 0.6);
+    background-image: linear-gradient(180deg, rgba(197, 49, 49, 0.5), rgba(0, 0, 0,0.6));
+    
+}
+
 
 /*jumbotron*/
 
 main{
     display: flex;
    
-    margin-top: 25vh;
+    margin-top: 10vh;
 }
 
 figure {
@@ -98,28 +118,41 @@ figure {
 #main-title{
     width: 50vw;   
     background-color: rgba(0,0,0, 0.6);
-    height: 50vh;
+    height: 60vh;
+    animation-duration: 1s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
     
 
     
-}
 
 #main-title h2{
-    
-  
+
     padding: 20px;
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-shadow: var(--text-shadow);
-    
+    animation-duration: 1s;
+    animation-name: animate-fade;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
 }
+    
 
 
 
 #portrait {
-    height: 50vh;
+    height: 55vh;
     opacity: 95%;
-    
+    animation-duration: 1s;
+    animation-name: animate-fade;
+    animation-delay: 2.5s;
+    animation-fill-mode: backwards;
 }
+
+
+
 
 /*footer*/
 footer {
