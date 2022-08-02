@@ -1,0 +1,136 @@
+/*universals*/
+:root{
+    --text-shadow: 1px 1px rgb(126, 125, 125);
+  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+
+
+html{
+    font-size: 16px;
+    font-family: 'Arvo', serif;
+    color: #fff;
+}
+
+body {
+    background-image: url('../images/alex-motoc-P43VRz8fLWs-unsplash.jpg');
+    background-size: cover;
+}
+
+h1{
+    font-size: 7rem;
+    font-weight: bold;
+    text-shadow: var(--text-shadow);
+    padding: 20px;
+  
+}
+
+h4{
+    text-shadow: var(--text-shadow);
+    font-size: 1.6em;
+    padding: 20px;
+    line-height: 1.4;
+}
+
+
+
+/*header*/
+
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    height: 50px;
+    background-color: rgba(0,0,0, 0.8);
+
+}
+
+#mini-title {
+    align-items: center;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+   
+}
+
+#mini-title h3{
+    font-size: 1.8rem;
+}
+
+nav ul{
+    display: flex;
+    
+
+}
+
+li a{
+    color: #fff;
+    padding: 10px 25px;
+    text-transform: uppercase;
+}
+
+
+/*jumbotron*/
+
+main{
+    display: flex;
+   
+    margin-top: 25vh;
+}
+
+figure {
+    background-color: antiquewhite; 
+    padding:10px;
+    margin-left: 100px;
+    display: flex;
+}
+
+
+#jumbotron{
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#main-title{
+    width: 50vw;   
+    background-color: rgba(0,0,0, 0.6);
+    height: 50vh;
+    
+
+    
+}
+
+#main-title h2{
+    
+  
+    padding: 20px;
+    font-size: 4rem;
+    text-shadow: var(--text-shadow);
+    
+}
+
+
+
+#portrait {
+    height: 50vh;
+    opacity: 95%;
+    
+}
+
+/*footer*/
+footer {
+    display: flex;
+    height: 10vh;  
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
