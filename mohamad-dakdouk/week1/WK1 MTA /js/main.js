@@ -67,20 +67,20 @@ const planTrip = function (startLine, startStation, endLine, endStation ) {
         newStartingLine = startingLine.reverse();
     } else {
         newStartingLine = startingLine;
-        };
+    }
 
     if (endingLine.indexOf(endStation) < endingLine.indexOf(`Union Square`)){
         newEndingLine =endingLine.reverse();
     } else {
         newEndingLine = endingLine;
-    };
+    }
 
     for(let i = newStartingLine.indexOf(startStation); i < newStartingLine.length; i++) {
         stationsPassedBy.push(newStartingLine[i]);
         numberOfStationsPassed++;
         // if endStation then stop /return
         if(sameLine && newStartingLine[i] === endStation) {
-            return {stations: stationsPassedBy, stationsCount: numberOfStationsPassed }
+            return {stations: stationsPassedBy.join(), stationsCount: numberOfStationsPassed }
         }
         // if endStation on different line, change line at union square
         if(!sameLine && newStartingLine[i] === 'Union Square') {
