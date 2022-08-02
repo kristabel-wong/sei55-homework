@@ -25,11 +25,33 @@
 
 const mtaSim = {
 
-    N : ["Times Square", "34th", "28th", "Union Square", "8th" ], //stations on N line
-    L : ["8th", "6th", "Union Square", "3rd", "1st"], //stations on L line
-    "6" : ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"], //stations on 6 line
+    N : [
+        "Times Square", 
+        "34th", 
+        "28th", 
+        "Union Square", 
+        "8th" 
+    ], //stations on N line
+    
+    L : [
+        "8th", 
+        "6th", 
+        "Union Square", 
+        "3rd", 
+        "1st"
+    ], //stations on L line
+
+    "6" : [
+        "Grand Central",
+         "33rd", 
+         "28th",
+          "23rd", 
+          "Union Square", 
+          "Astor Place"
+    ], //stations on 6 line
+
     currentLineTravelled : [], //list of stations travelled on a particular line
-    totalStationsTravelled : [], //all of the stations passed through
+    totalStationsTravelled : [], //all of the stations passed through in total
 
     planTrip : function( originLine, originStat, destinLine, destinStation )  {  //main function-- uses message(), endMessage(), 
         
@@ -43,7 +65,7 @@ const mtaSim = {
                 
         if( originLine === destinLine ){ //single line trips
             this.travel(originLine, startPosition, endPosition); //uses travel() to move from start to end
-            this.totalStationsTravelled.push(destinStation); //adds to the list of stationsTravelled
+            this.totalStationsTravelled.push(destinStation); //adds to the list of stationsTravelled so it is inclusive
             this.endMessage(originLine, destinStation, true, true); //announce total stops and destination
               
         } else { //double line trips
@@ -59,7 +81,10 @@ const mtaSim = {
 
     travel : function( line, start, end ) { //this can be used for either direction. Start is an index in the array
         this.currentLineTravelled = []; //clears previous journey
-        for (let i = start; (start < end) ? i < end : i > end ; (start < end) ? i++ : i-- ) { //this modifies the iterator depending on which direction (++ or -- )the train takes.
+
+        for (let i = start; (start < end) ? i < end : i > end ; (start < end) ? i++ : i-- ) { //this modifies the iterator depending on which direction (++ or -- )the train takes. This could have been done with splice and splice reverse
+            //return array.slic(start +1, end +1) OR
+            // return array.slice( end, start).reverse()
             this.totalStationsTravelled.push(this[line][i]); //add station to total journey
             this.currentLineTravelled.push(this[line][i]); // add station to current line journey
         }   
@@ -70,7 +95,7 @@ const mtaSim = {
     endMessage : function( line, destinStation, isFirstLeg, hasArrived ) { //the message for arrival at the destination   
         let messageFiller = ( isFirstLeg === true) ? 'You must travel ' : 'Your journey continues '; //for trips on two lines
         let messageEnd = ( hasArrived === true ) ? ` before arriving at ${destinStation}.` : '.' ;
-        console.log(`${messageFiller}through the following stations on line ${[line]}: ${this.currentLineTravelled.join(" -> ")}${messageEnd}`);
+        console.log(`%c${messageFiller}through the following stations on line ${[line]}: ${this.currentLineTravelled.join(" -> ")}${messageEnd}`, 'color : green');
         if ( hasArrived  === true ) {
             console.log(`The total number of stations travelled is ${this.totalStationsTravelled.length }.`);
         }
@@ -78,7 +103,7 @@ const mtaSim = {
     }, //end endMessage
 
 
-} // end mtaSim
+}; // end mtaSim
 
 
 //Testing
@@ -86,12 +111,12 @@ console.log('***Single line test ++: ***');
 mtaSim.planTrip('N', "Times Square", 'N', 'Union Square');
 console.log('***Single line test --: ***');
 mtaSim.planTrip('N', "8th", 'N', 'Times Square');
-console.log('Multi line test ++ then --:');
+console.log('***Multi line test ++ then --:****');
 mtaSim.planTrip('6', "Grand Central", "L", "8th");
-console.log('Multi line test -- then ++:');
+console.log('****Multi line test -- then ++:****');
 mtaSim.planTrip('L', "1st", "6", "33rd");   
-console.log('Multi line test ++ then ++:');
+console.log('***Multi line test ++ then ++:***');
 mtaSim.planTrip('L', "8th", "6", "Astor Place");   
-console.log('Multi line test -- then --:');
+console.log('***Multi line test -- then --:****');
 mtaSim.planTrip('L', "1st", "N", "Times Square");   
 
