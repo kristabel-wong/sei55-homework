@@ -1,8 +1,10 @@
 /*universals*/
+/*this is not optimised for responsive designer*/
 
 html {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
+    color: rgba(0,0,0,0.7);
 }
 
 
@@ -17,8 +19,12 @@ main {
 
 /* Header */
 header {
-    color: #fff;
+    color: rgba(255, 255 , 255, .8);
     height: 100px;
+}
+
+p {
+    line-height: 1.2;
 }
 
 nav {
@@ -43,12 +49,13 @@ nav li{
     padding: 25px;
     display: inline-flex;
     margin: 0 auto;
+    font-size: 1.2em;
    
     
 }
 
-li:hover {
-    background-image: url('../images/bg_nav_rollover.png');
+nav li:hover {
+    background-image: url(../images/bg_nav_rollover.png);
 }
 
 #title-banner {
@@ -74,11 +81,11 @@ li:hover {
 
 
 .social {
-    display: inline-block;
+    display: inline;
     background: url(../images/socialNav.png);
     margin-right: 400px;
     margin-top: 30px;
-    width: 600px;
+    
    
 }
 
@@ -89,6 +96,7 @@ li:hover {
         width: 55px;
         display: inline-block;
         background-position: 0px -60px;
+        
 }
 
 .linkedin:hover {
@@ -110,7 +118,7 @@ li:hover {
         height: 55px;
         width: 55px;
         display: inline-block;
-        background-position: -120px -60px;
+        background-position: 130px -60px;
 }
 .rss {
         height: 55px;
@@ -204,6 +212,7 @@ li:hover {
 
 .photo-column a {
     text-decoration: none;
+    color: rgba(7, 152, 242, 1);
 }
 
 
@@ -261,7 +270,7 @@ footer p {
 
 .footer-col a{
     text-decoration: none;
-    color: rgba(0, 171, 244, 0.8)
+    color: rgba(7, 152, 242, 0.8)
 }
 
 #copyright {
