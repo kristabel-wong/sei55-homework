@@ -1,0 +1,37 @@
+@font-face {
+    font-family: press-start-2p;
+    src: url(./press-start-2p-font/PressStart2P-vaV7.ttf);
+}
+
+html{
+    font-family: press-start-2p;
+    font-size: 54px;
+}
+
+h1{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+body{
+    cursor: url(../1f5de.png), auto;
+
+}
+
+#topCat{
+    transform: scaleX(1);
+}
+
+#sound{
+    /* display: none */
+}
+
+footer{
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
