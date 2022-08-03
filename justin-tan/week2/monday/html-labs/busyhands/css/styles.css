@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+}
+
+.navBackground {
+
+    background-color: black;
+    height: 60px;
+    border-bottom: 2px solid rgb(185, 185, 185);
+}
+
+.navbar {
+    margin-left: 80px;
+    position: relative;
+    top: 20px;
+}
+
+.navbar a {
+    color: whitesmoke;
+    display: inline;
+    padding: 15px;
+    text-decoration: none;
+    padding-top: 10;
+    
+}
+
+.logo {
+    margin: 40px 0 30px 80px;
+}
+
+.social {
+    position: absolute;
+    right: 60px;
+}
+
+.mainPhoto {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.requestQuote {
+    position: relative;
+    border: 1px solid grey;
+    margin: 50px 80px 40px 80px;
+    padding: 20px;
+}
+
+.requestQuote a {
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+}
+
+.requestQuote p {
+    margin-right: 300px;
+    font-size: 14px;
+}
+
+.homebox {
+    
+}
