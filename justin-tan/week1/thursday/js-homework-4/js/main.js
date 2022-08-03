@@ -178,33 +178,18 @@ const cartForParty = {
   proteinShake: "22.36" 
 };
 
-let total = 0
 
 const cashRegister = function (cart) {
-for (const key in cart) { 
-    total += parseFloat( cart[key])
-    console.log(total)
+    let total = 0
+    const prices = []
+    for (const key in cart) { 
+        total += parseFloat( cart[key])
+
     }
-}
+    console.log(`The total is ${total}`)
+} // end of cash register
 
 cashRegister(cartForParty)
-
-
-// const cashRegister = function (cart) {
-
-//     const itemPrice = Object.values(cart)
-//     const itemPriceNum = itemPrice.map(Number)
-//     console.log(itemPriceNum.length)
-//     console.log(itemPriceNum)
-
-//     let totalPrice = 0
-
-//     for (let i = 0; i < itemPriceNum.length; i++) {
-//         console.log(i)
-//         // totalPrice = totalPrice + itemPriceNum[i]
-//         // return totalPrice
-//     }
-// }
 
 console.log( `=======================================================`)
 
@@ -220,91 +205,89 @@ console.log( `=======================================================`)
 
 // The bank has many accounts. Accounts should be objects that all share a set of common functionality.
 
+
 const bank = {
+    accList: [
+        {name: 'Tom', balance: 5000},
+        {name: 'Pat', balance: 13000},
+        {name: 'Lisa', balance: 900},       
+    ],
 
-    account1: { name: "John", balance: 9000 },
+    addAcount: function (accName, startingBalance) {
+        const newAcc = {name: accName, balance: startingBalance}
+        this.accList.push(newAcc)
+        return `New account has been created with name: ${accName}, and deposit of ${startingBalance}`
+        // console.log(this.accList)
+    },
 
-    account2: { name: "Pat", balance: 40000 },
+    getTotalBalance: function() {
+        let total = 0
+        for (i = 0; i < this.accList.length; i++) {
+            let accBalance = this.accList[i].balance
+            total += accBalance
+        }
+        console.log(`Total sum of money in bank is ${total}`)
+    },
 
-    account3: { name: "Lisa", balance: 50000},
+    deposit: function(name, depositAmount) {
+        for (i = 0; i < this.accList.length; i++) {
+            let accName = this.accList[i].name
+            // console.log(accName)
+            let accBalance = this.accList[i].balance
 
-    displayTotal: function () { //method for calculating total balance
-        let sum = 0
-        for (const key in bank) {
-            
-            const totalBalance = bank[key].balance
-
-            sum += totalBalance
-            console.log(`Total balance is ${sum}`)
+            if (accName === name) {
+                let newBalance = accBalance + depositAmount
+                this.accList[i].balance = newBalance        
+                return this.accList[i].balance  
+                     
+            }
         }
     },
 
-    addAccount: function (name, balance) { //method for adding accs
-        const bankKeysLength = Object.keys( bank ).length -4
-        //setting account number
-
-        const accNum = `account${bankKeysLength + 1}`
-        //setting account name
-
-        bank[accNum] = {} //creating empty account
-        bank[accNum].name = name
-        bank[accNum].balance = balance
+    withdrawal: function(name, withdrawAmount) {
+        for (i = 0; i < this.accList.length; i++) {
+            let accName = this.accList[i].name
+            let accBalance = this.accList[i].balance
+            // console.log(accName)
+            if (accName === name) {
+                if (accBalance < withdrawAmount) {
+                    return `${name} have insufficient funds`
+                } else {
+                    let newBalance = accBalance - withdrawAmount
+                    this.accList[i].balance = newBalance        
+                    return this.accList[i].balance   
+                }   
+            }
+        }
     },
 
-    withdrawals: function (accNum, amount) {
-        const accBalance = bank[accNum].balance - amount
-        console.log(accBalance)
-        return accBalance
+    transfer: function(nameSender, nameRecipient, transferAmount) {
+        this.withdrawal(nameSender, transferAmount )
+        this.deposit(nameRecipient, transferAmount)
+        return `${nameSender} transferred $${transferAmount} to ${nameRecipient}`
     },
 
-    deposit: function (accNum, amount) {
-        let accountBalance = bank[accNum].balance
-        let fundBalance = accountBalance + amount
-        accountBalance = fundBalance
-        console.log(accountBalance)
-        return accountBalance
-    }
 }
 
 
-console.log(bank.addAccount("Paul", 3000))
-console.log(bank.addAccount("Kim", 50300))
+//Bank activity
 
+console.log( bank.addAcount('Jon', 7500) )  //Jon created an account with deposit of 7500
 
-bank.withdrawals(`account2`, 5000)
-bank.deposit(`account3`, 4000)
+console.log( bank.deposit("Tom", 500) )   //Tom deposited 500 to his account
 
-bank.displayTotal()
+console.log( bank.withdrawal("Jon", 4000) ) //Jon withdrew 4000 from his account
 
-console.log(bank)
+console.log( bank.withdrawal("Lisa", 5000) )   //Lisa withdrew 5000, but insufficient funds to do so
 
+console.log( bank.transfer("Pat", "Lisa", 5000) ) //Pat transferred to Lisa 5000
 
+console.log( bank.withdrawal("Lisa", 5000) ) // Lisa now has sufficient funds to withdraw 5000
 
+console.log( bank.getTotalBalance() ) // Get the total amount of funds the bank now has
 
+console.log( bank.accList) // List of account name with their respective balance
 
-// const bank = {
-//     account1: ["John", 23000],
-//     account2: ["Lisa", 60720],
-//     account3: ["Pat", 8200],
-//     displayTotal: function () { //function to display total balance
-//         let sum = 0
-        
-//         for (const key in bank) {
-//         const accMoney = bank[key][1]
-        
-//         sum += accMoney
-//         console.log(sum)
-
-//         }
-//     }
-//     addAccounts: function (name, amount) {
-
-//     }
-// }
-
-// bank.displayTotal()
-
-// {name: }
 
 
 // Accounts
@@ -323,6 +306,9 @@ console.log(bank)
 // Additional
 // Begin exploring the JavaScript Koans. Fork, clone and start trying them.
 
+console.log( `=======================================================`)
+
+
 // Credit Card Validation
 // You're starting your own credit card business. You've come up with a new way to validate credit cards with a simple function called validateCreditCard that returns true or false.
 
@@ -334,6 +320,94 @@ console.log(bank)
 // The sum of all the digits must be greater than 16
 // The following credit card numbers are valid:
 
+
+const validator = {
+
+    removeDashFromCard: function (cardNum) {        
+        let numCardWithoutDash = []
+        for (let i = 0; i < cardNum.length; i++) {
+            // console.log(card[i])
+            if (cardNum[i] !== "-") {
+                numCardWithoutDash.push(cardNum[i])
+            }
+        }
+        return numCardWithoutDash
+    },
+    
+    convertCardNumToInt: function(card) {
+        let numCard = []
+        for (i = 0; i < card.length; i++) {       
+            numCard.push(parseInt(card[i]))
+        }
+        console.log(numCard)
+        return numCard
+    },
+
+    invalidChar: function(cardNumInt) {
+        if ( cardNumInt.includes(NaN) ) {
+            return `Invalid`
+        } else {
+            return `Valid`
+        }
+    },
+
+    onlyOneChar: function(cardNumInt) {
+        for (i = 1; i < cardNumInt.length; i++) {
+            if (cardNumInt[i] !== cardNumInt[0] ) {
+                return `Valid`
+            } 
+        }
+        return 'Invalid'
+    },
+
+    sumLessThan16: function(cardNumInt) {
+        let total = 0
+        for (i = 0; i < cardNumInt.length; i++) {
+            total += cardNumInt[i]
+        }
+            if (total < 16) {
+                return `Invalid`
+            } 
+        return `Valid`
+    },
+
+    lastNumOdd: function(cardNumInt) {
+        const lastDigit = cardNumInt[cardNumInt.length - 1]
+        if (lastDigit % 2 === 1) {
+            return `Invalid`
+        }
+        return `Valid`
+    },
+
+    cardValidator: function(cardNum) {
+        const cardNumWithoutDash = this.removeDashFromCard(cardNum)
+        const convertCardToInt = this.convertCardNumToInt(cardNumWithoutDash)
+        if ( this.invalidChar (convertCardToInt) === "Valid" &&
+             this.onlyOneChar (convertCardToInt) === "Valid" &&
+             this.sumLessThan16 (convertCardToInt) === "Valid" &&
+             this.lastNumOdd (convertCardToInt) === "Valid") {
+             return `This card number ${cardNum} is valid`
+             }
+            
+            return `This card number ${cardNum} is invalid`
+
+    }
+
+};
+
+
+console.log (validator.cardValidator("1111-2222-3333-4444"))  // Card is valid
+
+console.log (validator.cardValidator("1111-b222-a333-4n44"))  // Card is invalid due to invalid characters
+
+console.log (validator.cardValidator("1111-1011-0000-0000"))  // Card is invalid due to total sum of < 16
+
+console.log (validator.cardValidator("8888-8888-8888-8888"))  // Card is invalid due to only one number
+
+console.log (validator.cardValidator("1111-2222-3333-4445"))  // Card is invalid due to last number being odd
+
+
+
 // 9999-9999-8888-0000
 // 6666-6666-6666-1666
 // The following credit card numbers are invalid:
@@ -344,6 +418,7 @@ console.log(bank)
 // 6666-6666-6666-6661 odd final number
 // Example
 // validateCreditCard('9999-9999-8888-0000'); // Returns: true
+
 // Hint: Remove the dashed from the input string before checking if the input credit card number is valid.
 
 // Bonus: Return an object indicating whether the credit card is valid, and if not, what the error is
@@ -351,3 +426,10 @@ console.log(bank)
 // { valid: true, number: 'a923-3211-9c01-1112' } 
 // { valid: false, number: 'a923-3211-9c01-1112', error: ‘wrong_length’ }
 // Double Bonus: Make your credit card scheme even more advanced! What are the rules, and what are some numbers that pass or fail? Ideas: check expiration date! Check out the Luhn Algorithm for inspiration.
+
+
+
+
+
+// // console.log ( validateCreditCard("9a99-9999-8888-0000") )
+
