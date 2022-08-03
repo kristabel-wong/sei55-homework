@@ -5,8 +5,11 @@
 1. Set up your repository.
 2. Do your homework.
 3. Submit your homework.
-
-### Set up your repository
+  - `git add .`
+  - `git commit -m "YOUR_COMMIT_MESSAGE_GOES_HERE"`
+  - `git pull upstream main` - pull down changes from other repos
+  - `git push origin main`
+## Set up your repository
 
 You only need to do this _**once**_, not every time you're submitting homework!
 
@@ -29,11 +32,62 @@ _'Cloning' takes your 'forked' repository on GitHub and creates a local copy - o
 
 _Adding an upstream repository links the local repository on your computer to the original repository on Github (i.e. mine, the one from which you created the fork)_
 
-- `cd SEI55-homework`
-- `git remote add upstream https://github.com/kristabel-wong/SEI55-homework.git`
-- `git pull upstream main`
+* `cd SEI55-homework`
+* `git remote add upstream https://github.com/kristabel-wong/SEI55-homework.git`
+* `git pull upstream main (git pull also works)` 
+    *  Use ` git remote -v` to check if this worked. You should see something similar to:
+    ``` 
+    origin      https://github.com/{YOUR_USERNAME}/sei55-homework.git   (fetch)
+    origin      https://github.com/{YOUR_USERNAME}/sei55-homework.git   (push)
+    upstream    https://github.com/{ORIGINAL_USER}/sei55-homework.git   (fetch)
+    upstream    https://github.com/{ORIGINAL_USER}/sei55-homework.git   (push)
+    ```
 
-### Do your homework
+**4. Displaying your GitHub Account**
+
+_Set your display name from your GitHub account to the remote._
+
+*   `git config --global user.email "email@example.com"`
+* `git config --global user.name "Yourfirstname Yourlastname"`
+
+_When pushing your homework, a merge file will open, and the below command sets that to your chosen Text Editor_
+* `git config --global core.editor "code --wait"`
+
+**5. Personal Access Tokens**
+
+_When you first push your homework, you will be prompted to enter in your github username and password. For the password, you will need to enter in a Personal Access Token._
+
+Go into the folder you wish to push
+* cd into e.g. `homework/firstName-lastName/week1`
+    * [OPTIONAL] if you don't have a file to test the push - `touch test.txt` in the chosen folder     
+* `git add .`
+* `git commit -m "first commit"`
+* `git push upstream main` (or `git push` also works)
+
+The following will show in your terminal
+
+```
+Username for "https://github.com": [your username] (what it looks like in your URL)
+Password: [enter Personal Access Token] (this will remain blank when you paste 
+--> then press Enter)
+```  
+To get your Personal Access Token:
+* Click on your User (right hand corner) 
+* Settings (down the bottom of menu)
+* Developer Settings (bottom of menu)
+* Personal Access Token
+* Generate new token (you may need to re-enter your password)
+* Choose a name for the token (e.g. name of repository: sei55-homework)
+* Set the Expiration to "No expiration"
+* Select "repo" (included all the ones beneath - should be automatically selected)
+* Generate Token
+
+Time to enter your token. Keep this somewhere safe
+
+<br/>
+<br/>
+
+## Do your homework
 
 You should put each night's homework in a new folder within the appropriate directory of your homework repo. So, for day two, where you have two tasks ("Calculator" and "Strings"), you might do something like this:
 
@@ -48,16 +102,16 @@ You should put each night's homework in a new folder within the appropriate dire
 
 You need to do this every time you're submitting homework.
 
-- **Commit your work to your local repository progressively**
+1. **Commit your work to your local repository progressively**
   - Make sure you are the correct folder containing the homework you want to submit.
   - `git add .`
   - `git commit -m "YOUR_COMMIT_MESSAGE_GOES_HERE"`(where `YOUR_COMMIT_MESSAGE_GOES_HERE` is your description of the work you are committing)
-- **Push your changes to your forked repository**
+2. **Push your changes to your forked repository**
   - `git pull upstream main` - merge changes that have been made to this repository into your own local repository (if a weird screen appears on this step, PLEASE SEE THE **IMPORTANT 2** NOTED BELOW).
   - `git push origin main`
-- **Once you're finished, submit a pull request for me to accept your homework**
+3. **SUBMIT A PULL REQUEST - for me to accept your homework**
   - Navigate to your forked version of this repository on Github (eg [https://github.com/{YOUR_USERNAME_HERE}/SEI55-homework](https://github.com/{YOUR_USERNAME_HERE}/SEI55-homework)).
-  - Hit the **Pull request** button.
+  - Hit the **Pull request** green button.
   - Make sure the destination for the pull request is set to my repository, not your own or anyone else's.
   * **IMPORTANT:**
     In the pull request comment, tell me the following:
