@@ -1,0 +1,256 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+h1 img {
+    border: 2px solid red;
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.hover {
+    color: black;
+    border-radius: 5px;
+}
+
+img {
+   border-radius: 10px;  
+}
+
+
+body {
+    font-family: 'Dosis', sans-serif;
+    background: black;
+    max-width: 1000px;
+}
+
+ul {
+
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    margin: 0 auto;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+li {
+    text-align: center;
+    display: inline-block;
+    color: red;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+
+.mainImage {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+.pic1 {
+
+    position: relative;
+    top: -300px;
+    left: 600px;
+    padding: 10px; 
+    max-height: 400px;
+    width: 300px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid rgb(207, 131, 144);
+    border-radius: 10px;
+
+} 
+
+.pic2 {
+
+    position: relative;
+    top: -300px;
+    left: 70px; 
+    font-family: 'Satisfy', sans-serif;
+    max-height: 400px;
+    width: 400px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid rgb(122, 197, 107);
+    border-radius: 10px;
+} 
+
+.pic3 {
+
+    position: relative;
+    top: -150px;
+    left: 550px; 
+    height: 175px;
+    width: 400px;
+    font-family: 'Satisfy', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid rgb(57, 150, 237);
+    border-radius: 10px;
+} 
+
+.pic4 {
+
+    position: relative;
+    top: -200px;
+    left: 20px; 
+    max-height: 400px;
+    width: 400px;
+    padding: 10px; 
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid rgb(228, 194, 74);
+    border-radius: 10px;
+} 
+
+.pic5 {
+
+    position: relative;
+    top: -100px;
+    left: 350px; 
+    max-height: 400px;
+    width: 400px;
+    padding: 10px; 
+    font-family: 'Satisfy', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid rgb(220, 110, 228);
+    border-radius: 10px;
+    margin-bottom: 50px;
+} 
+
+.ruby1 {
+
+    position: relative;
+    top: 80px;
+    left: 200px; 
+    height: 75px;
+    width: 75px;
+}
+
+.ruby2 {
+
+    position: relative;
+    top: 450px;
+    left: 150px; 
+    height: 75px;
+    width: 75px;
+
+}
+
+.ruby3 {
+
+    position: relative;
+    rotate: 90;
+    top: 250px;
+    left: 700px; 
+    height: 75px;
+    width: 75px;
+    transform: rotate(0.25turn);
+}
+
+.ruby4 {
+
+    position: relative;
+    top: 850px;
+    left: 100px; 
+    height: 75px;
+    width: 75px;
+}
+
+.ruby5 {
+
+    position: relative;
+    top: 575px;
+    left: 750px; 
+    height: 75px;
+    width: 75px;
+    transform: rotate(0.25turn);
+}
+
+.hometown {
+    position: relative;
+
+    left: 7.5px;
+    height: 500px;
+    max-width: 200px;
+    
+}
+
+.bioHeading {
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.bio1, .bio2 {
+
+    position: relative;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    word-wrap: normal;
+}
+
+.clickBait {
+    color: red;
+    position: relative;
+    text-align: center;
+    top: 90px;
+    left: 540px;
+    font-size: 30px;
+}
+
+iframe {
+    float: right;
+    top: 400px;
+    border-radius: 20px;
+}
+
+span {
+    color: red;
+}
+
+.funFact {
+    color: rgb(14, 149, 227);
+    font-size: 30px;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+
