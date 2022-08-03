@@ -101,3 +101,4 @@ const stationsPlan = {
 };//stationPlan()
 
 stationsPlan.planTrip('L', '3rd', 'L', '6th');
+stationsPlan.planTrip('N', 'Times Square', '6', '33rd');
