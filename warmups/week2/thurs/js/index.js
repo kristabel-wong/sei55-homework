@@ -26,11 +26,11 @@ const scrabble = {
             // console.log(currentLetter);
 
             // loop over each key value pair in letterScores
-            for (let key in this.letterScores) {
+            for (let key in this.letterScores) { // 2nd loop
                 // if the currentLetter in value of key in letterScore
 
                 // if the key of 1 includes "C"
-                if (this.letterScores[key].includes(currentLetter)) {
+                if (this.letterScores[key].includes(currentLetter)) { // includes is the 3rd loop here!
                     score += parseInt(key);
                 }
             }
@@ -66,9 +66,9 @@ const scrabbleImproved = {
 
         for (let i = 0; i < word.length; i++) {
 
-            const currentLetter = word[i]; // c
+            const currentLetter = word[i]; // grabs a single letter
 
-            const letterScore = this.letterScores[currentLetter]; // 3
+            const letterScore = this.letterScores[currentLetter]; // returns the numerical value
 
             score += letterScore;
 
