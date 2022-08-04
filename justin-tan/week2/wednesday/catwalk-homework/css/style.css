@@ -1,0 +1,15 @@
+#catGif {
+    position: absolute;
+    /* left: 85%; */
+    top: 60%;
+    border: 1px solid red;
+    /* transform: scaleX(-1); */
+}
+
+#border {
+    position: relative;
+    width: 98vw;
+    height: 98vh;
+    border: 1px solid red;
+    margin: -5px;
+}
