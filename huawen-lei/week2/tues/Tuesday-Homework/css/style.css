@@ -1,0 +1,107 @@
+
+/* div,p{
+    border: 1px solid red;
+} */
+
+.heading{
+    display: inline-block;
+    position:relative;
+    top: -30px;
+    width: 40%;
+}
+
+img{
+    /* position: absolute; */
+    /* right: 10px; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 240px;
+    float: right;
+}
+
+
+.firstblock{
+    /* border: 5px solid green; */
+    display: block;
+    position: fixed;
+    width: 100%;
+    /* height: 100px; */
+    padding: 20px;
+    /* margin: 5px auto; */
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgb(3, 71, 116);
+    color: white;
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+.secondblock{
+    border: 1px solid black;
+    display: inline-block;
+    position: fixed;
+    width: 170px;
+    /* height: 700px; */
+    top: 180px;
+    padding: 10px;
+    margin: 5px 0px;
+    z-index:1;
+    background-color: #f8f9fa;
+}
+
+.thirdblock{
+    /* border: 5px solid navy; */
+    display: inline-block;
+    position: relative;
+    top: 160px;
+    left: 220px;
+    margin: 5px auto;
+    padding: 10px;
+    width: 80%;
+    /* height: 700px; */
+}
+
+.like{
+    /* border: 1px solid red; */
+    display: inline-block;
+    /* position: fixed; */
+    position: absolute;
+    right: 0px;
+    top: 3px;
+    width: 40%;
+    height: 70px;
+    margin: 20px;
+}
+
+.webintro{
+    /* border: 5px solid purple; */
+    position: relative;
+    display: block;
+    top: -25px;
+    /* height: 40px; */
+    width: 40%;
+    font-size: 23px;
+    left:100px;
+}
+
+.login{
+    margin: 5px;
+}
+
+.navlink{
+    text-decoration: none;
+}
+
+article h3{
+    font-family: 'DM Serif Display', serif;
+}
+
+
+
+
+
+
+
+
+
