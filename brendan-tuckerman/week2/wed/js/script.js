@@ -2,7 +2,7 @@
 console.log('Is this thing on?')
 // Create a variable to store a reference to the img.
 
-const darnCat = document.querySelector('img');
+const darnCat = document.querySelector('img'); //grab that cat
 
 darnCat.style.left = '0px'
 // Change the style of the img to have a "left" of "0px", so that it starts at the left hand of the screens.
@@ -12,14 +12,15 @@ let directionToggle = 'right';
 let rightId;
 let leftId;
 let pace = 10;
+const sound = document.querySelector('#sound')
 
 
-function stopInterval (id) {
+function stopInterval (id) { //clear intervals
     window.clearInterval(id);
 }
 
 
-function catWalkRight () {
+function catWalkRight () { //walks cat right
     
     directionToggle = 'right'
   
@@ -42,11 +43,10 @@ function catWalkRight () {
         document.querySelector('#score').innerHTML = 'GAME OVER' //circles forever
     }
 
-
     
 }
 
-function catWalkLeft() {
+function catWalkLeft() { //walk left
    
     directionToggle = 'left';
     let w = window.innerWidth
@@ -67,23 +67,22 @@ function catWalkLeft() {
 }
 
 
-
-function randomChoice() { //for colorur
-    return( Math.floor(Math.random() * 255))
+function randomChoice() { //for colour
+    return( Math.floor(Math.random() * 256))
 }
 
-function incrementPace() {
+function incrementPace() { //speed up cat
     pace += 5;
 }
 
-function randomColour() {
+function randomColour() { //selects a random color
     
     color = `rgb(${randomChoice()}, ${randomChoice()}, ${randomChoice()})`;
     document.body.style.backgroundColor = color
 }
 
 
-function turnAround() {
+function turnAround() { //flips the cat
     console.log('clicked');
 
 
@@ -120,7 +119,7 @@ function incrementScore() {
     document.querySelector('#score').innerHTML = score;
 }
 
-const sound = document.querySelector('#sound')
+
 
 
 
