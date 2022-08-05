@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Uchen&display=swap');
+
+
+.flex_fun {
+    position: relative;
+    display: inline-flex;
+    flex-flow: row;
+    font-family: "IBM Plex Mono" ;
+    font-size: 16px;
+    height: 700px;
+    gap: 5px;
+    border: 1px solid red;
+    align-items: center;
+}
+.flex {
+    display: flex;
+    margin: auto;
+    vertical-align: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5px ;
+    text-shadow: 0 0 1em rgb(255, 255, 255), 0 0 0.5em rgba(100, 100, 221, 0.818);
+}
+.fun_facts {
+    border: 3px dotted green;
+}
+
+.flex.dead {
+    position: relative;
+    order: 1;
+    border: 1px solid lightsalmon;
+    height: 75%;
+    width: 100%;
+  
+    
+}
+#posthumously {
+    content: "";
+    background-size: contain;
+    background-image: url('https://d1rytvr7gmk1sx.cloudfront.net/wp-content/uploads/2016/11/gracehopperandunivac-2.jpg') ; 
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: .2;
+    filter: drop-shadow(5px 5px 4px #4444dd);
+
+}
+#posthumously_text {
+    text-align: center;
+
+}
+
+.flex.amazing {
+    position: relative;
+    order: 2;
+    border: 1px solid palegoldenrod;
+    height: 75%;
+    width: 100%;
+}
+#grace_amazing {
+    content: "";
+    background-size: contain;
+    background-image: url('https://www.womengineered.org/wp-content/uploads/2020/03/A-ship-in-port-is-safe-but-thats-not-what-ships-are-built-for.-850x850.png') ; 
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: .2;
+    filter: drop-shadow(5px 5px 4px #4444dd);
+
+}
+#amazing_text {
+    text-align: center;
+
+}
+
+.flex.yale   {
+    position: relative;
+    order: 3;
+    border: 1px solid paleturquoise;
+    height: 75%;
+    width: 100%;
+
+}
+#yale_times {
+    content: "";
+    background-size: contain;
+    background-image: url('https://beta.techcrunch.com/wp-content/uploads/2016/11/margaret_hamilton_in_action.jpg') ; 
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: .2;
+    filter: drop-shadow(5px 5px 4px #4444dd);
+}
+#yale_text {
+    text-align: center;
+
+}
+
+
+.flex.national {
+    position: relative;
+    order: 4;
+    border: 1px solid palevioletred;
+    height: 75%;
+    width: 100%;
+}
+#international_acclaim{
+    content: "";
+    background-size: contain; 
+    background-image: url('https://api.time.com/wp-content/uploads/2020/03/1959_Grace-Hopper.jpg?quality=85&w=1800') ; 
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: .2;
+    filter: drop-shadow(5px 5px 4px #4444dd);
+}
+#international_text {
+    text-align: center;
+
+}
+
+.flex.teacher{
+    position: relative;
+    order: 5;
+    border: 1px solid lightslategray;
+    height: 75%;
+    width: 100%;
+
+}
+#proud_teacher{
+    content: "";
+    background-size: contain; 
+    background-image: url('https://www.rejectedprincesses.com/wp-content/uploads/2016/11/15193543_1481308688550191_7968125240837101958_n.jpg') ; 
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: .2;
+    filter: drop-shadow(5px 5px 4px #4444dd);
+}
+#teacher_text {
+    text-align: center;
+
+}
+
+.flex.bug {
+
+    order: 6;
+    border: 1px solid palegreen;
+    height: 75%;
+    width: 100%;
+    position: relative;
+
+}
+#moth_in_notebook {
+    content: "";
+    background-size: contain;
+    background-image: url('https://cdn.surfnetkids.com/go/wp-content/uploads/2014/12/H96566k.jpg') ; 
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: .2;
+    filter: drop-shadow(5px 5px 4px #4444dd);
+
+}
+#moth_text {
+    text-align: center;
+
+
+}
+

@@ -1,0 +1,26 @@
+body{
+    background-color:rgb(154, 209, 231);
+}
+img {
+    position: absolute;
+    bottom: 0px;
+}
+
+#luke {
+    height:200px;
+    bottom:270px;
+    left: 50px;
+    z-index: -10;
+}
+
+#sunmoon {
+    width: 100%;
+    z-index: -20;
+    bottom: 150px;
+}
+
+#stars{
+    width: 100%;
+    top: 0px;
+    z-index: -30;
+}

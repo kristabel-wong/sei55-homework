@@ -42,7 +42,7 @@ console.log(`=======`);
 
 
 
-function maxOfTwoNumbers() = 
+// function maxOfTwoNumbers() = 
 
 
 

@@ -259,7 +259,7 @@ const gameWord = wordList[randomNumber];
 // console.log(gameWord);
 
 const gameWordLetters = Array.from(`${gameWord}`);
-console.log(gameWordLetters);
+// console.log(gameWordLetters);
 
 const blankSpacesForGuesses = function(gameWord){
     blankSpacesForGuesses = Array.from(`${gameWord}`);
