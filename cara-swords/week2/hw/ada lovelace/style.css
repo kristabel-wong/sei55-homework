@@ -1,0 +1,48 @@
+  h1 {
+    color: #ce7870;
+    text-align: center;
+  }
+  body {
+    background-color: #becbcf;
+    font-family: Verdana;
+    font-size: 15px;
+  }
+  img{
+    display: flex;
+    width: 60%;
+    margin: auto;
+  }
+  nav ul li {
+    text-align: left;
+    overflow: hidden;
+    padding: 0 40px;
+    transition: 2s;
+    line-height: 45px;
+    color: antiquewhite;
+  }
+  nav ul li:hover{
+  transform: scale(1.2);
+  background-color: #6e7d75;
+} 
+
+.firstblock{
+  display: inline-block;
+  text-align: center;
+  
+}
+
+.secondblock{
+  display: inline-block;
+  text-align: center;
+  
+}
+
+  .footer { 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #6e7d75;
+  color: white;
+  text-align: center;
+}
