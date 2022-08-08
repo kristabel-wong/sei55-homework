@@ -102,7 +102,7 @@ const $walkingCat = function() {
     let rightEdge = window.innerWidth - 290;
 
     if(currentPosition >= rightEdge - 10){
-
+        
         direction = -1;
         // console.log(`this is running`)
         $cat.css('transform', 'scaleX(-1)')
