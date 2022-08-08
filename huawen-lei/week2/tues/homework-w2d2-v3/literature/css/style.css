@@ -1,0 +1,441 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+/* font-family: 'Kalam', cursive; */
+/* font-family: 'Tangerine', cursive; */
+/* font-family: 'Rock Salt', cursive; */
+/* font-family: 'Bad Script', cursive; */
+/* font-family: 'Tangerine', cursive; */
+
+
+/* div,p{
+    border: 1px solid red;
+} */
+
+.heading{
+    display: inline-block;
+    position:relative;
+    top: -15px;
+    width: 40%;
+}
+
+ul a{
+    color: white;
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 60px;
+}
+
+.firstblock{
+    /* border: 5px solid green; */
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 110px;
+    padding: 20px;
+    /* margin: 5px auto; */
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgb(75, 78, 83);
+    color: white;
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+.email{
+    /* border: 1px solid red; */
+    display: inline-block;
+    /* position: fixed; */
+    position: absolute;
+    right: 0px;
+    top: 3px;
+    width: 30%;
+    height: 70px;
+    margin: 20px 0px;
+}
+
+.navigation{
+    /* border: 5px solid purple; */
+    position: relative;
+    display: block;
+    top: -18px;
+    /* height: 40px; */
+    width: 60%;
+    font-size: 20px;
+    left:40px;
+    
+}
+
+.login{
+    margin: 5px;
+}
+
+.navlink{
+    text-decoration: none;
+}
+
+
+
+li a:hover{
+    border-bottom: 20px solid rgba(247, 249, 250, 0.305);
+    background-image: linear-gradient(0deg, rgba(247, 249, 250, 0.305), rgba(75, 78, 83, 0.6))
+}
+
+
+img{
+    display: block;
+    border-radius: 4px;
+    width: 60%;
+    margin: 5px auto;
+}
+
+
+.secondblock{
+    display: block;
+    position: relative;
+    top: 180px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Tangerine', cursive;
+    margin: 0 auto;
+}
+
+.secondblock p{
+    margin: 40px;
+}
+
+.secondblock .saying{
+    /* font-weight: 1000px; */
+    font-size: 60px;
+}
+
+.secondblock .sayingauthor{
+    font-size: 30px;
+}
+
+.thirdblock{
+    /* border: 5px solid green; */
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 950px;
+    height: 700px;
+    top: 220px;
+    padding: 0 10%;
+    justify-content: center;
+    margin: 0 auto 600px
+}
+
+
+
+.thirdblock .firstRow{
+    width: 25%;
+}
+
+#background1{
+    height: 67.07%;
+    background-image: url(../../graph/Background_4.jpeg);
+}
+
+#photo1{
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#photo1 img{
+    width: auto;
+}
+
+
+
+
+
+.thirdblock .secondRow{
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.secondRow img,.secondRow div{
+    width: 50%;
+    height: 33.4%;
+}
+
+#bookinfo1,
+#bookinfo2,
+#bookinfo3
+{
+    background-color: #606060;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#bookinfo1 p{
+    padding: 0 30px;
+    font-family: 'Bad Script', cursive;
+}
+
+#bookinfo2 p{
+    padding: 0 63px;
+    font-family: 'Bad Script', cursive;
+}
+
+#bookinfo3 p{
+    padding: 0 70px;
+    font-family: 'Bad Script', cursive;
+}
+
+
+/* good version */
+
+/* #book1,
+#book2,
+#book3
+{
+    background-color: #bbbbbb;
+}
+
+
+#book1 a,
+#book2 a,
+#book3 a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#book1 a img{
+    width: 140px;
+    height: auto;
+    margin-top: 13px;
+    position: absolute;
+    top: 0px;
+}
+
+#book2 a img{
+    width: 140px;
+    height: auto;
+    margin-top: 12px;
+    position: absolute;
+    top: 0px;
+}
+
+#book3 a img{
+    width: 140px;
+    height: auto;
+    margin-top: 8px;
+    position: absolute;
+    top: 0px;
+}
+
+#bookimg1:hover{
+    width: 105%;
+    transition: 1s;
+    z-index: 1;
+    top: -90px;
+}
+
+#bookimg2:hover{
+    width: 105%;
+    transition: 1s;
+    z-index: 1;
+    top: -90px;
+}
+
+#bookimg3:hover{
+    width: 105%;
+    transition: 1s;
+    z-index: 1;
+    top: -90px;
+} */
+
+
+/* alternative version without flex box */
+#book1,
+#book2,
+#book3
+{
+    background-color: #bbbbbb;
+    text-align: center;
+}
+
+
+#book1 a,
+#book2 a,
+#book3 a
+{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#book1 a img{
+    width: 140px;
+    height: auto;
+    /* margin-top: 13px; */
+    /* position: absolute; */
+    /* top: 0px; */
+    position: relative;
+    margin: 10px auto;
+}
+
+#book2 a img{
+    width: 140px;
+    height: auto;
+    /* margin-top: 12px; */
+    /* position: absolute; */
+    /* top: 0px; */
+    position: relative;
+    margin: 10px auto;
+}
+
+#book3 a img{
+    width: 140px;
+    height: auto;
+    /* margin-top: 8px; */
+    /* position: absolute; */
+    /* top: 0px; */
+    position: relative;
+    margin: 10px auto;
+}
+
+#bookimg1:hover{
+    /* width: 105%; */
+    transition: 1s;
+    z-index: 1;
+    /* top: -90px; */
+    /* top: -66px; */
+    transform:scale(1.8);
+}
+
+#bookimg2:hover{
+    /* width: 105%; */
+    transition: 1s;
+    z-index: 1;
+    /* top: -90px; */
+    /* top: -66px; */
+    transform:scale(1.8);
+}
+
+#bookimg3:hover{
+    /* width: 105%; */
+    transition: 1s;
+    z-index: 1;
+    /* top: -90px; */
+    /* top: -66px; */
+    transform:scale(1.8);
+}
+/* end of alternative version */
+
+
+
+
+/* bad version why it is restricted in the box? */
+
+/* #book1 a,
+#book2 a,
+#book3 a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#book1 a img{
+    width: 140px;
+    height: auto;
+    margin-top: 13px;
+}
+
+#book2 a img{
+    width: 140px;
+    height: auto;
+    margin-top: 12px;
+}
+
+#book3 a img{
+    width: 140px;
+    height: auto;
+    margin-top: 8px;
+}
+
+#bookimg1:hover{
+    width: 300%;
+    transition: 1s;
+    z-index: 1;
+}
+
+#bookimg2:hover{
+    width: 300%;
+    transition: 1s;
+    z-index: 1;
+}
+
+#bookimg3:hover{
+    width: 1300%;
+    transition: 1s;
+    z-index: 1;
+} */
+
+/* bad version end */
+
+
+
+
+
+.thirdblock .thirdRow{
+    width: 24%
+}
+
+#background2{
+    background-image: url('../../graph/Background_7.png');
+    height: 66.7%;
+    
+}
+
+#photo2{
+    height: 33.4%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#photo2 img{
+    width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
