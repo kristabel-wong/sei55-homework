@@ -10,44 +10,41 @@
 // It should also figure out if there are any more letters that need to be guessed, and if not, it should congratulate the user for winning the game.
 // Pretend you don't know the word, and call guessLetter multiple times with various letters to check that your program works.
 
-const hangmanLetters = ['F', 'O', 'X'];
-const hangmanGuessLetter = ['_', '_','_'];
+var hangmanLetters = ['F', 'O', 'X'];
+var hangmanGuessLetters = ['F_', '_', 'X'];
 
-const hangmanGuessLetters = function(letter){
-    for (var i = 0; i < hangmanLetters.length; i++){
+function hangmanGuessLetters(letter) {
+    var tryAgain = false;
+    var giveItAnotherCrack = false;
+    for (var i = 0; i < hangmanLetters.length; i++) {
         if (hangmanLetters [i] == letter) {
-            hangmanGuessLetter[i] = letter;
-            }
+            hangmanGuessLetters [i] = letter;
+            tryAgain [i] = letter;
+            giveItAnotherCrack = true;
+        }
+        if (hangmanGuessLetters [i] == '_') {
+            giveItAnotherCrack = true;
+        }
     }
-    let guessProgress = ``;
-      for (let i = 0; i , hangmanGuessLetter; i++){
-        guessProgress.join('hangmanguessletter');
-      }
-    console.log(guessProgress);
-      if (hangmanGuessLetter.includes('_')===false){
-        console.log('Congratulations, you guessed the word!');
-      }
-} //guess letter
-
-HangmanGuessLetter('H');
-HangmanGuessLetter('E');
-HangmanGuessLetter('L');
-HangmanGuessLetter('P');
-console.log(`=========`)
+    if (tryAgain) {
+        console.log('Yeah buddy, you found a letter');
+        console.log(hangmanGuessLetters.join(''));
+        if (!giveItAnotherCrack) {
+            console.log('YOU GOT IT CHAMP!');
+        } 
+    } else {
+        console.log('Oh noes, thats not right!');
+    }
+}
+guessLetter('H');
+guessLetter('E');
+guessLetter('L');
+guessLetter('P');
 
 // Bonus: Make it more like Wheel of Fortune:
 // Start with a reward amount of $0
 // Every time a letter is guessed, generate a random amount and reward the user if they found a letter (multiplying the reward if multiple letters found), otherwise subtract from their reward.
 // When they guess the word, log their final reward amount.
-
-
-console.log(`Wheel of Fortune Version`);
-console.log(`=======`)
-let PrizeMoney = 0
-const wheelAmount = [10, 20, 30, 40, 50];
-
-const puzzle = ['W','H','E','E','L']
-
 // Bonus: Make it like Hangman:
 // Keep track of all the guessed letters (right and wrong) and only let the user guess a letter once. If they guess a letter twice, do nothing.
 // Keep track of the state of the hangman as a number (starting at 0), and subtract or add to that number every time they make a wrong guess.

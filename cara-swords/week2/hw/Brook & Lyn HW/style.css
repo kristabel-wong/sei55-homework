@@ -1,0 +1,46 @@
+h1{
+    color:#656565;
+    font-size: 24px;
+}
+
+h2{
+    color:#656565;
+    font-size: 14px;
+}
+
+label{
+  color: blue;  
+}
+
+
+p{
+    color:#656565;
+    font-family: Times New Roman;
+    line-height: 17px;
+    font size: 12px;
+}
+
+#intro{
+    border-style: none;
+}
+
+img{
+    border: #a99f9f;
+    border-style: solid;
+}
+
+footer{
+    color:#656565;
+    font size: 6px;
+    font-family: Times New Roman;    
+}
+
+/* <title>Brook & Lyn
+    font Size = 12px
+</title>
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a */
