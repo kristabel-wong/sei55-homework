@@ -23,7 +23,6 @@ function stopInterval (id) { //clear intervals
 function catWalkRight () { //walks cat right
     
     directionToggle = 'right'
-  
     let w = window.innerWidth
     let oldLeft = parseInt(darnCat.style.left);
 

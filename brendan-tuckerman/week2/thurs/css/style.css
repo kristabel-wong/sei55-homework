@@ -10,15 +10,35 @@ html{
 
 h1{
     text-align: center;
+    position: relative;
+    
    
 }
 
 h3{
     text-align: center;
-    font-size: 22pt;
-    
+    font-size: 20pt;
+    position: relative;
+    text-shadow: 4px 4px rgb(3, 39, 247);
+    animation: glow .2s infinite alternate;
 }
 
+/*animate shadow*/
+
+
+@keyframes glow {
+    to {
+        text-shadow: 4px 4px rgb(101, 121, 228);
+    }
+}
+
+
+
+.title{
+    position: relative;
+    z-index: 100;
+
+}
 /* body{
     cursor: url(../1f5de.png), auto;
 
@@ -27,23 +47,27 @@ h3{
 
 img {
     height: 30px;
+
+    
 }
 
 .topCat{
     transform: scaleX(1);
-    
+    position: absolute;
+    z-index: -1000;
 
 }
 
 #game-container {
     position: absolute;
-    bottom: 50%;
+    bottom: 80%;
     left: 0;
     
 }
 
 .row {
     white-space: nowrap;
+    
 
 }
 
