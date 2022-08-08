@@ -1,5 +1,25 @@
 # Title: ATM App
 ---
+## Update v2.0
+
+- update the event listener in `atm.js` 
+
+    - v2.0: 
+    Only 1 listener is required to monitor 4 buttons (Inspired by the presentation from Dee)
+    ```
+    $("input[type='button']").on('click',atm.getData)
+    ```
+
+
+    - v1.0: 
+    There are 4 listeners to minitor 4 buttons, same callback function 
+    ```
+    $("#checking-deposit").on('click', atm.getData);
+    $('#checking-withdraw').on('click', atm.getData);
+    $('#savings-deposit').on('click', atm.getData);
+    $('#savings-withdraw').on('click', atm.getData);
+    ```
+
 
 ## Features
 
@@ -30,11 +50,7 @@ This file contains: 4 events handlers, and `atm object` which has `atm.getData()
 
 - Event handlers
     ```
-    $("#checking-deposit").on('click', atm.getData);
-    $('#checking-withdraw').on('click', atm.getData);
-
-    $('#savings-deposit').on('click', atm.getData);
-    $('#savings-withdraw').on('click', atm.getData);
+    $("input[type='button']").on('click',atm.getData)
     ```
 
 - Functions

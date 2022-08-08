@@ -58,10 +58,11 @@ const atm = {
 
 //============ Events ============
 
-$("#checking-deposit").on('click', atm.getData);
-$('#checking-withdraw').on('click', atm.getData);
+// $("#checking-deposit").on('click', atm.getData);
+// $('#checking-withdraw').on('click', atm.getData);
 
-$('#savings-deposit').on('click', atm.getData);
-$('#savings-withdraw').on('click', atm.getData);
+// $('#savings-deposit').on('click', atm.getData);
+// $('#savings-withdraw').on('click', atm.getData);
 
-
+$("input[type='button']").on('click',atm.getData)
+//learned from Dee
