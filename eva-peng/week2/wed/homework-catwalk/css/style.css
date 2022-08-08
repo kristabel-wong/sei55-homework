@@ -1,0 +1,7 @@
+
+/* Change the style of the img to have a "left" of "0px", so that it starts at the left hand of the screens. */
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aquamarine;
+    opacity: 0;
+}
