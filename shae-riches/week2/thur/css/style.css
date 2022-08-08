@@ -1,0 +1,18 @@
+#main {
+    display: grid;    
+    grid-template-rows: 200px 200px 200px 200px 200px;
+}
+
+.grid_row {
+    border: 1px  red;
+    position:relative
+
+}
+
+#mainCat {
+
+    position: absolute;
+    align-items: end;
+
+
+}
