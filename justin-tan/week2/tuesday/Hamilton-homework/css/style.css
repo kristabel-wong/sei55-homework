@@ -80,6 +80,14 @@ h1 {
     box-shadow: 0 0 20px 5px whitesmoke;
 }
 
+/* nav .centered {
+    border: 1px solid red;
+}
+
+nav .centerer {
+    border: 1px solid blue;
+} */
+
 #description {
     /* border: 1px solid red; */
     margin-bottom:0;
@@ -115,11 +123,11 @@ marquee img {
     left: 0;
     z-index: -1;
     animation-duration: 20s;
-    animation-name: slidein;
+    animation-name: earthSlide;
     animation-iteration-count: infinite;
 }
 
-@keyframes slidein {
+@keyframes earthSlide {
     0% {
         left: 5%;
     }
@@ -303,3 +311,4 @@ article span {
     background-color:darkorange;
     color: black;
 }
+

@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    /* border: 1px solid white; */
+    /* background: url(); */ 
+}
