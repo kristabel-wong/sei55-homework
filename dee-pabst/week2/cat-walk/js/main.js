@@ -1,5 +1,7 @@
 console.log(`%cLet me tell thee of the days of high adventure`, 'Font-Family: fantasy; font-size: 14px;')
 
+
+
 // const cat = document.querySelector('img');
 // cat.style.left = "0px"
 // let direction = 10; // walking right
@@ -82,7 +84,7 @@ const setLightLevel = function(angle){
         //set bg to pink
         $body.css('background-color', 'rgb(235, 186, 232)')
     } else if (angle <= 320) {
-        // set to blue
+        // set to blue .hide() and .show()
         $body.css('background-color', 'rgb(154, 209, 231)')
         $stars.css('visibility', 'hidden');
     }
@@ -90,7 +92,7 @@ const setLightLevel = function(angle){
 
 // sun and moon
 const $sunmoon = $('#sunmoon');
-let angle = 0
+let angle = 0;
 const dayNight = function(){
     $sunmoon.css('transform',`rotate(${angle}deg)`);
     if (angle<360){
@@ -99,7 +101,7 @@ const dayNight = function(){
         angle = 0;
     }
     setLightLevel(angle);
-}
+};
 
 // start the cat moving
 walkRight();
