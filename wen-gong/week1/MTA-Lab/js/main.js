@@ -100,5 +100,5 @@ const stationsPlan = {
   }, //planTrip
 };//stationPlan()
 
-stationsPlan.planTrip('L', '3rd', 'L', '6th');
+stationsPlan.planTrip('L', '3rd', 'L', '1st');
 stationsPlan.planTrip('N', 'Times Square', '6', '33rd');
