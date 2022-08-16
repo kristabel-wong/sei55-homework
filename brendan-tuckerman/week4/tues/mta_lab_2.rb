@@ -85,8 +85,19 @@ def plan_trip start, finish, start_line, end_line = nil
 
 end #end_plan_trip
 
+# def color_choice name #grabs a color for the output
+#     case name
+#     when 'n' then 'red'
+#     when 'l' then 'blue'
+#     when '6' then 'green'
+#     end
+# end #end colorchoice
+
 # puts / prints the journey
 def announce first_leg, second_leg, start_line_name, end_line_name #takes one or 2 arrays as well as the lines (for colors)
+
+    # first_color = color_choice start_line_name
+    # second_color = color_choice end_line_name
 
     number_of_stations = first_leg.length #keep track of #of stations travelled
     puts "\nStarting at #{first_leg.first} on the #{start_line_name.upcase} line, travel through the following stations:"
