@@ -40,7 +40,7 @@ console.log(catTag.style.left)
   // below to work on...
 // need to flip the direction not just (-)
   // comparing a string to a value 
-  if (currentLeft > window.innerWidth){
+  if (currentLeft >= window.innerWidth-300){
     // catTag.style.tranform = "relative";
     // catTag.style.transform = "scaleX(-1)";
     catTag.style.left = `${currentLeft-1}px`;

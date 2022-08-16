@@ -31,7 +31,7 @@ const walkingCat = function () {
     //     const width = screenWidth[i];
     // }
 };
-window.setInterval(walkingCat, 10);
+window.setInterval(walkingCat, 9);
 
 
 // KANGAROO
