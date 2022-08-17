@@ -1,0 +1,12 @@
+Displaying results for:
+<%=@search_term%>
+<ul style="list-style: none;">
+<%# no equals here %>
+<% @result['results'].each do |movie| %>
+    <li style="">
+    <img src="http://image.tmdb.org/t/p/w92/<%= movie['poster_path']%>" alt="<%= movie['title']%>" >
+    <strong><%= movie['title']%></strong> (<%= movie['release_date'][0,4]%>)
+    - <em><%= movie['overview']%></em>
+    </li>
+<% end %>
+</ul>
