@@ -26,7 +26,7 @@ require 'pry' #for debugging
         ####### Support Method ########
 
 def is_start_before arg1, arg2, arr #determines whether train should go forward or backwards
-    arr.index(arg1) < arr.index(arg2)
+    arr.index(arg1)  < arr.index(arg2) 
 end #end is_is_start_before
 
         ####### Trip Methods #########
@@ -37,7 +37,7 @@ def single_line start, start_line, finish  #returns an array of stations on a si
     if is_start_before(start, finish, start_line) #"Forwards"
         first_leg = start_line[start_line.index(start)..start_line.index(finish)]
     else
-        reverse_direction = start_line.reverse! #"Reverse"
+        reverse_direction = start_line.reverse! #"Reverse" #is this needed?
         first_leg = reverse_direction[start_line.index(start)..start_line.index(finish)]
     end
     first_leg
@@ -59,7 +59,7 @@ def plan_trip start, finish, start_line, end_line = nil
     name_of_end_line = end_line
 
     #declare the lines 
-    mta_lines = { #hash that stores the lines
+    mta_lines = { #hash that stores the lines ##this can be put into a method that return
         n: ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
         l: ["8th", "6th", "Union Square", "3rd", "1st"],
         "6" => ["Grand Central", "33rd", "28th", "23rd", "Union Square",  "Astor Place"],
@@ -147,7 +147,7 @@ def display_n  #n line selection menu
 end #end displayN
 
 
-def display_l # l: ["8th", "6th", "Union Square", "3rd", "1st"]
+def display_l # l: ["8th", "6th", "Union Square", "3rd", "1st"]//display line (loop through)
 
     puts"\n Choose which station:"
     puts"\n1. 8th \n2. 6th\n3. Union Square\n4. 3rd\n5. 1st".blue
