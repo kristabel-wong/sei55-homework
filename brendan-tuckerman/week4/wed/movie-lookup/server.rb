@@ -22,9 +22,19 @@ end
 
 #page to display the results
 get '/search/results' do
+
+
     @search_term = params[:movie_search]
-    all_search_results = HTTParty.get 'https://api.themoviedb.org/3/search/movie?api_key=71e0672b3f5e675ea66bbec878ff0e84&query=' + @search_term
+    all_search_results = HTTParty.get 'https://api.themoviedb.org/3/search/movie?api_key=71e0672b3f5e675ea66bbec878ff0e84&query=' + @search_term 
+
+    total_pages = all_search_results["total_pages"] #integer of totla page numbers
+
     
+    # #this should get all pages
+    # (total_pages -1).times do | page|
+    #     all_search_results = HTTParty.get 'https://api.themoviedb.org/3/search/movie?api_key=71e0672b3f5e675ea66bbec878ff0e84&query=' + @search_term + "&page="+ page.to_s
+    # end
+
     #w here is width
     @base_image_url = "https://image.tmdb.org/t/p/w200/"
 

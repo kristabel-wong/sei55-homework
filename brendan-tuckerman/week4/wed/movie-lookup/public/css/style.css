@@ -51,13 +51,13 @@ a:hover {
     height: 80vh;
     display: flex;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
 footer{
     display: flex;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
@@ -66,3 +66,4 @@ footer p{
     padding: 5px;
     font-size: 0.6rem;
 }
+
