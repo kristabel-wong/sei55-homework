@@ -273,7 +273,7 @@ def menu #the main menu for choosing a journey
 
     end #end while
     
-end #end menu
+end #end menu-
 
 
 ####### Initialise ########
