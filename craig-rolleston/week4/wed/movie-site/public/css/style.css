@@ -1,0 +1,17 @@
+body {
+
+    font-family: "Comic Sans MS", serif;
+    background-color: rgb(33, 192, 192);
+
+    background-image: url('https://media.istockphoto.com/vectors/abstract-shiny-background-with-blank-film-strips-and-copy-space-vector-id1058727850?k=20&m=1058727850&s=612x612&w=0&h=W7Gcv5mFs9IninwTufJRkj8m77af7tmod672UpuXu3g=');
+
+    background-size: cover;
+
+    text-align: center;
+    
+}
+
+header {
+    font-size: 40px;
+}
+
