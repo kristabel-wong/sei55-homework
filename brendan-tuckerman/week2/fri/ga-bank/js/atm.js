@@ -9,7 +9,7 @@ account:  //account details
             accountNumber: 101,
             firstName: "Alice",
             lastName: "Pung",
-            checkingBalance: 2000 ,
+            checkingBalance: 2000,
             savingsBalance: 1000,
 
     },
@@ -43,21 +43,31 @@ account:  //account details
         const finalBalance = currentAccountBalance - withdrawAmount;
         const oldTotalFunds = this.calculateTotalFunds();
         const newTotalFunds = oldTotalFunds - withdrawAmount
-        
         //determine whether the withdrawal is possible
-        if (finalBalance >= 0) {
-            this.setBalance(accountType, finalBalance)
-            return true;
-        } 
-        else if (newTotalFunds >= 0 && accountType === 'checking'){
-            this.setBalance('checking', 0);
-            this.setBalance('savings', newTotalFunds);
-            return true;
-        }       
-        else {
-            console.log(`*****Insufficient Funds******`);
-            return false;
-        } //end if/else
+
+        if(withdrawAmount > 0) { //ensure ammount is not negative
+
+            if (finalBalance >= 0) {
+                this.setBalance(accountType, finalBalance)
+                return true;
+            } 
+            else if (newTotalFunds >= 0 && accountType === 'checking'){ //overdraft 
+                this.setBalance(accountType, 0);
+                this.setBalance('savings', newTotalFunds);
+                return true;
+            }
+            else if (newTotalFunds >= 0 && accountType === 'savings'){//overdraft
+                this.setBalance(accountType, 0);
+                this.setBalance('checking', newTotalFunds);
+                return true;
+            }
+            else {
+                console.log(`*****Insufficient Funds******`);
+                return false;
+            } //end if/else
+
+        } //end withdraw amount
+        
 
     }, //end withdrawFunds
 
@@ -73,6 +83,7 @@ $('#savings-balance').html(`$${bank.getBalance('savings')}`);
 
 //=========ATM============//
 
+//TODO: Put this in a seperate js file.
 
 
 //Displays red if balance is at 0, grey if not
@@ -86,7 +97,7 @@ const displayRed = (accountType) => {
 }; //end displayRed
 
 
-
+//TODO: create functions ofr these and DRY them.
 //deposit funds into a checking account
 $('#checking-deposit').on('click', function() {
     const amount = $('#checking-amount').val();
@@ -101,8 +112,8 @@ $('#checking-withdraw').on('click', function() {
     bank.withdrawFunds('checking', parseInt(amount));
     $('#checking-balance').html(`$${bank.getBalance('checking')}`);
     $('#savings-balance').html(`$${bank.getBalance('savings')}`);
-    displayRed('checking');
-    displayRed('savings');
+    displayRed('checking'); //this could be made into one function that just checks both accounts.
+    displayRed('savings'); //this could be made into one function that just checks both accounts.
 });
 
 //deposit funds into a savings account
@@ -120,6 +131,7 @@ $('#savings-withdraw').on('click', function() {
     $('#checking-balance').html(`$${bank.getBalance('checking')}`);
     $('#savings-balance').html(`$${bank.getBalance('savings')}`);
     displayRed('savings');
+    displayRed('checking');
 });
 
 
