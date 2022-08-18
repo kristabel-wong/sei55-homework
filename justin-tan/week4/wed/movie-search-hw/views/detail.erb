@@ -1,0 +1,27 @@
+
+
+<h2><%= @data["original_title"]%></h2>
+
+<img src="https://image.tmdb.org/t/p/original/<%= @data["poster_path"] %>" alt="thumbnail_image" id="detail">
+
+<p><strong>Release Date:</strong></p>
+<p><%= @data["release_date"]%></p>
+
+<p><strong>Description:</strong></p>
+<p><%= @data["overview"]%></p>
+
+<p><strong>Averate Rating:</strong></p>
+<p><%= @data["vote_average"]%></p>
+
+<p><strong>Genre:</strong></p>
+<p><%= @data["genres"][0]["name"]%></p>
+
+<p><strong>Budget:</strong></p>
+<p>$<%= @data["budget"]%></p>
+
+<p><strong>Revenue:</strong></p>
+<p>$<%= @data["revenue"]%></p>
+
+<p><strong>Run Time:</strong></p>
+<p><%= @data["runtime"]%>mins.</p>
+
