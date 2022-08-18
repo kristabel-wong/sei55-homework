@@ -1,0 +1,66 @@
+<h3>Editing <%= @distro["name"] %>
+: </h3>
+<div class="form_container">
+
+    <form action="/distros/<%= @distro["id"] %>" method="post" id="edit_form">
+    
+    <label>
+        Name:
+        <input type="text" name="name" value= "<%= @distro["name"] %>">
+    </label>
+    <br>
+
+    <label>
+        Family:
+        <input type="text" name="family" value= "<%= @distro["family"] %>">
+    </label>
+    <br>
+
+     <label>
+        Source Model:
+        <input type="text" name="source_model" value= "<%= @distro["source_model"] %>" >
+    </label>
+    <br>
+
+     <label>
+        Latest Release:
+        <input type="text" name="latest" value= "<%= @distro["latest"] %>">
+    </label>
+    <br>
+
+     <label>
+        Dsecription:
+        <input type="text" name="description" value= "<%= @distro["description"] %>"> 
+    </label>
+    <br>
+
+     <label>
+        Rolling Release (1 or 0):
+        <input type="text" name="is_rolling" value= "<%= @distro["is_rolling"] %>">
+    </label>
+    <br>
+
+     <label>
+        Release Year:
+        <input type="text" name="release_date" value= "<%= @distro["release_date"] %>">
+    </label>
+    <br>
+
+     <label>
+        Website:
+        <input type="text" name="website" value= "<%= @distro["website"] %>">
+    </label>
+    <br>
+
+     <label>
+        logo URL:
+        <input type="text" name="logo_url" value= "<%= @distro["logo_url"] %>">
+    </label>
+    <br>
+
+    <button>Edit Distro</button>
+    
+    </form>
+
+
+</div>

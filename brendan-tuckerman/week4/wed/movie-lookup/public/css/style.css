@@ -18,6 +18,7 @@ h1 {
     font-size: 2rem;
 }
 
+
 .worst{
     color: rgb(233, 6, 6);
     font-family: 'DynaPuff', cursive;
@@ -51,7 +52,7 @@ a:hover {
     height: 80vh;
     display: flex;
     width: 100%;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
 }
 
