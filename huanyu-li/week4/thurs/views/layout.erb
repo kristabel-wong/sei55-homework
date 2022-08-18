@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Database</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <h1>Movies Database</h1>
+        <a href="/">Home</a>
+        |
+        <a href="/movies">All Movies</a>
+        |
+        <a href="/movies/new">Add Movie</a>
+        <hr>
+    </nav>
+    <main>
+    <%= yield %>
+    </main>
+    <footer>
+    <hr>
+    &copy; Movies Database 2022
+    </footer>
+
+
+</body>
+</html>

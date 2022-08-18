@@ -1,0 +1,20 @@
+
+<h2><%= @movie["title"] %></h2>
+
+<a href="/movies/<%= @movie["id"] %>/edit">Edit</a>
+|
+<a href="/movies/<%= @movie["id"] %>/delete">Delete</a>
+
+<div class="container">
+    <div class="image">
+        <!-- url: <%= @movie["poster_url"] %> -->
+        <img src="<%= @movie["poster_url"] %>" alt="<%= @movie["title"] %>">
+        </div>
+    <div class="text">
+        <strong>Title:  </strong><%= @movie["title"] %> <br>
+       <strong>Date:  </strong><%= @movie["release_date"] %> <br>
+        <strong>Runtime:  </strong><%= @movie["runtime"] %> <br>
+        <strong>Score:  </strong><%= @movie["score"] %> <br>
+        <strong>Overview:  </strong><%= @movie["overview"] %> <br>
+        </div>
+    </div>

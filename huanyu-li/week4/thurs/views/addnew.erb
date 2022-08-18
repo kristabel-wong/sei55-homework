@@ -1,0 +1,45 @@
+
+<h2>Add New Movie</h2>
+<br>
+<form action="/movies" method="post" class="addNew">
+
+<label>
+    Title:
+    <input type="text" name="title">
+</label>
+<br>
+
+<label>
+    Date:
+    <input type="date" name="release_date">
+</label>
+<br>
+
+<label>
+    Runtime:
+    <input type="text" name="runtime">
+</label>
+<br>
+
+<label>
+    Score:
+    <input type="number" step="0.1" name="score">
+</label>
+<br>
+
+<label>
+    Overview:
+    <textarea name="overview" cols="30" rows="5"></textarea>
+    <%# <input type="text" name="overview"> %>
+</label>
+<br>
+
+<label>
+    Poster URL:
+    <textarea name="poster_url" cols="30" rows="5"></textarea>
+    <%# <input type="text" name="poster_url"> %>
+</label>
+<br>
+
+<button>Add</button>
+</form>
