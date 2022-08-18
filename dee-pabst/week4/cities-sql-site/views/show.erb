@@ -1,0 +1,32 @@
+<strong><h2><%= @city['name']%></h2></strong>
+<img src="<%=@city['image_url']%>" alt="<%= @city['name']%>">
+<table>
+<tr>
+<td>Country</td>
+<td><%=@city['country']%></td>
+</tr>
+<tr>
+<td>Population</td>
+<td><%=@city['population'].to_i%></td>
+</tr>
+<tr>
+<td>Demonym</td>
+<td><%=@city['demonym']%></td>
+</tr>
+<tr>
+<td>Area</td>
+<td><%=@city['area']%> km<sup>2</sup></td> 
+</tr>
+<tr>
+<td>
+<form action="/city/<%= params[:id] %>/edit">
+<button>Edit</button>
+</form>
+</td>
+<td>
+<form action="/city/<%= params[:id] %>/delete">
+<button>Delete</button>
+</form>
+</td> 
+</tr>
+</table>
