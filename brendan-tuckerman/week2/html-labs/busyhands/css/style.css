@@ -1,0 +1,291 @@
+/*universals*/
+/*this is not optimised for responsive designer*/
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0,0,0,0.7);
+}
+
+
+body {
+    background-color: black;
+}
+
+main {
+    background-color: #fff;
+  
+}
+
+/* Header */
+header {
+    color: rgba(255, 255 , 255, .8);
+    height: 100px;
+}
+
+p {
+    line-height: 1.2;
+}
+
+nav {
+   display: flex;
+   align-items: left;
+   width: 50%;
+   height: 100px;
+
+   
+   
+}
+
+nav ul {
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav li{
+    
+    padding: 25px;
+    display: inline-flex;
+    margin: 0 auto;
+    font-size: 1.2em;
+   
+    
+}
+
+nav li:hover {
+    background-image: url(../images/bg_nav_rollover.png);
+}
+
+#title-banner {
+    background-image: url("../images/bg_body.jpg");
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+ 
+
+}
+
+#title-banner img {
+    margin-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 60px;
+
+   
+}
+
+
+
+.social {
+    display: inline;
+    background: url(../images/socialNav.png);
+    margin-right: 400px;
+    margin-top: 30px;
+    
+   
+}
+
+.linkedin {
+        position: relative;
+        right: -280px;
+        height: 55px;
+        width: 55px;
+        display: inline-block;
+        background-position: 0px -60px;
+        
+}
+
+.linkedin:hover {
+    background-position: 0px 0px;
+}
+.twitter {
+        position: relative;
+        right: 120px;
+        height: 55px;
+        width: 55px;
+        display: inline-block;
+        background-position: -60px -60px;
+}
+
+.twitter:hover {
+    background-position: -60px 0px;
+}
+.facebook {
+        height: 55px;
+        width: 55px;
+        display: inline-block;
+        background-position: 130px -60px;
+}
+.rss {
+        height: 55px;
+        width: 55px;
+        display: inline-block;
+        background-position: -180px -60px;
+}
+/*jumbotron*/
+
+#jumbotron-container{
+    position: relative;
+    top: -300px;
+    left: 100px;
+   
+}
+
+/*quote box*/
+
+#quote-box {
+    position: relative;
+    top: -300px;
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 65%;
+    height: 75px;    
+    background-image: url('../images/bg_blurb.jpg');
+    border-top: 2px solid grey;
+    border-left: 1px solid grey;
+    margin-top: 0px;
+}
+
+#quote-box p{
+   padding: 10px;
+   font-size: 1.1em;
+}
+
+#button {
+    float: right;
+    padding-left: 170px;
+    height: 60px;
+    align-self: flex-end;
+}
+
+/*photo columns */
+
+.photo-column {
+    width: 1fr;
+}
+
+#photo-column-container {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    position: relative;
+    width: 50%; 
+    top: -250px;
+    justify-content: space-between;
+    
+}
+
+.image-container {
+    background-image: url("../images/bg_body.jpg");
+    width: 260px;
+    height: 110px;
+    text-align: center;
+    
+    
+}
+
+.image-container img{
+    align-content: center;
+    width: 250px;
+    padding-top: 10px;
+}
+
+.photo-column{
+    padding-right: 60px;
+}
+
+.photo-column h3 {
+    font-size: 1.8em;
+    padding: 10px;
+}
+
+.photo-column p {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: .9em;
+}
+
+.photo-column a {
+    text-decoration: none;
+    color: rgba(7, 152, 242, 1);
+}
+
+
+/*footer */
+footer {
+    color: rgba(108, 107, 107, 0.6);
+    margin-top: -200px;
+    display: flex;
+    padding: 10px;
+    height: 400px;
+    width: 100%;
+    background-color: black;
+  
+}
+
+footer h4 {
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+    }
+
+footer p {
+    border-top: 1px solid rgba(108, 107, 107, 0.4);
+    padding-top: 8px;
+    padding-bottom: 8px;    
+    
+}
+
+.footer-col{
+    font-size: 0.8rem;
+}
+
+#widget{
+    border-bottom: none;
+}
+
+#blogroll{
+    margin-left: 100px;
+    width: 400px;
+    padding-right: 20px;
+}
+
+#text-widget {
+    width: 500px;
+    padding-right: 20px;
+    line-height: 1.4;
+}
+
+#meta-widget {
+    margin-right: 400px;
+    width: 300px;
+
+}
+
+.footer-col a{
+    text-decoration: none;
+    color: rgba(7, 152, 242, 0.8)
+}
+
+#copyright {
+    padding-top: 50px;
+}
+
+#theme{
+    padding-top: 60px;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+
+
+
+
+<% @array_movies[1..5].each do |movie| %> 
+<ul>
+    <li>
+    <div> 
+        <img src="https://image.tmdb.org/t/p/w300<%= movie["poster_path"] %>">
+    </div>
+    <h4>Movie name: <%= movie["title"] %></h4>
+    <h4>Movie date: <%= movie["release_date"]%></h4>
+    <p>Overview: <%= movie["overview"]%></p>
+    </li>
+    <br>
+
+    
+
+</ul>
+<% end %>
+
+
+<%= params[:movie_name]%>
+
+

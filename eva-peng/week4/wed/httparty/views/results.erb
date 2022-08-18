@@ -1,0 +1,8 @@
+<h2>Movie data for "<%= @movie %>"</h2>
+
+
+<% @results_array.each do |item| %>
+<ul>
+<li>Movie Title: <%= item["title"] %>, Release Date: <%= item["release_date"] %></li><br>
+</ul>
+<% end %>

@@ -49,8 +49,8 @@ const guessLetter = function(guess){
 // console.log('Incorrect, try again!');
 // console.log('YOU WON, CONGRATULATIONS!!');
 
-guessLetter( 'F' );
+// guessLetter( 'D' );
 guessLetter( 'O' );
-guessLetter( 'X' );
+// guessLetter( 'X' );
 
 //

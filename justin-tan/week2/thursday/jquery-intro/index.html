@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Intro</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <h1>
+        Welcome to My Special Site With All My Thoughts and Feelings On It
+    </h1>
+
+    <p id="intro">It was nice for you to visit.</p>
+
+    <p class="special">Another line.</p>
+    
+    <h4 class="special">My favourite dogs:</h4>
+
+    <ul>
+        <li>Corgi</li>
+        <li>Poms</li>
+        <li class="special">Shiba Inu</li>
+    </ul>
+
+    <h2>Here comes a form</h2>
+
+    <form>
+        <!-- the container for grouping all the related form elements -->
+        <label>
+            First Name: <input type="text" name="firstName" placeholder="Enter name capitalised">
+        </label>
+
+        <br>
+
+        <label>
+            Birthday
+            <input type="date" name="birthday">
+        </label>
+            
+
+        <br>
+
+        <label>
+        Email body:    
+            <textarea name="emailBody" >
+Default contents
+Second line
+            </textarea>
+        </label>
+
+        <br>
+
+        <label>
+            Dog breed:
+            <select name="breed">
+                <option value="" selected disabled>Please select...</option>
+                <option value="1">Corgi</option>
+                <option value="2">Frenchie</option>
+                <option value="3">Greyhound</option>
+            </select>
+        </label>
+
+        <br>
+        <fieldset>
+
+        <legend>
+            Select the preferred dog traits:
+        </legend>
+
+        <br>
+
+            <label>
+                <input type="checkbox" name="traits" value="boundy">
+                Lots of bounding around
+            </label>
+            
+            <br>
+            
+            <label>
+                <input type="checkbox" name="traits" value="boundy">
+                Slobbering
+            </label>
+            
+            <br>
+            
+            <label>
+                <input type="checkbox" name="traits" value="boundy">
+                Always on the lookout
+            </label>
+
+        </fieldset>
+        
+        <fieldset>
+
+        <legend>
+            Select only one brother:
+        </legend>
+
+        <br>
+
+            <label>
+                <input type="radio" name="bro" value="Groucho">
+                Groucho
+            </label>
+            
+            <br>
+            
+            <label>
+                <input type="radio" name="bro" value="Harpo">
+                Harpo
+            </label>
+            
+            <br>
+            
+            <label>
+                <input type="radio" name="bro" value="Chico">
+                Chico
+            </label>
+
+        </fieldset>
+
+        <input type="submit" value="Submit Info">
+        <button>Submit Info</button>
+
+        </form>
+        
+        <table>
+
+            <thead>
+                <th>Brother</th>
+                <th>Instrument</th>
+            </thead>
+
+            <tr>
+                <td>Groucho</td>
+                <td>Guitar</td>
+            </tr>
+
+            <tr>
+                <td>Harpo</td>
+                <td>Harp</td>
+            </tr>
+
+            <tr>
+                <td>Chico</td>
+                <td>Flute</td>
+            </tr>
+
+        </table>
+
+        <br>
+
+        <div>DIV container for layout</div>
+        <div>Another DIV container for layout</div>
+
+        <span>A span</span>
+        <span>Another span</span>
+
+        <br>
+
+        <h4>Forbidden / deprecated</h4>
+        
+        <b>Bold</b> - use strong tag <strong> Bold </strong>
+
+        <i>Italics</i> use "em" tag: <em>italicised</em>
+
+        <marquee behavior="" direction=""></marquee>
+        scrolling text! So easy and fun!
+        </marquee>
+
+        <br>
+
+        <p>
+            How to show code/HTML tags on your page:
+            <br>
+
+            &lt;img&gt;
+            
+            <br>
+            
+            Copyright: &copy;
+
+            this &amp; that
+            
+            <pre>
+                <code>
+                const x = 1;
+                const y = 2
+                <p>this is a P tag - still need &lt;</p>
+                </code>
+            </pre>
+        </p>
+
+        <blockquote>
+            For inspirational quotes or large quoted blocks
+        </blockquote>
+        
+
+    <!-- 
+        An HTML comment
+        can be multi line
+        It still appears in the browser
+
+    -->
+    <br>
+
+    <img src="http://placekitten.com/600/400" alt="A picture of a cute kitty" id="cat">
+
+    <p>
+        Please sign my <a href="http://ga.co/" target="_new">Guestbook</a>
+    </p>
+
+    <div>
+        <span>
+
+            This is a div
+            <a href="http://ga.co">Some other link</a>
+        </span>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non alias ipsam magni magnam minima, sapiente maiores qui aliquid quaerat expedita provident cupiditate aliquam assumenda mollitia tenetur totam numquam quidem rem.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos alias, ipsum placeat nostrum praesentium aliquam, eius laborum cupiditate at, natus ad minus hic quos consequuntur asperiores. Optio exercitationem saepe iusto?</p>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js" href="css/style.css"></script>
+
+</body>
+</html>

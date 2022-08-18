@@ -1,0 +1,11 @@
+body {
+    background-color: fuchsia;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    clear: left;
+}

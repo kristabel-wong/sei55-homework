@@ -55,3 +55,24 @@ const farenheitTemp = 116.6;
 const celsiusEquivalLentTemp = (farenheitTemp - 32) / 1.8;
 console.log(`${farenheitTemp}°F is ${celsiusEquivalLentTemp.toFixed(1)}°C.`)
 
+console.log(`---------------`)
+
+
+const story = "The dogs are happy. The dogs are runnings. The owners are drunk. The dogs are running on the road. The dogs"
+const wordCounter= function(string){
+  const stringArray = string.split(' ');
+  const freq = {}
+  for (let i = 0; i < stringArray.length; i++){
+       const currentWord = stringArray[i];
+       if ( currentWord in freq){
+           freq[ currentWord] +=1;
+
+       }else{
+        freq [currentWord] = 1;
+       }
+
+  }
+   console.log(freq)
+}
+    
+wordCounter()
