@@ -1,7 +1,13 @@
 
-<h1>Title Results</h1>
+<h1 class="title">Title Results</h1>
 
-<% @titles.each do | el | %>
-<%= el["title"] %> <br>
-<% end %>
- 
+<div class="poster">
+
+    <% @titles.each do | el | %>
+       <div> 
+        <%= el["title"]%> 
+        </div>
+        <img src='https://image.tmdb.org/t/p/w185<%= el["poster_path"] %>' alt="film poster">
+
+    <% end %>
+</div> 

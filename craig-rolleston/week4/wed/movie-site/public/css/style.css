@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
 body {
 
-    font-family: "Comic Sans MS", serif;
+    font-family: "Silkscreen", serif;
     background-color: rgb(33, 192, 192);
 
     background-image: url('https://media.istockphoto.com/vectors/abstract-shiny-background-with-blank-film-strips-and-copy-space-vector-id1058727850?k=20&m=1058727850&s=612x612&w=0&h=W7Gcv5mFs9IninwTufJRkj8m77af7tmod672UpuXu3g=');
@@ -12,6 +14,19 @@ body {
 }
 
 header {
+    font-size: 45px;
+    text-align: center;
+}
+
+.poster {
+    display: inline-block;
+}
+
+.title {
     font-size: 40px;
+}
+
+h2 {
+    font-size: 25px;
 }
 
