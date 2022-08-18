@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+
+}
+
+ul {
+
+    position: relative;
+    display: inline-block;
+
+}
+
+#nav_list{
+
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+
+
+}
+
+#home_text {
+    
+    text-align: center ;
+
+}

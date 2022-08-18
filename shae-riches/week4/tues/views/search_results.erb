@@ -1,0 +1,24 @@
+search results - <%= @film %>
+<br><br><br>
+
+<% @results.each do | el |  %>
+
+<label>
+ 
+
+    <a class="movie_title" href="/movie/<%=el["id"]%>">
+    <%= el["title"] %> 
+    </a> 
+    
+
+</label>
+
+<br>
+<img 
+src='https://image.tmdb.org/t/p/w185<%= el["poster_path"]%>' 
+alt="film poster">
+<br>
+
+<% end %>
+
+
