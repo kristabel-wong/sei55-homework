@@ -1,0 +1,120 @@
+<% other_clip_ids = @other_clips_ids.map do | clip | %>
+<% clip['id'] %>
+<% end        %>
+
+<%= other_clip_ids %>  <%# array of clip_ids OTHER than current clip being viewed %>
+
+
+
+
+<div id='main_CT_container'>
+
+    <div id='data-container'>
+        <article id='clip-title' class='single-clip-data'>
+            <h3><%= @single_clip['title'] %></h3>
+        <br>
+        </article>
+
+        <article id='clipped-by' class='single-clip-data'>
+        Clipped By:
+            <%= @single_clip['clipped_by'] %>
+        <br>
+        </article>    
+        
+        <article id='clip-channel' class='single-clip-data'>
+            Clip Channel Source: <%= @single_clip['channel'] %>
+            Platform: <%= @single_clip['channel_home'] %>
+        <br>
+        </article>    
+    
+        
+        <article id='clip-category' class='single-clip-data'>
+            Category:
+            <%= @single_clip['category'] %>
+        <br>
+        </article>
+        
+        <article id='clip-length' class='single-clip-data'>
+            Length (seconds):
+            <%= @single_clip['seconds_length'] %>
+        <br>
+        </article>
+
+        <article id='views-on-source' class='single-clip-data'>
+            Source View Count:
+            <%= @single_clip['source_view_count'] %>
+        <br>
+        </article>    
+        
+        <article id='date-made' class='single-clip-data'>
+            Created on:
+            <%= @single_clip['date_made'] %>
+        <br>
+        </article>    
+        
+        <%# <article class='single-clip-data'>
+            Video url:
+            <%=@single_clip['video_source_url']
+        </article>%>
+
+    </div> <%# closes id='data-container'  %>
+
+
+
+
+
+
+    <div id='video-container'>
+            
+            
+            <video id='single-clip-video' class='single-clip-data' controls >
+                <source src="<%=@single_clip['video_source_url']%>" type="video/webm" alt="The original clip can be found at <%= @single_clip['clip_official_url'] %>">
+            </video> <%# closes single-clip-video player%>
+
+            <div id='rank-interactivity'>
+                
+                <form id='rank-up' action="/clip_list" method='post'>
+                    <article id='clip-ranker-count'>
+                        RANKER VIEW COUNT:
+                        <%= @single_clip['ranker_view_count'] %>
+                        <br>
+                    </article>
+
+                    <label>
+                        <button id='yes-button'> <input type='integer'> Nah, Yeah!</button>
+                    </label>               
+
+                    <label> 
+                        <button id='no-button'>Yeah, Nah?</button>
+                    </label>
+
+                </form> 
+
+                <form id='next-clip-sender' action="/clip_list/CLIP_TIME/<%= other_clip_ids[rand(0..2)] %>">
+                    <label id='next-button'>
+                        <button>Thank you, NEXT!</button>
+                    </label>
+                </form> <%# closes 'next-clip-sender' form  %>
+
+            </div> <%# closes 'rank-up' div %>
+
+
+
+    </div> <%# closes video cotainer %>
+
+
+
+
+
+
+
+        <%# <article class='single-clip-data'>
+            Source Video url:
+            <%= @single_clip['clip_official_url'] 
+        <br>
+        </article> %>
+
+</div> <%# closes id='main_CT_container' %>
+
+
+
