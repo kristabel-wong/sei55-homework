@@ -140,3 +140,11 @@ input{
 a {
     color: blue;
 }
+
+/*Edit*/
+
+#edit_heading {
+    font-size: 1.8rem;
+    margin-top: 10vh;
+    padding-right: 25px;
+}
