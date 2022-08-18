@@ -1,0 +1,69 @@
+/*Stylesheet for TWMDB */
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.worst{
+    color: rgb(233, 6, 6);
+    font-family: 'DynaPuff', cursive;
+}
+
+nav li {
+    align-items: center;
+    display: inline-flex;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+
+.results {
+    border: 2px solid red;
+    border-radius: 25px;
+    margin: 25px;
+    text-align: center;
+    background-color: rgba(173, 168, 168, 0.6);
+}
+
+
+.search {
+    height: 80vh;
+    display: flex;
+    width: 100%;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    position: relative;
+    bottom: 0;
+}
+
+footer p{
+    display: inline-flex;
+    padding: 5px;
+    font-size: 0.6rem;
+}
+
