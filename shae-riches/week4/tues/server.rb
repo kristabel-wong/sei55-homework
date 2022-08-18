@@ -38,12 +38,23 @@ get '/movie_search/search_results' do
     movie_search_info = HTTParty.get "https://api.themoviedb.org/3/search/movie?api_key=24d863d54c86392e6e1df55b9a328755&query=#{@film}"
 
     @results = movie_search_info["results"]
-    
-
 
     erb :search_results
 
 end
+
+get "/movie/:id" do
+    
+
+
+    
+    erb :individual_film
+
+end
+
+
+
+
 
 
 
