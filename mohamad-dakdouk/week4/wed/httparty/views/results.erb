@@ -1,0 +1,12 @@
+<h2> Movies results with the Title "<%= @movie_title %>" </h2>
+
+<h4> List of Movies </h4>
+    <%# <li> <%= @titles </li> <li> <%= @year %> 
+    <%#The below is a for loop going through the data and extracting for the specific data  %>
+    <div><% @title.each do |el| %></div>
+    <%= el ["title"] %> 
+    <%= el ["release_date"] %><br>
+    <%# The below is used to import an image then changing the end path of the image %>
+    <img src="https://image.tmdb.org/t/p/w185<%=el ["poster_path"]%>" alt="film poster">
+
+    <% end %>
