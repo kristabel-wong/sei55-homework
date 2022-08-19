@@ -1,0 +1,47 @@
+<h3>
+    Update the latest info of your team
+</h3>
+
+<form action="/teams/<%= @team['id'] %>" method="post">
+
+<label>
+Team:
+<input type="text" name="team" value="<%= @team['team'] %>">
+</label>
+<br>
+
+<label>
+Region:
+<input type="text" name="region" value="<%= @team['region'] %>">
+</label>
+<br>
+
+<label>
+Group:
+<input type="text" name="group_in" value="<%= @team['group_in'] %>">
+</label>
+
+<br>
+
+<label>
+Appearance in Worldcup:
+<input type="text" name="time_in" value="<%= @team['time_in'] %>">
+</label>
+<br>
+</label>
+
+
+<label>
+Host Country: (1 for yes, 0 for no)
+<input type="text" name="host" value="<%= @team['host'] %>">
+</label>
+<br>
+
+
+<label>
+Image URL:
+<input type="text" name="image_url" value="<%= @team['image_url'] %>">
+</label>
+<br>
+
+<button>Update Your Team</button>

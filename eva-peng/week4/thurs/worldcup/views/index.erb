@@ -1,0 +1,14 @@
+<h2>
+    Index of Teams
+</h2>
+<ul>
+<% @results.each do |team| %>
+    <li>
+    <a href="/teams/<%= team['id'] %>">
+    
+        <%= team['team'] %> 
+    </a>
+    </li>
+
+<% end %>
+</ul>
