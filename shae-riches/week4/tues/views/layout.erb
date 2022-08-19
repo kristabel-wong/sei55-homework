@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie_Look_Up</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="bg_image">
+    <header>
+        
+        <nav>
+            <h1>Movie Search</h1>
+            <hr>
+             <ul id='nav_list'>
+              <li ><a class='nav_li_point' href="/">Home</a></li>
+              <li ><a class='nav_li_point' href="/about">About</a></li>
+              <li ><a class='nav_li_point' href="/contact">Contact</a></li>
+            </ul>
+            <hr>
+        </nav>
+
+    </header>
+
+    <div id="main">
+        <%= yield %>
+    </div>
+
+
+    <footer>
+        <hr>
+        &copy; Tentin Quarintino 2022.
+    </footer>
+
+ </div>
+</body>
+
+</html>
