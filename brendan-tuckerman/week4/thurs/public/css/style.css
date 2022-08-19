@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+html {
+    font-size: 20px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+header {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+header img {
+    max-height: 10vh;
+}
+
+header li {
+    display: inline-flex;
+    padding: 5px;
+    
+
+}
+
+header h2 {
+    align-self: center;
+    font-size: 1.8rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    color: aqua;
+}
+
+
+main{
+    width:90vw;
+    height: 90vh;
+    display: flex;
+    margin-left: 10vw;
+
+}
+
+
+/*home page */
+
+.home {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home h1{
+    padding-bottom: 25px;
+}
+
+.home li {
+    text-decoration: overline;
+    list-style: none;
+    padding: 5px;
+}
+
+/*Index*/
+
+.distro_list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.distro_list h2 {
+    font-size: 1.8rem;
+    padding: 10vh;
+}
+
+.distro_list li {
+    padding: 10px;
+    list-style: lower-greek;
+}
+
+/*Add*/
+
+#new_heading {
+    font-size: 1.8rem;
+    margin-top: 10vh;
+}
+
+.form_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+input{
+    margin: 5px;
+}
+ 
+
+/*entry*/
+
+.distro_title{
+    color: rebeccapurple;
+    font-size: 2rem;
+}
+
+.entry{
+    display: block;
+    
+}
+
+.entry li{
+    padding: 5px;
+
+}
+
+.entry ul{
+    margin-top: 5vh;
+}
+
+.entry img {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+a {
+    color: blue;
+}
+
+/*Edit*/
+
+#edit_heading {
+    font-size: 1.8rem;
+    margin-top: 10vh;
+    padding-right: 25px;
+}
