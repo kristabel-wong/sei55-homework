@@ -1,0 +1,15 @@
+
+<h2>Your results for the WORST movie about <%= @search_term %> are:</h2>
+
+<% @sorted_list.each do |film| %>
+    <div class="results">
+        <h3><%= film[:title] %></h3>
+        <p>Score: <%= film[:score] %> </p>
+        <img src="<%=@base_image_url + film[:poster_path] %>" alt="Film poster"/>
+        <p>Synopsis: <%= film[:overview] %> </p>
+    </div>
+<% end %> 
+
+
+
+
