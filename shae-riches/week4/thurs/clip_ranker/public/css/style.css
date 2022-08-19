@@ -1,9 +1,27 @@
-h1{
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+section{
+    font-family: 'Aboreto';
+    /* border: 10px solid red; */
 }
-#footer{
-    position: relative;
-    top: 20vh;
+
+h1{
+    font-family: 'Aboreto';
+    text-align: center;
+    
+
+}
+
+
+#nav_bar{
+    text-align: center;
+
+
+}
+
+.nav_link{
+    text-align: center;
+    
 
 }
 
@@ -13,9 +31,6 @@ h1{
     position: absolute;
     right: 0;
     top: 0;
-
-    /* border-radius: 50%; */
-
     padding: 0.5rem;
 
 }
@@ -61,4 +76,13 @@ h1{
     display: inline;
     position: absolute;
     top: -10vh;
+}
+
+#full-page{
+    /* border: 5px solid red; */
+    background-color: antiquewhite;
+    background-image: url("/videos/ClearcutMelodicGreatwhiteshark-max-1mb.gif") ;
+    background-size: cover;
+    color: aliceblue;
+
 }

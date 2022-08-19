@@ -2,7 +2,7 @@
 <% clip['id'] %>
 <% end        %>
 
-<%= other_clip_ids %>  <%# array of clip_ids OTHER than current clip being viewed %>
+<%# <% other_clip_ids %>  <%# array of clip_ids OTHER than current clip being viewed %> 
 
 
 
@@ -81,7 +81,7 @@
                     </article>
 
                     <label>
-                        <button id='yes-button'> <input type='integer'> Nah, Yeah!</button>
+                        <button id='yes-button'>Nah, Yeah!</button>
                     </label>               
 
                     <label> 
@@ -91,16 +91,18 @@
                 </form> 
 
                 <form id='next-clip-sender' action="/clip_list/CLIP_TIME/<%= other_clip_ids[rand(0..2)] %>">
+                    
                     <label id='next-button'>
                         <button>Thank you, NEXT!</button>
                     </label>
-                </form> <%# closes 'next-clip-sender' form  %>
 
-            </div> <%# closes 'rank-up' div %>
+                </form>     <%# closes 'next-clip-sender' form  %>
+
+            </div>          <%# closes 'rank-up' div %>
 
 
 
-    </div> <%# closes video cotainer %>
+    </div>                  <%# closes video cotainer %>
 
 
 

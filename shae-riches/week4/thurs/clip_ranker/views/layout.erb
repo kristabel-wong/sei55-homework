@@ -10,28 +10,29 @@
 
 <body>
     
-    <nav id='nav_bar'>
-    <h1>CLIP RANKER
-    </h1>
-    <img id='nav_image' src="https://place-puppy.com/75x75" alt="smol dog">
-    </nav>
-    <a href="/">Home</a>
-    |
-    <a href="/about">About</a>
-    |
-    <a href="/clip_list">Clip List</a>
-    
-    <hr>
-
-    <section>
-        <%= yield %>
-    </section>
-
-    <footer id='footer'>
+    <div id='full-page'>
+        <nav id='nav_bar'>
+        <h1>CLIP RANKER
+        </h1>
+        <%# <img id='nav_image' src="https://place-puppy.com/75x75" alt="smol dog"> %>
+        
+        <a class='nav_link' href="/">Home</a>
+        |
+        <a class='nav_link' href="/about">About</a>
+        |
+        <a class='nav_link' href="/clip_list">Clip List</a>
+        </nav>
         <hr>
-        &copy; Clip_Ranker. 2022
-    </footer>
 
+        <section>
+            <%= yield %>
+        </section>
+
+        <footer id='footer'>
+            <hr>
+            &copy; Clip_Ranker. 2022
+        </footer>
+    </div>
 </body>
 
 </html>
