@@ -1,0 +1,28 @@
+
+
+<div class="entry">
+    <h2> Distro Details for <span class="distro_title"><%= @distro.name %></span></h2>
+    <img src="<%= @distro.logo_url %>" alt="<%= @distro.name %>" >
+    <br>
+    <figure>
+        <img src="<%= @distro.screenshot_url %>" alt="A screenshot of the <%= @distro.name %> in use." />
+        <figcaption>A screenshot of the <%= @distro.name %>distribution in use.</figcaption>
+    </figure>
+
+    <br>
+    <a href="/distros/<%= @distro.id %>/edit">Edit</a>
+    |
+    <a href="/distros/<%= @distro.id %>/delete" onlick="check_delete()">Delete</a>
+    <br>
+    <ul class="distro details">
+         <li><strong>Website:</strong><a href="<%= @distro.website %>"><%= @distro.website %></li></a>
+        <li><strong>Family:</strong><a href="/families/<%= @distro.family.id%>"><%= @distro.family.description %></li></a>
+        <li><strong>Latest Version:</strong><%= @distro.latest_version %></li>
+        <li><strong>Original Release Date:</strong><%= @distro.release_date %></li>
+        <li><strong>Current:</strong><%= @distro.is_current ? "Yes" : "No" %></li>
+        
+    </ul>
+    <br>
+    <p class="description_text"><strong>Description:</strong></p><br><p><%= @distro.description %></p>
+  
+</div>

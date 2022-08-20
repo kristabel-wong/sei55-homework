@@ -1,0 +1,81 @@
+<h2 id="new_heading">Add a New Distro</h2>
+
+<div class="form_container">
+    
+    <form action="/distros" method="post" id="new_form">
+    
+    <label>
+        Name:
+        <input type="text" name="name">
+    </label>
+    <br>
+
+
+    <label for="">
+        Family / Basis:
+        <select name = "family_id" id="family_id">
+            <option value="" selected disabled>Please select:</option>
+
+            <% Family.all.each do |family|  %>
+            <option value = "<%= family.id %>"> <%= family.description %>
+            </option>
+            <% end  %>
+        </select>
+    </label>   
+    
+    <br>
+
+     <label>
+        Latest Version:
+        <input type="text" name="latest_version">
+    </label>
+    <br>
+
+     <label>
+        Original Release Date:
+        <input type="date" name="release_date">
+    </label>
+    <br>
+
+      <label>
+        Current?
+        <select name="is_current" id="is_current">
+            <option value="" selected disabled>Please select:</option>
+            <option value="1"> Yes</option>
+            <option value="0"> No</option>
+        </select>
+    </label>
+    <br>
+
+
+
+     <label>
+        Website:
+        <input type="text" name="website">
+    </label>
+    <br>
+
+     <label>
+        Logo URL:
+        <input type="text" name="logo_url">
+    </label>
+    <br>
+
+    <label>
+        Screenshot URL:
+        <input type="text" name="screenshot_url">
+    </label>
+    <br>
+
+     <label>
+        Description:
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="Please type a brief description here"></textarea>
+    </label>
+    <br>
+
+    <button>Add Distro</button>
+    
+    </form>
+
+
+</div>

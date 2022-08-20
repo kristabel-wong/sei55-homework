@@ -1,0 +1,27 @@
+<div class="entry">
+    <h2> Family Details for <span class="family_title"><%= @family.description %></span></h2>
+    
+    <br>
+    <a href="/families/<%= @family.id %>/edit">Edit</a>
+    |
+    <a href="/families/<%= @family.id %>/delete" onlick="check_delete()">Delete</a>
+    <br>
+    <ul class="family details">
+    
+         <li><strong>File Type:</strong><%= @family.file_format %></li>
+        <li><strong>Package Manager:</strong><%= @family.package_manager %></li>
+        <li><strong>Release Year:</strong><%= @family.release_year %></li>
+
+        </ul>
+        <br>
+        <h3>Related Distros:</h3>
+            <ul>
+                <% @family.distros.each do |distros| %>
+                <li><a href ="/distros/<%= distros.id %>"><%= distros.name %></a></li>
+                <%  end  %>
+            </ul>
+        
+    
+    
+   
+</div>

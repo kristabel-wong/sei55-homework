@@ -1,0 +1,12 @@
+
+
+<div class="family_list">
+    <h2>Family Classes:</h2>
+    <%# Add all of the names to a list and link to their 'main' page %>
+    <ul>
+    <% @results.each do |family|  %>
+            <a href="/families/<%= family.id %>"><li> <%= family.description %> </li></a>
+    <% end  %>
+    </ul>
+
+</div>
