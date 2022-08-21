@@ -51,7 +51,7 @@ end
 
 def log2
     puts "a"
-    result Math.log2(get_a_number)
+    result = Math.log(get_a_number)
 end
 
 exitMenu = -1
