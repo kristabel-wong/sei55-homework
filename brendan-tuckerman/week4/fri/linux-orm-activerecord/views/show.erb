@@ -6,13 +6,13 @@
     <br>
     <figure>
         <img src="<%= @distro.screenshot_url %>" alt="A screenshot of the <%= @distro.name %> in use." />
-        <figcaption>A screenshot of the <%= @distro.name %>distribution in use.</figcaption>
+        <figcaption>A screenshot of the <%= @distro.name %> distribution in use.</figcaption>
     </figure>
 
     <br>
     <a href="/distros/<%= @distro.id %>/edit">Edit</a>
     |
-    <a href="/distros/<%= @distro.id %>/delete" onlick="check_delete()">Delete</a>
+    <a href="#" onclick= "checkDelete('distros',<%= @distro.id %>)">Delete</a>
     <br>
     <ul class="distro details">
          <li><strong>Website:</strong><a href="<%= @distro.website %>"><%= @distro.website %></li></a>
@@ -24,5 +24,15 @@
     </ul>
     <br>
     <p class="description_text"><strong>Description:</strong></p><br><p><%= @distro.description %></p>
-  
+      <script src="/js/main.js" type="text/javascript"></script>
+
+    <br>
+    <h3>Asociated packages:</h3>
+        <% @bridges.each do |bridge| %>
+            <ul>
+                <li><%= bridge.package.name  %></li>
+            </ul>
+        <% end   %>
+
+
 </div>

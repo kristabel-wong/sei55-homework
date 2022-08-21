@@ -4,7 +4,7 @@
     <br>
     <a href="/families/<%= @family.id %>/edit">Edit</a>
     |
-    <a href="/families/<%= @family.id %>/delete" onlick="check_delete()">Delete</a>
+    <a href="#" onclick= "checkDelete('families',<%= @family.id %>)">Delete</a>
     <br>
     <ul class="family details">
     
@@ -22,6 +22,6 @@
             </ul>
         
     
-    
+    <script src="/js/main.js" type="text/javascript"></script>
    
 </div>

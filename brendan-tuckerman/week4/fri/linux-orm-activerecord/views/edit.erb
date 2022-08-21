@@ -77,6 +77,15 @@
     </label>
     <br>
 
+    <h3>Asociated packages:</h3>
+        <% @packages.each do |package| %>
+            
+            <input type= "checkbox" name="package.package_id" ><%= package.name  %></li>
+            
+        <% end   %>
+
+
+
     <button>Confirm Edits</button>
     
     </form>

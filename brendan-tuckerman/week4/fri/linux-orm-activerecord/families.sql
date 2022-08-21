@@ -34,4 +34,13 @@ INSERT INTO families ( description, file_format, package_manager, release_year )
 
     );
 
+INSERT INTO families ( description, file_format, package_manager, release_year )
+VALUES (
+    'Gentoo ',
+    'HFS',
+    'Portage',
+    2000
+
+    );
+
 

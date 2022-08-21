@@ -47,3 +47,18 @@ INSERT INTO distros (name, family_id, description, latest_version, is_current, r
         "handylinux.org" 
 
     );
+
+
+    INSERT INTO distros (name, family_id, description, latest_version, is_current, release_date, logo_url, screenshot_url, website)
+    VALUES (
+        "CentOS",
+        1,
+        "Community-supported Linux distribution designed as an OpenSource version of RHEL and well suited for servers. Now sponsored by Red Hat. ",
+        "2.4.5",
+        1,
+        "2004-14-05",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Centos-logo-light.svg/300px-Centos-logo-light.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CentOS_Stream_9_Workstation_showing_GNOME_Shell_40.png/300px-CentOS_Stream_9_Workstation_showing_GNOME_Shell_40.png",
+        "centos.org" 
+
+    );

@@ -1,11 +1,14 @@
 console.log('Mic Check');
 
-function check_delete () {
-    if (confirm('Are you sure you want to save this thing into the database?')) {
-        // Save it!
-        console.log('Thing was saved to the database.');
+const  checkDelete = (subPath, id) => {
+    if (confirm('Are you sure you want to remove this thing from the database?\n\nWARNING: This cannot be undone.')) {
+        // Remove it
+        console.log('Thing was removed from the database.');
+        return window.location.href = `/${subPath}/${id}/delete`;
+        
       } else {
         // Do nothing!
-        console.log('Thing was not saved to the database.');
+        console.log('Thing was not removed from the database.');
+        return window.location.href = `/${subPath}`;
       }
 };

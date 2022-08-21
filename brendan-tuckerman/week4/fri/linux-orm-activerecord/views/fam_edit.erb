@@ -1,0 +1,36 @@
+
+
+ <h2 id="edit_heading">Editing <%= @family.description %>
+</h2>
+
+
+<div class="form_container">
+    
+    <form action="/families/<%=  @family.id %>" method="post" id="new_form">
+    
+    <label>
+        Description:
+        <input type="text" name="description" value ="<%= @family.description %>">
+    </label>
+    <br>
+
+    <label>
+        File Type:
+        <input type="text" name="file_format" value ="<%= @family.file_format%>">
+    </label>
+    <br>
+
+     <label>
+        Package Manager:
+        <input type="text" name="package_manager" value ="<%= @family.package_manager %>">
+    </label>
+    <br>
+
+    
+
+    <button>Confirm Edits</button>
+    
+    </form>
+
+
+</div>
