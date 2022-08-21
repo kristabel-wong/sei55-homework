@@ -1,10 +1,10 @@
 
-<h2 id="edit_heading">Editing package "<%= @package.name %>"
+
+
+
+<div class=" box">
+    <h2 id="edit_heading">Editing package "<%= @package.name %>"
 </h2>
-
-
-<div class="form_container">
-    
     <form action="/packages/<%=  @package.id %>" method="post" id="new_form">
     
     <label>
@@ -20,6 +20,7 @@
     <br>
 
     <%# First, put in check boxes with each of the distros %>
+    <h3>Distros that use this package:</h3>
         <% Distro.all.each do |distro|  %>
             <input type="checkbox" name="<%=distro.id %>"  id=""><%= distro.name %><br>
         <% end  %>

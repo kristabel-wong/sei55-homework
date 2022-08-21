@@ -1,4 +1,4 @@
-console.log('Mic Check');
+// This prompts the user when they click on the delete link
 
 const  checkDelete = (subPath, id) => {
     if (confirm('Are you sure you want to remove this thing from the database?\n\nWARNING: This cannot be undone.')) {

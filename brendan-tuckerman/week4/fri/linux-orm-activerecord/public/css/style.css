@@ -42,14 +42,23 @@ li {
     padding:10px
 }
 
+img {
+    padding: 10px;
+}
+
 svg{
     height: 25px;
     border-radius: 5px;
+    padding: 10px
     
 }
 
 svg:hover{
     background-color: aqua;
+}
+
+figcaption{
+    font-size: 0.6rem;
 }
 
 header h2 {
@@ -60,6 +69,10 @@ header h2 {
 nav {
     display: flex;
     align-items: center;
+}
+
+a{
+    text-decoration: underline;
 }
 
 a:hover {
@@ -77,6 +90,13 @@ main{
 
 }
 
+p{
+    line-height: 1.5;
+}
+
+#main_title{
+    border-bottom: 10px solid black;
+}
 
 footer{
     position: static;
@@ -102,18 +122,19 @@ footer{
     text-decoration: overline;
     list-style: none;
     padding: 5px;
+    margin-top: 10px;
 }
 
 /*Index*/
 
-.distro_list {
+.box {
     margin-top: -10vh;
     text-align: center;
     min-width: 50vw;
     margin-left: 25vw;
     margin-bottom: 25vh;
-    background-color: rgba(73, 73, 73, 0.6) ;
     border-radius: 25px;
+    box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
 }
 
 .distro_list h2 {
@@ -134,15 +155,12 @@ footer{
 
 #new_heading {
     font-size: 1.8rem;
-    margin-top: -20vh;
    }
 
 .form_container{
     font-weight: bold;
     width: 100%;
     margin-left: 25vw;
-    border-top: 2px double rgba(73, 73, 73, 0.6);
-    border-bottom: 2px double rgba(73, 73, 73, 0.6);
     
 }
 
@@ -153,16 +171,15 @@ input{
 
 /*entry*/
 
-.distro_title{
-    color: rebeccapurple;
-    font-size: 2rem;
+span {
+    color: #f4bd22;
 }
 
 .entry{
     width: 100%;
     margin-left: 25vw;
     margin-top: -10vh;
-    background-color: rgba(73, 73, 73, 0.6);
+    
 }
 
 .entry li{
@@ -180,15 +197,14 @@ input{
 }
 
 a {
-    color: blue;
+    color: rgb(76, 76, 78);
 }
 
 /*Edit*/
 
 #edit_heading {
     font-size: 1.8rem;
-    margin-top: 10vh;
-    padding-right: 25px;
+
 }
 
 
@@ -199,7 +215,6 @@ a {
     margin-top: 20vh;
     text-align: center;
     width: 100%;
-    background-color: rgba(73, 73, 73, 0.6);
     
 }
 
@@ -213,3 +228,8 @@ button{
     margin: 8px 150px;
     text-align: center;
 }
+
+.details{
+    line-height: 1.5;
+}
+

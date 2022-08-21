@@ -1,6 +1,6 @@
 
 
-<div class="entry">
+<div class="box">
     <h2> Distro Details for <span class="distro_title"><%= @distro.name %></span></h2>
     <img src="<%= @distro.logo_url %>" alt="<%= @distro.name %>" >
     <br>
@@ -30,7 +30,7 @@
     <h3>Asociated packages:</h3>
         <% @bridges.each do |bridge| %>
             <ul>
-                <li><%= bridge.package.name  %></li>
+               <a href="<%= bridge.id %>"> <li><%= bridge.package.name  %></li></a>
             </ul>
         <% end   %>
 

@@ -37,14 +37,14 @@ class Family < ActiveRecord::Base #this assumes the existence of lower case fami
 end
 
 class Package < ActiveRecord::Base
-    has_many :distros, through: :bridges #plural - many to many
+    has_many :distros#, #through: :bridges #plural - many to many
 end
 
 #Joining table for many to many. Stores a list of keys that mathces hich packeges are on which distros
-class Bridge < ActiveRecord::Base
-    belongs_to :distro #foreign key
-    belongs_to :package #foregn key
-end
+# class Bridge < ActiveRecord::Base
+#     belongs_to :distro #foreign key
+#     belongs_to :package #foregn key
+# end
 
 
 
@@ -173,15 +173,15 @@ post '/distros/:id' do
         screenshot_url: params[:screenshot_url],
         description: params[:description]
     )
-    bridge.each do |pack|
-        pack.update(
+    # bridge.each do |pack|
+    #     pack.update(
         
-            distro_id: params[:id],
-            package_id: params[:package_id]
+    #         distro_id: params[:id],
+    #         package_id: params[:package_id]
             
 
-        )
-    end
+    #     )
+    # end
 
 
     redirect "/distros/#{params[:id]}"

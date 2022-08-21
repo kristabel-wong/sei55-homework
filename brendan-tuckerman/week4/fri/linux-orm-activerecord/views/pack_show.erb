@@ -1,5 +1,5 @@
-<div class="entry">
-    <h2> Details for the package "<span class="show_title"><%= @package.name %></span>"</h2>
+<div class="box">
+    <h2> Details for the package <span class="show_title"><%= @package.name %></span></h2>
     
     <br>
     <a href="/packages/<%= @package.id %>/edit">Edit</a>
@@ -8,16 +8,17 @@
     <br>
     <ul class="details">
     
-         <li><strong>Description</strong><%= @package.description %></li>
+         <li><strong>Description:</strong><em><%= @package.description %></li></em>
         
 
         </ul>
         <br>
         <h3>Distros that use this Package:</h3>
             <ul>
-                <% @package.distros.each do |distros| %>
-                <li><a href ="/distros/<%= distros.id %>"><%= distros.name %></a></li>
-                <%  end  %>
+                <%# <% @package.distros.each do |distros| %> 
+                <%# <li><a href ="/distros/<%= distros.id %>
+                <%# <%= distros.name</a></li> %> 
+                <%# <%  end  %> 
             </ul>
         
     
