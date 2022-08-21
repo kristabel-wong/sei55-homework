@@ -1,0 +1,33 @@
+<h2>
+    <%= @travel['location'] %>
+</h2>
+
+<div class="editdelete">
+<a  href="/travel/<%=@travel['id']%>/edit">Edit</a>
+|
+<a href="/travel/<%=@travel['id']%>/delete">Delete</a>
+</div>
+
+<p>
+    <strong>Country:</strong>
+    <%= @travel['country'] %>
+</p>
+
+<p>
+    <strong>Description:</strong>
+    <%= @travel['description'] %>
+</p>
+
+<p>
+    <strong>Rating out of 10:</strong>
+    <%= @travel['rating'] %>
+</p>
+
+<p>
+    <strong>Visited:</strong>
+    
+    <%= @travel['visited'] == 1 ? 'Yes' : 'No' %>
+
+</p>
+
+<img class="travel-image" src="<%= @travel['image_url'] %>" alt=" <%= @travel['location'] %> ">

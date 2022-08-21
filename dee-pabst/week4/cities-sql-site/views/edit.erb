@@ -1,0 +1,39 @@
+<h2>Edit <%= @city['name'] %></h2>
+
+<form action="/city/<%=params[:id]%>" method="post">
+    <table>
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td><input id="name" type="text" name="name" value="<%=@city['name']%>"></td>
+        </tr>
+        <tr>
+            <td><label for="country">Country</label></td>
+            <td><input id="country" type="text" name="country" value="<%=@city['country']%>"></td>
+        </tr>
+        <tr>
+            <td><label for="population"></label>Population</td>
+            <td><input id="population" type="number" name="population" value="<%=@city['population']%>"></td>
+        </tr>
+        <tr>
+            <td><label for="demonym"></label>Demonym</td>
+            <td><input id="demonym" type="text" name="demonym" value="<%=@city['demonym']%>"></td>
+        </tr>
+        <tr>
+            <td><label for="area"></label>Area</td>
+            <td><input id="area" type="number" name="area" value="<%=@city['area']%>"></td>
+        </tr>
+        <tr>
+            <td><label for="image_URL"></label>Image URL</td>
+            <td><input id="image_URL" type="text" name="image_url" value="<%=@city['image_url']%>"></td>
+        </tr>
+        <tr>
+            <td><label for="visited"></label>Visited?</td>
+            <td><input id="visited" type="checkbox" name="visited" value="1"<% @city['visited'] == 1 ? checked=true : checked=false  %> ></td>
+        </tr>
+        <tr>
+            <td>
+                <button>Update</button>
+            </td>
+        </tr>
+    </table>
+</form>
