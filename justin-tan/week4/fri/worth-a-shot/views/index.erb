@@ -1,0 +1,15 @@
+<h2>List of all Poisons</h2>
+
+<div id="index">
+<% @results.each do |el| %>
+
+    <div class="alcohol_img">
+    <a href="/alcohols/<%= el.id %>">
+        <img src="<%= el.image_url %>" alt="<%= el.id %>">
+    </a>
+
+    <p><%= el.name %></p>
+    </div>
+
+<% end %>
+</div>
