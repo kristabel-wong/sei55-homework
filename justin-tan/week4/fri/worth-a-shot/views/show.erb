@@ -1,0 +1,44 @@
+<h2>Toxicology Report</h2>
+
+<div id="report">
+<img src="<%= @alcohol.image_url %>" alt="<%= @alcohol.name %>" id="alcohol_detail_img">
+
+<h3><strong>Poison Name</strong></h3>
+<p><%= @alcohol.name %></p>
+
+<h3><strong>Poison Type</strong></h3>
+<p><%= @alcohol.kind %></p>
+
+<h3><strong>Age</strong></h3>
+<p><%= @alcohol.age %></p>
+
+<h3><strong>Country</strong></h3>
+<p><%= @alcohol.country %></p>
+
+<h3><strong>Toxic level</strong></h3>
+<p><%= @alcohol.percentage %>%</p>
+
+<h3><strong>Wallet Damage</strong></h3>
+<p>$<%= @alcohol.price %></p>
+
+<h3><strong>Premiumity</strong></h3>
+<p><%= @alcohol.premium == true ? 'Yes' : 'No' %></p>
+
+<h3><strong>Description</strong></h3>
+<p><%= @alcohol.description %></p>
+
+<h3><strong>Rightful Owner</strong></h3>
+<a href="/profiles/<%= @alcohol.profile.id %>">
+<img src="<%= @alcohol.profile.profile_img %>" alt="<%= @alcohol.profile.id %>" id="avatar">
+<p><%= @alcohol.profile.name %></p>
+</a>
+
+<nav class="show_nav">
+<a href="/alcohols/<%= @alcohol.id %>/edit">Edit Poison</a> 
+
+<a href="/alcohols/<%= @alcohol.id %>/delete" class="delete">Delete Poison</a>
+</nav>
+</div>
+
+
+

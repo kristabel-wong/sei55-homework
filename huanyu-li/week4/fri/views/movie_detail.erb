@@ -1,0 +1,28 @@
+
+<h2><%= @movie.title %></h2>
+
+<a href="/movies/<%= @movie.id %>/edit">Edit</a>
+|
+<a href="/movies/<%= @movie.id %>/delete">Delete</a>
+
+<div class="container">
+    <div class="image">
+        <img src="<%= @movie.poster_url %>" alt="<%= @movie.title %>">
+        </div>
+    <div class="text">
+        <strong>Title:  </strong><%= @movie.title %> <br><br>
+       <strong>Date:  </strong><%= @movie.release_date %> <br><br>
+        <strong>Runtime:  </strong><%= @movie.runtime %> <br><br>
+        <strong>Score:  </strong><%= @movie.score %> <br><br>
+        <strong>Overview:  </strong><%= @movie.overview %> <br><br>
+        
+ 
+        <% unless @movie.cast == nil %>
+            <strong>Cast:  </strong>
+            <a href="/casts/<%= @movie.cast.id %>"> <%= @movie.cast.name%> </a>
+         <br><br>
+        <% end %>
+      
+         
+        </div>
+    </div>

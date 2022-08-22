@@ -1,0 +1,35 @@
+
+
+
+
+<div class=" box">
+    <h2 id="edit_heading">Editing package "<%= @package.name %>"
+</h2>
+    <form action="/packages/<%=  @package.id %>" method="post" id="new_form">
+    
+    <label>
+        Name:
+        <input type="text" name="name" value ="<%= @package.name %>">
+    </label>
+    <br>
+
+     <label>
+        Description:
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="Please type a brief description here"><%= @package.description %></textarea>
+    </label>
+    <br>
+
+    <%# First, put in check boxes with each of the distros %>
+    <h3>Distros that use this package:</h3>
+        <% Distro.all.each do |distro|  %>
+            <input type="checkbox" name="<%=distro.id %>"  id=""><%= distro.name %><br>
+        <% end  %>
+        
+    
+
+    <button>Confirm Edit</button>
+    
+    </form>
+
+
+</div>
