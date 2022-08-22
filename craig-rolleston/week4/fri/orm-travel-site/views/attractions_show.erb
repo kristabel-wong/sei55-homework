@@ -1,0 +1,19 @@
+<h2>
+    <%= @attractions.travel.location if @attractions.travel%>
+</h2>
+
+<a  href="/attractions/<%=@attractions.id%>/edit">Edit</a>
+|
+<a href="/attractions/<%=@attractions.id%>/delete">Delete</a>
+
+<p>
+    <strong>Name:</strong>
+    <%= @attractions.name %>
+</p>
+
+<p>
+    <strong>Destination:</strong>
+    <%= @attractions.travel.location if @attractions.travel%>
+</p>
+
+<img class="attraction-image" src="<%= @attractions.image_url %>" alt=" <%= @attractions.travel %> ">

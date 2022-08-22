@@ -1,0 +1,29 @@
+<h3><%= @attractions.name %></h3>
+
+<form action="/attractions/<%= @attractions.id %>" method="post">
+
+    <label>
+    Name:
+        <input type="text" name="name" value="<%= @attractions.name %>">
+    </label>
+    <br>
+    <label>
+    Image URL:
+        <input type="text" name="image_url" value="<%= @attractions.image_url %>">
+    </label>
+    <br>
+    <label>
+    Destination:
+        <select name="travel_id">
+            <option>--</option>
+            <% Travel.all.each do |travel| %>
+            <option value="<%= travel.id %>">
+            <%= travel.location %>
+            </option>
+            <% end %>
+        </select>
+    </label>
+
+    <button>Edit Attraction</button>
+
+</form>
