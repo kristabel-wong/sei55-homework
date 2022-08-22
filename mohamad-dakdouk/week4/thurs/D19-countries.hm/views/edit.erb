@@ -1,0 +1,47 @@
+<%# This is the editing page inserts a prefilled form with existing data from the database %>
+
+<h3>Editing <%= @country['name'] %> </h3>
+
+
+<form action="/countries/<%= @country['id'] %>" method="post">
+
+<label>
+    name:
+    <input type="text" name="name" value="<%= @country['name']%>">
+</label>
+<br>
+
+<label>
+    Location:
+    <input type="text" name="location" value="<%= @country['location']%>">
+</label>
+<br>
+<label>
+    Language:
+    <input type="text" name="language" value="<%= @country['language']%>">
+</label>
+<br>
+<label>
+    Population:
+    <input type="text" name="population" value="<%= @country['population']%>">
+</label>
+<br>
+<label>
+    Attractions:
+    <input type="text" name="attractions" value="<%= @country['attractions']%>">
+</label>
+<br>
+<label>
+    Vist (1 for yes, 0 for No):
+    <input type="text" name="vist" value="<%= @country['vist']%>">
+</label>
+<br>
+<label>
+    Image:
+    <input type="text" name="image_url" value="<%= @country['image_url']%>">
+</label>
+<br>
+
+<button>Update Country</button>
+
+</form>
