@@ -1,0 +1,43 @@
+
+
+<h2>Edit for <%= @cast.name %></h2>
+<a href="/casts/<%= @cast.id %>/delete">Delete</a>
+
+<br>
+<br>
+<form action="/casts/<%= @cast.id %>" method="post" class="addNew">
+
+<label>
+    Name: <br>
+    <input type="text" name="name" value="<%= @cast.name %>">
+</label>
+
+
+<label>
+    Birthday: <br>
+    <input type="date" name="birthday" value="<%= @cast.birthday %>">
+</label>
+
+
+<label>
+    Place of Birth: <br>
+    <input type="text" name="place_of_birth" value="<%= @cast.place_of_birth %>">
+</label>
+
+
+<label>
+    Biography: <br>
+    <textarea name="biography" cols="30" rows="5"><%= @cast.biography %></textarea>
+</label>
+
+
+<label>
+    Photo URL: <br>
+    <textarea name="photo_url" cols="30" rows="5"><%= @cast.photo_url %></textarea>
+</label>
+<br>
+
+
+<button>Update</button>
+</form>
+

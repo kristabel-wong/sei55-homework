@@ -1,0 +1,10 @@
+<h2>All cities</h2>
+
+<%# list of cities builds here dynamically %>
+<% @result.each do |city|%>
+    <ol>
+        <a href="/city/<%=city['id']%>">
+        <%= city['name']%>, <%= city['country']%>
+        </a>
+    </ol>
+<% end %>

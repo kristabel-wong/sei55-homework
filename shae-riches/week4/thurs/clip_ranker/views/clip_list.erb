@@ -1,0 +1,12 @@
+Clip Titles
+
+<% @clip_list.each do | clip | %>
+
+    <li>
+        <a href="clip_list/CLIP_TIME/<%= clip['id'] %>">
+        <%= clip['title'] %>
+        </a>
+    
+    </li>
+
+<% end  %>

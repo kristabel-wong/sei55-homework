@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Library</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="/images/tux.jpg" alt="image of Tux the linux mascot">
+        <h2>The Linux Library</h2>
+
+        <nav>
+            <ul>   
+                <a href="/"><li>Home</li></a>
+                |
+                <a href="/distros"><li>All Distros</<li></a>
+                |
+                <a href="/distros/new"><li>Add</<li></a>
+                |
+                <a href="https://www.linux.org/forums/linux-beginner-tutorials.123/" target="_blank"><li>Learn Linux</<li></a>
+            
+            </ul>
+        
+        </nav>
+    </header>
+    <main>
+
+        <%= yield %>
+
+    </main>
+    <footer>&copy Brendan Tuckerman 2022</footer>
+    <script src= "js/main.js" type="text/javascript"></script>
+</body>
+</html>

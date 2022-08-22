@@ -1,0 +1,16 @@
+
+<ul>
+<% @data_results.each do |item| %>
+    <li>
+    Title: <a href="/movie-details?movie_id=<%= item["id"] %>"><%= item["title"] %></a>  <br>
+    Date: <%= item["release_date"] %> <br>
+    Score: <%= item["vote_average"] %> <br>
+    Overview: <%= item["overview"] %> <br>
+    Poster: <br>
+    <a href="/movie-details?movie_id=<%= item["id"] %>"><img src="https://image.tmdb.org/t/p/w185/<%=item["poster_path"]%>"/></a> <br>
+    <hr>
+    </li>
+<% end  %>
+
+</ul>
+    

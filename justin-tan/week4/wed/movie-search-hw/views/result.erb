@@ -1,0 +1,20 @@
+
+
+<p>Results for <strong><%= @search %>:</strong></p>
+
+
+<ul>
+<% @dataArr.each do |el| %>
+    <% @movie_id = el["id"] %> 
+
+   <a href="/result/<%= @movie_id %>" name="<%= @movie_id %>" >
+   <img src="https://image.tmdb.org/t/p/original/<%= el["poster_path"] %>" alt="image_thumbnail" class="image">
+   </a>
+
+   <li class="original_title"><strong> <%= el["original_title"] %> </strong></li>
+
+   <p class="release_date"> <%= el["release_date"] %> </p>
+
+   <p class="overview"> <%= el["overview"] %> </p>
+<% end %>
+</ul>

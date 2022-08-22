@@ -13,6 +13,7 @@
 #Phase 2
 #Advanced Calculator functionality
 #Calculator should be able to do more complex arithmetic (exponents, square roots) - STFW##
+puts "Welcome to Calculator"
 
 print "please enter first number: "
 num1 = gets.chomp.to_f
@@ -20,23 +21,32 @@ num1 = gets.chomp.to_f
 print "please enter second number: "
 num2 = gets.chomp.to_f
 
-print "Please select what operations you would like to perform (add/substract/multiply/divide/exponents/square root):"
-operation = gets.chomp.downcase
+puts "Please select the number of the operation you would like to perform: "
+puts "1. Add"
+puts "2. Substract"
+puts "3. Multiply"
+puts "4. Divide"
+puts "5. Exponents"
+puts "6. Square Root"
+puts "7. Exit"
+operation = gets.to_i
 
 case operation
-when "add"
+when 1
     puts "#{num1} + #{num2} = #{num1 + num2}"
-when "substract"
+when 2
     puts "#{num1} - #{num2} = #{num1 - num2}"
-when "multiply"
+when 3
     puts "#{num1} * #{num2} = #{num1 * num2}"
-when "divide"
+when 4
     puts "#{num1} / #{num2} = #{num1 / num2}"
-when "exponents"
-    puts "#{num1} to the #{num2} power is #{num1 ** num2}"
-when "square root"
-    puts "#{num1}'s square root is #{num1.sqrt}"
-    puts "#{num2}'s square root is #{num2.sqrt}"
+when 5
+    puts "#{num1} to the power of #{num2} is #{num1 ** num2}"
+when 6
+    puts "#{num1}'s square root is #{Math.sqrt(num1)}"
+    puts "#{num2}'s square root is #{Math.sqrt(num2)}"
+when 7
+    puts "Bye Bye"
 else
     puts "please check your operation input"
 end
