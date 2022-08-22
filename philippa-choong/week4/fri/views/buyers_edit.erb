@@ -1,0 +1,20 @@
+<h3> Edit <%= @buyer.name %> Profile
+</h3>
+
+<form action="/buyers/<%= @buyer.id %>" method="post">
+
+<label>
+Name:
+<input type="text" name="name" value="<%= @buyer.name %>">
+</label>
+
+<br>
+
+<label>
+Email:
+<input type="text" name="email" value="<%= @buyer.email %>">
+</label>
+
+<button>Submit!</button>
+
+</form>
