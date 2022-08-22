@@ -1,0 +1,83 @@
+body {
+    color: hsl(350deg, 100%,100%);
+    background-image: url('/images/stylus-gcae8bc8f0_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: black;
+    border-radius: 5px;
+    border: 4px solid hsl(350deg, 100%,100%);
+    padding: 1vw 5vw;
+    margin: 1vw 5vw;
+}
+
+a {
+    text-decoration: none;  
+    color: hsl(350deg, 100%,100%);
+}
+
+nav a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 15%;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+nav a:hover {
+    background-color: hsl(350deg, 100%,100%);
+    color: hsl(350deg, 100%, 50%);
+    border-radius: 5px;
+}
+
+section img{
+    width: 40vw;
+    border-radius: 5px;
+    left: 20vw;
+    position: relative;
+}
+
+section {
+    background-color: hsla(350deg, 100%, 50%, .7);
+    padding: 1vw 5vw;
+    margin: 1vw 5vw;
+    border: 4px solid black;
+    border-radius: 5px;
+}
+
+h2{
+    text-align: center;
+}
+
+table {
+    position: relative;
+    background-color: black;
+    border-radius: 5px;
+    width: 40vw;
+    left: 20vw;
+    font-size: .8rem;
+}
+
+td{
+    padding: 0 4px;
+    margin: 0 4px;
+}
+
+header img {
+    position: relative;
+    width: 70vw;
+    left: 10vw;
+}
+header {
+background-color:  hsla(350deg, 100%,100%, .8);
+border-radius: 5px;
+margin: 0 5vw;
+}
+
+select {
+    width: 89%;
+}
