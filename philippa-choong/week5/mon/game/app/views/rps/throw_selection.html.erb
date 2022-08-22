@@ -1,0 +1,13 @@
+<h3> Enter your secret number between 1 to 10 </h3>
+
+<%= image_tag 'rps.png', alt:'rock-paper-scissors image', class:'rps-image'%>
+
+<form action="/rps/throw_verdict">
+
+    <label>
+    Rock,Paper or Scissors? 
+    <input type="text" name="throw">
+    </label>
+    <br>
+
+    <button> Submit </button>
