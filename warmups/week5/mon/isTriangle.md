@@ -12,4 +12,4 @@ puts triangle? 5, 1, 2 # => false
 ```
 
 ### Bonus
-Instead of explicitly taking 3 parameters, make your function **variadic**.
+Instead of explicitly taking 3 parameters, make your function **variadic**. (Don't give me more than 3 numbers - because we won't be testing a triangle anymore)
