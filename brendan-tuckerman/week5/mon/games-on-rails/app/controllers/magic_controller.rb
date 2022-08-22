@@ -7,7 +7,7 @@ class MagicController < ApplicationController
     def answer
         @question = params[:question]
 
-        @options = [   	
+        options = [   	
             "It is certain",   	
             "It is decidedly so",   	"Without a doubt",   	
             "Yes definitely",   	
@@ -25,6 +25,9 @@ class MagicController < ApplicationController
             "Outlook not so good",   	
             "Very doubtful" ]
 
+        choice = rand options.length
+
+        @answer = options[choice]
 
     end #end answer
  

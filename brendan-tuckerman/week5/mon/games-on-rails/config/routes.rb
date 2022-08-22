@@ -8,15 +8,25 @@ Rails.application.routes.draw do
   get '/magic'  => 'magic#question'
 
   # Magic 8 ball 2: Provide Answer
-  get 'magic/answer' =>  'magic#answer'+
+  get 'magic/answer' =>  'magic#answer'
 
 
-  # Secret paghes
+  # Secret Number
 
   # 1 . form
-  get '/secret' => 'secret#'
+  get '/secret' => 'secret#guess'
 
 
-  # 2. right or woron
+  # 2. right or wrong
+  get 'secret/check' =>
+ 'secret#check'
+
+
+
+  ## Rock Paper Scissors
+
+  get 'rock_paper_scissors/' => 'rock_paper_scissors#choose' 
+
+  get 'rock_paper_scissors/throw' => 'rock_paper_scissors#throw'
 
 end
