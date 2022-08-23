@@ -52,7 +52,8 @@ post '/hits' do
         weeks_at_number_one:    params[:weeks_at_number_one],
         year_released:          params[:year_released],
         spotify_streams:        params[:spotify_streams],
-        thumbnail:              params[:thumbnail]
+        thumbnail:              params[:thumbnail],
+        artist_id:              params[:artist_id]
     )
 
     # go to the hits page to confirm the new entry
