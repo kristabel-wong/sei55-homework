@@ -1,0 +1,9 @@
+<h2>All trees</h2>
+
+<ul>
+<% @trees.each do |tree| %>
+<li>
+<%= link_to tree.common_name, tree_path(tree.id) %>
+</li>
+<% end %>
+</ul>
