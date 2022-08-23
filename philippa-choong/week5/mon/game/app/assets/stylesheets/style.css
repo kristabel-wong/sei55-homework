@@ -20,6 +20,13 @@ h4{
     font-size: 40px;
 }
 
+a{
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(0, 255, 170);
+    font-size: 20px;
+}
+
+
 .eight-ball{
     width:30%;
 }
