@@ -1,0 +1,60 @@
+
+<h2>Add New Movie</h2>
+<br>
+<form action="/movies" method="post" class="addNew">
+
+<label>
+    Title: <br>
+    <input type="text" name="title" required>
+</label>
+
+
+<label>
+    Date: <br>
+    <input type="date" name="release_date">
+</label>
+
+
+<label>
+    Runtime: <br>
+    <input type="text" name="runtime">
+</label>
+
+
+<label>
+    Score: <br>
+    <input type="number" step="0.1" max="10" min="0" name="score">
+</label>
+
+
+<label>
+    Overview: <br>
+    <textarea name="overview" cols="30" rows="5"></textarea>
+    <%# <input type="text" name="overview"> %>
+</label>
+
+
+<label>
+    Poster URL: <br>
+    <textarea name="poster_url" cols="30" rows="5"></textarea>
+    <%# <input type="text" name="poster_url"> %>
+</label>
+
+
+<label>
+    Cast:
+    <select name="cast_id">
+    <option value="" selected disabled>Please select:</option>
+
+    <% Cast.all.each do |cast|  %>
+        <option value="<%= cast.id %>">
+        <%= cast.name %>
+        </option>
+    <% end  %>
+    <option value="">Not in the List</option>
+    </select>
+</label>
+<br>
+<button>Add</button>
+</form>
+

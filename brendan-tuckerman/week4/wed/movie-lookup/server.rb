@@ -40,7 +40,7 @@ get '/search/results' do
 
     #TODO: will need to do the following for eahc page of results
 
-    @movie_details = all_search_results["results"]
+    @ = all_search_results["results"]
 
     ##create an array to store the results, title, score(and later other details)
     @worst_list = []
