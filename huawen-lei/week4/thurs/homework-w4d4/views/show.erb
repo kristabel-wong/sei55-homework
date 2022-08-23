@@ -1,0 +1,43 @@
+
+
+<h3>
+    Information of <%=@movie['name'] %>
+</h3>
+
+<a href="/movie/<%=@movie['id'] %>/edit">Update Info</a>
+|
+<a href="/movie/<%=@movie['id'] %>/delete">Delete</a>
+
+<p>
+<strong>Release Year: </strong>
+<%=@movie['release_year'] %>
+</p>
+
+<p>
+<strong>Director: </strong>
+<%=@movie['director'] %>
+</p>
+
+<p>
+<strong>Starring: </strong>
+<%=@movie['starring'] %>
+</p>
+
+<p>
+<strong>Country: </strong>
+<%=@movie['country'] %>
+</p>
+
+<p>
+<strong>Running time: </strong>
+<%=@movie['running_time'] %> min
+</p>
+
+<p>
+<strong>Watch or not: </strong>
+<%=@movie['watch_or_not'] == 1? 'Yes': 'No' %>
+</p>
+
+<img src="<%=@movie['image_url'] %>" alt="<%=@movie['name'] %>">
+
+
