@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body{
-    background-color: hsl(202, 83%, 65%);
+    background-color: #58bffd;
     color: rgb(29, 28, 28);
     font-family: 'Poppins', sans-serif;
 }
 
 a{
     color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
 }
 
 svg {
@@ -37,6 +42,10 @@ header li{
 
 }
 
+h1{
+    font-size: 4rem;
+}
+
 .sidebar{
     position: absolute;
     left: 0;
@@ -47,5 +56,61 @@ header li{
 }
 
 .container{
-    margin-left: 20vw;
+     margin-left: 20vw;
+} 
+
+.sign_button{
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
+
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.5rem;
+}
+
+footer ul{
+    display: inline-flex;
+    
+}
+
+footer li{
+    padding: 10px; 
+}
+
+
+/*home*/
+#main_image{
+    min-height: 50vh;
+}
+
+#home{
+    text-align: center;
+}
+
+/*new and edit*/
+.form{
+
+    border: 2px solid #89c7ee;
+    padding: 10px;
+    width: 50vw;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.show{
+    border: 2px solid #89c7ee;
+    padding: 10px;
+    width: 50vw;
+    border-radius: 20px;
+}
+
+.profile{
+    margin: 0 auto;
+    text-align: center;
+
 }

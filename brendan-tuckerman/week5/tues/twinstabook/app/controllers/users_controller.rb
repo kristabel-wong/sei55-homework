@@ -37,6 +37,7 @@ class UsersController < ApplicationController
 
     # 2. Show single entry
     def show
+        @path = user_path.to_s
         @user = User.find params[:id]
     end
 

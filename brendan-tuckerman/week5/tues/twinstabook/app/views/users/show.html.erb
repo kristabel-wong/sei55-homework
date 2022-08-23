@@ -1,23 +1,24 @@
 
-<div class="container">
+<div class="show container">
     
-    <div class="profile container">
+    <div class="profile">
      <h2>Hi! I'm <%= @user.first_name %>   <%= @user.last_name %></h2>
     
-        <div class="profile_img container">
+        <div class="profile_img">
             <%= image_tag @user.profile_img_url, alt: @user.first_name %> 
 
         </div>   
         
     
-        <div class="bio container">
+        <div class="bio">
             <p>Age: <%= @user.age %> </p>
             <p>Bio:<%= @user.bio %></p>
         
         </div>
+  
+
+        <%= link_to 'Edit my Details', edit_user_path(@user.id) %>
+        |
+        <%= link_to 'Delete my account', "javascript:checkDelete(#{@user.id})"  %>
     </div>
-
-    <%= link_to 'Edit my Details', edit_user_path(@user.id) %>
-    <%= link_to 'Delete my account', destroy_user_path(@user.id) %>
-
 </div>
