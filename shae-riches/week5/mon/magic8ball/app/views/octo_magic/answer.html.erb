@@ -1,0 +1,19 @@
+<div id="answer_page">
+    <div id="answer_section">
+        <p class="answer_text">To, Octo, you bring this question, yes?</p>
+        <p class="answer_text" id="the_answer">Hmmmm... Octo, says:</p>
+        <p id="answer_actual_answer"><strong><%= @options[rand @options.length]%></strong></p>
+
+        <div id="answer_buttons_box">
+            <form class="answer_form" action="/octo_magic/reveals_answer">
+                <button class="answer_buttons" id="answer_ask_again_button">Ask Again?</button>
+            </form >
+                <form class="answer_form" action="/octo_magic/ask_octo">
+                <button class="answer_buttons" id="answer_new_question_button">New Question</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="answer_eight_legs"><%=  image_tag 'eight_legs.gif', alt:"eight legged friend"%></div>
+
+</div>
