@@ -1,0 +1,28 @@
+<div class="container">
+
+<h2>Edit account details for <%= @user.first_name %>  <%= @user.last_name %></h2>
+<%= form_with model: @user, local: true do |f|  %>
+
+     <%= f.label :first_name%>
+    <%= f.text_field :first_name%>
+    <br>
+
+    <%= f.label :last_name%>
+    <%= f.text_field :last_name%>
+    <br>
+       <%= f.label :age %>
+    <%= f.number_field :age, in: 1..100 %>
+    <br>
+   
+    <%= f.label :profile_image_url, 'Profile Image URL'%>
+    <%= f.url_field :profile_img_url%>
+    <br>
+     <%= f.label :bio%>
+    <%= f.text_area :bio, size: "70x5", placeholder: "Tell us about yourself..."%>
+    <br>
+    <%= f.submit %>
+
+<% end %>
+
+
+</div>
