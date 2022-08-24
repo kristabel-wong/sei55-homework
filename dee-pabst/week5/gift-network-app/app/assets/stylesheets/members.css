@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+}
+
+.avatar {
+    max-width: 20vw;
+}
+
+.img-home {
+    width: 60vw;
+    border: 2px solid white;
+}

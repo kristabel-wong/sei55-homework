@@ -1,0 +1,23 @@
+<h2><%= @item.summary %></h2>
+<%= image_tag @item.image, alt:@item.summary, class: 'item' %>
+
+<p>
+<strong>Description:</strong>
+<%= @item.description %>
+</p>
+
+<p>
+<strong>Condition:</strong>
+<%= @item.condition %>
+</p>
+
+<p>
+<strong>Category:</strong>
+<%= @item.category %>
+</p>
+
+<p>
+<strong>Contact:</strong>
+<%= @item.member.name %>
+Ph: <%= @item.member.phone %>
+</p>
