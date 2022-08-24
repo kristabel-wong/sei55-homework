@@ -1,0 +1,31 @@
+<h2>Editing <%= @player.name %></h2>
+
+<%= form_with model: @player, local: true do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+
+    <%= f.label :sex %>
+    <%= f.text_field :sex %>
+    <br>
+
+    <%= f.label :dob %>
+    <%= f.text_field :dob %>
+    <br>
+
+    <%= f.label :grand_slam %>
+    <%= f.text_field :grand_slam %>
+    <br>
+
+    <%= f.label :highest_ranking %>
+    <%= f.text_field :highest_ranking %>
+    <br>
+
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+    <br>
+
+    <%= f.submit %>
+
+<% end %>

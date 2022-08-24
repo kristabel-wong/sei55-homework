@@ -1,0 +1,34 @@
+<h2>
+<%= @player.name %>
+</h2>
+
+<%= link_to 'Edit', edit_player_path(@player.id) %>
+|
+<%= link_to 'Delete', destroy_player_path(@player.id) %>
+
+<p>
+    <strong>Sex:</strong>
+    <%= @player.sex%> 
+</p>
+
+<p>
+    <strong>DOB:</strong>
+    <%= @player.dob%>
+</p>
+
+<p>
+    <strong>Country:</strong>
+    <%= @player.country%>
+</p>
+
+<p>
+    <strong>No. of Grand Slam:</strong>
+    <%= @player.grand_slam%>
+</p>
+
+<p>
+    <strong>Highest Ranking:</strong>
+    <%= @player.highest_ranking%>
+</p>
+
+<%= image_tag @player.image_url, alt: @player.name, class: 'player' %>
