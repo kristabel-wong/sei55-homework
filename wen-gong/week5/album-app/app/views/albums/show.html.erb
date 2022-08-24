@@ -1,0 +1,29 @@
+
+
+<h2>
+  <em><%= @album.name %></em>,
+  <%= @album.released %>
+</h2>
+<h3>
+  by 
+  <%= link_to @album.singer.name, singer_path(@album.singer.id) %>
+</h3>
+
+
+
+<%= link_to 'Edit', edit_album_path(@album.id) %>
+|
+<%= link_to 'Delete', album_path(@album.id), method: 'delete' %>
+
+
+<p>
+    <strong>Genre:</strong>
+    <%= @album.genre %>
+</p>
+
+<p>
+    <strong>Length:</strong>
+    <%= @album.length %>
+</p>
+
+<%= image_tag @album.image, alt: @album.name, class: 'album' %>
