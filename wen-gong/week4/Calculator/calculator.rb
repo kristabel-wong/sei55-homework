@@ -56,7 +56,7 @@ def BMI()
     weight = gets.chomp().to_f
     puts "Enter your height(metre): "
     height = gets.chomp().to_f
-    puts (weight / (height ** height))
+    puts (weight / (height ** 2))
     exit()
 end
 
