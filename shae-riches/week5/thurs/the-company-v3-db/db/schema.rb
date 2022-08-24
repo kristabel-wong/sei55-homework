@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_23_093225) do
+ActiveRecord::Schema.define(version: 2022_08_24_094354) do
+
+  create_table "departments", force: :cascade do |t|
+    t.string "title"
+    t.integer "employee_count"
+    t.integer "budget"
+    t.integer "income"
+    t.integer "productivity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "employees", force: :cascade do |t|
     t.string "name"

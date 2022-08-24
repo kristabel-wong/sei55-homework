@@ -23,6 +23,7 @@ Employee.create!(
     leave_accrued_hours:    494,
     leave_taken_hours:      494,
     end_date:               nil,
+    department_id:          management.id
 
 )
 
@@ -41,7 +42,8 @@ Employee.create!(
     sick_days_taken:        0, 
     leave_accrued_hours:    2584, 
     leave_taken_hours:      0, 
-    end_date:               nil 
+    end_date:               nil,
+    department_id:          production.id 
 
     
 )
@@ -61,10 +63,47 @@ Employee.create!(
     leave_accrued_hours:    259200,
     leave_taken_hours:      0,
     end_date:               nil,
+    department_id:          records.id
 
 )
 
 puts "Done! Created #{ Employee.count } employees."
 puts Employee.pluck( :name ).join(', ')
 
+# ----------------------------------------------------------------- #
 
+Department.destroy_all
+
+
+management = Department.create!(
+
+    title:              'Management',
+    employee_count:     1,
+    budget:             0,
+    income:             0,
+    productivity:       100,
+
+)
+
+records = Department.create!(
+
+    title:              'Records',
+    employee_count:     1,
+    budget:             100_000,
+    income:             500_000,
+    productivity:       50,
+
+)
+
+production = Department.create!(
+
+    title:              'Production',
+    employee_count:     1,
+    budget:             10_000_000_000,
+    income:             1,
+    productivity:       100,
+
+)
+
+puts "Done! Created #{ Department.count } employees."
+puts Department.pluck( :name ).join(', ')
