@@ -1,0 +1,43 @@
+
+<h2><%= @team.name %></h2>
+
+<%= link_to "Edit", edit_team_path(@team.id) %>
+|
+<%= link_to "Delete", team_path(@team.id), method:'delete' %>
+
+<div class="container">
+
+    <div class="logo">
+        <%= image_tag @team.logo, alt:@team.name, class:'logo'%>
+    </div>
+
+    <div class="text">
+        <p>
+            <strong>Founded:</strong>
+            <%= @team.founded %>
+        </p>
+
+        <p>
+            <strong>Arena:</strong>
+            <%= @team.arena %>
+        </p>
+
+        <p>
+            <strong>Owner:</strong>
+            <%= @team.owner %>
+        </p>
+
+        <p>
+            <strong>Players:</strong>
+            <ul>
+                <% @team.players.each do |player| %>
+                    <li>
+                    <%= link_to player.name, player_path(player.id) %>
+                    </li>
+                <% end %>
+            </ul>
+            
+        </p>
+    </div>
+
+</div>

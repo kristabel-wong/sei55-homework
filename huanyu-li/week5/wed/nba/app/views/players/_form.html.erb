@@ -1,0 +1,40 @@
+
+<%= form_with model:@player, local:true do |f| %>
+
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br><br>
+
+    <%= f.label :height %>
+    <br>
+    <%= f.number_field :height, in: 1.0..3.0, step:0.01%> m
+    <br><br>
+
+    <%= f.label :weight %>
+    <br>
+    <%= f.number_field :weight, in: 30..300%> Kg
+    <br><br>
+
+    <%= f.label :country %>
+    <br>
+    <%= f.text_field :country %>
+    <br><br>
+
+    <%= f.label :dob,"Date of Birth" %>
+    <br>
+    <%= f.date_field :dob %>
+    <br><br>
+
+    <%= f.label :photo %>
+    <br>
+    <%= f.text_field :photo %>
+    <br><br>
+
+    <%= f.label :team_id, "Team" %>
+    <br>
+    <%= f.collection_select :team_id, Team.all, :id, :name, include_blank: true %>
+    <br><br>
+    <%= f.submit %>
+
+<% end %>

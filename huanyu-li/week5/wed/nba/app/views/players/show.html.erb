@@ -1,0 +1,40 @@
+<h2><%= @player.name %></h2>
+
+<%= link_to "Edit", edit_player_path(@player.id) %>
+|
+<%= link_to "Delete", player_path(@player.id), method:'delete' %>
+
+<div class="container">
+
+    <div class="logo">
+        <%= image_tag @player.photo, alt:@player.name, class:'logo'%>
+    </div>
+
+    <div class="text">
+        <p>
+            <strong>Height:</strong>
+            <%= @player.height %> m
+        </p>
+
+        <p>
+            <strong>Weight:</strong>
+            <%= @player.weight %> Kg
+        </p>
+
+        <p>
+            <strong>Country:</strong>
+            <%= @player.country %>
+        </p>
+
+        <p>
+            <strong>Date of Birth:</strong>
+            <%= @player.dob %>
+        </p>
+
+        <p>
+            <strong>Team:</strong>
+            <%= link_to @player.team.name, team_path(@player.team.id) %>
+        </p>
+    </div>
+
+</div>
