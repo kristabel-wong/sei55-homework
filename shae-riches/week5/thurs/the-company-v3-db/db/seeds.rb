@@ -5,6 +5,46 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Department.destroy_all
+
+
+management = Department.create!(
+
+    title:              'Management',
+    employee_count:     1,
+    budget:             0,
+    income:             0,
+    productivity:       100,
+
+)
+
+records = Department.create!(
+
+    title:              'Records',
+    employee_count:     1,
+    budget:             100_000,
+    income:             500_000,
+    productivity:       50,
+
+)
+
+production = Department.create!(
+
+    title:              'Production',
+    employee_count:     1,
+    budget:             10_000_000_000,
+    income:             1,
+    productivity:       100,
+
+)
+
+puts "Done! Created #{ Department.count } employees."
+puts Department.pluck( :title ).join(', ')
+
+
+# ----------------------------------------------------------------- #
+
+
 Employee.destroy_all
 
 Employee.create!(
@@ -70,40 +110,4 @@ Employee.create!(
 puts "Done! Created #{ Employee.count } employees."
 puts Employee.pluck( :name ).join(', ')
 
-# ----------------------------------------------------------------- #
 
-Department.destroy_all
-
-
-management = Department.create!(
-
-    title:              'Management',
-    employee_count:     1,
-    budget:             0,
-    income:             0,
-    productivity:       100,
-
-)
-
-records = Department.create!(
-
-    title:              'Records',
-    employee_count:     1,
-    budget:             100_000,
-    income:             500_000,
-    productivity:       50,
-
-)
-
-production = Department.create!(
-
-    title:              'Production',
-    employee_count:     1,
-    budget:             10_000_000_000,
-    income:             1,
-    productivity:       100,
-
-)
-
-puts "Done! Created #{ Department.count } employees."
-puts Department.pluck( :name ).join(', ')

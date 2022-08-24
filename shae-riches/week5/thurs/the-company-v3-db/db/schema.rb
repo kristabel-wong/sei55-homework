@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_24_094354) do
+ActiveRecord::Schema.define(version: 2022_08_24_104853) do
 
   create_table "departments", force: :cascade do |t|
     t.string "title"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2022_08_24_094354) do
     t.integer "leave_accrued_hours"
     t.integer "leave_taken_hours"
     t.date "end_date"
+    t.integer "department_id"
   end
 
 end

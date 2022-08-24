@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root to: 'the_company#home'
+  root to: 'employees#home'
   # ----------------------------------------------------------- #
   #CREATE
   #1
@@ -26,8 +26,9 @@ Rails.application.routes.draw do
 
   # -------------------------- NEW WAY ---------------------------- #
 
-  resource :employees
+  resources :departments
 
-  resource :department
+  resources :employees
+
 
 end
