@@ -1,0 +1,28 @@
+<%= form_with model: @post, local: true do |f|  %>
+
+    <%= f.label :title%>
+    <%= f.text_field :title%>
+    <br>
+
+    <%= f.label :link%>
+    <%= f.text_field :link%>
+    <br>
+    
+    <%= f.label :votes %>
+    <%= f.number_field :votes, in: 1..100 %>
+    <br>
+   
+    <%= f.label :image, 'Image URL'%>
+    <%= f.text_field :image%>
+    <br>
+    
+    <%= f.label :text%>
+    <%= f.text_area :text, size: "70x5", placeholder: "What is on your mind...?"%>
+    <br>
+
+    <%= f.label :user_id, 'Posted by' %>
+    <%= f.collection_select :user_id, User.all, :id, :last_name, include_blank: true %>
+
+    <%= f.submit %>
+
+<% end %>
