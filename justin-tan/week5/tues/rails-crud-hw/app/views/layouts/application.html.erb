@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Melbourne Restaurants</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Melbourne Eats</h1>
+      <p>Your top guide to spoil your taste buds in Melbourne</p>
+      <hr>
+      <nav>
+      <a href="/">Home</a>
+      |
+      <%= link_to 'All Restaurants', restaurants_path %>
+      |
+      <%= link_to 'Add Restaurants', new_restaurant_path %>
+      </nav>
+      <hr>
+    </header>
+
+    <%= yield %>
+
+    <hr>
+    <footer>
+    &copy; We are Gluttons estd 2022
+    </footer>
+  </body>
+</html>
