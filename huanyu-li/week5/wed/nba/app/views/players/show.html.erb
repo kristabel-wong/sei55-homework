@@ -31,10 +31,12 @@
             <%= @player.dob %>
         </p>
 
+        <% unless @player.team == nil %>
         <p>
             <strong>Team:</strong>
             <%= link_to @player.team.name, team_path(@player.team.id) %>
         </p>
+        <% end %>
     </div>
 
 </div>

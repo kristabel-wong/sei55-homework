@@ -27,6 +27,7 @@
             <%= @team.owner %>
         </p>
 
+        <% unless @team.players.length == 0 %>
         <p>
             <strong>Players:</strong>
             <ul>
@@ -36,8 +37,8 @@
                     </li>
                 <% end %>
             </ul>
-            
         </p>
+        <% end %>
     </div>
 
 </div>
