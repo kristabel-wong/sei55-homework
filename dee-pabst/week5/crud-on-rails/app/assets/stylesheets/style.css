@@ -1,0 +1,12 @@
+body {
+    background-image: url('forest-gcab555328_1920.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-align: center;
+}
+h1, h2, p, section, nav, footer, ul{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(120, 53%, 16%);
+    list-style: none;
+}

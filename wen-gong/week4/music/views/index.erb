@@ -1,0 +1,10 @@
+
+  <ul class="a-list">
+  <% @results.each do |album| %>
+    <li>
+      <a href="/albums/<%= album.id %>">
+        <%= album.name %>
+      </a>
+    </li>
+  <% end %>
+  </ul>

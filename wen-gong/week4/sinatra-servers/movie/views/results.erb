@@ -1,0 +1,14 @@
+<!--
+<h2>Movies data for "<%= @movie_title %>"</h2>
+-->
+<%# Movie original title: <%=  @movie_original_title %>  
+<%# Movie popularity: <%=  @movie_popularity %> 
+
+<h2>All "<%= @movie_title %>" movies:</h2>
+<br>
+<% @results.each do |item| %>
+  <a href="/lookup/results/:movie_title"><%= item["title"] %> </a> 
+  <br>
+
+<% end %>
+
