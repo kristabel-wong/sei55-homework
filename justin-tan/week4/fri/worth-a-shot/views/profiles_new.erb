@@ -1,0 +1,53 @@
+<h2>Welcome to the club!</h2>
+
+<form action="/profiles" method="post" id="profile_form">
+
+<label>
+    <p><strong>Name:</strong>
+    <input type="text" name="name">
+    </p>
+</label>
+
+<label>
+    <p><strong>Age:</strong>
+    <input type="number" name="age" min="0">
+    </p>
+</label>
+
+<label>
+    <p><strong>Occupation:</strong>
+    <input type="text" name="occupation">
+    </p>
+</label>
+
+<label>
+    <p><strong>Net Worth:</strong>
+    <input type="number" name="net_worth" min="0">
+    </p>
+</label>
+
+<label>
+    <p><strong>Toxicity:</strong>
+    <input type="range" name="toxicity" id="toxicity" min="0" max="100">
+    </p>
+</label>
+
+<label>
+    <p>
+    <strong>Interest:</strong>
+    <br>
+    <textarea name="interests" rows="5" cols="30" maxlength="200">
+    </textarea>
+    </p>
+</label>
+
+<label>
+    <p><strong>Profile image:</strong>
+    <input type="text" name="profile_img">
+    </p>
+</label>
+
+
+<button>Create profile</button>
+
+</form>

@@ -1,0 +1,10 @@
+<h2><%= @artist.name %></h2>
+<img src="<%= @artist.image_url %>" alt="<%= @artist.name %>">
+<table>
+  <tr>
+    <td>Web</td>
+    <td><a href="<%= @artist.website %>"><%= @artist.website %></a></td>
+  </tr>
+</table>
+<a href="/artists/<%= @artist.id %>/edit">Edit</a>
+<a href="/artists/<%= @artist.id %>/delete">Delete</a>

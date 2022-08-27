@@ -1,0 +1,34 @@
+
+<h2><%= @cast.name %></h2>
+
+<a href="/casts/<%= @cast.id %>/edit">Edit</a>
+|
+<a href="/casts/<%= @cast.id %>/delete">Delete</a>
+
+<div class="container">
+    <div class="image">
+        <img src="<%= @cast.photo_url %>" alt="<%= @cast.name %>">
+        </div>
+    <div class="text">
+        <strong>Name:  </strong><%= @cast.name %> <br><br>
+
+       <strong>Birthday:  </strong><%= @cast.birthday %> <br><br>
+
+        <strong>Place of Birth:  </strong><%= @cast.place_of_birth %> <br><br>
+
+        <strong>Biography:  </strong><%= @cast.biography %> <br><br>
+
+        <% unless @cast.movies == nil || @cast.movies.length == 0 %>
+            <strong>Movies: </strong>
+            <ul>
+            <% @cast.movies.each do |movie| %>
+                <li>
+                <a href="/movies/<%= movie.id %>"><%= movie.title %></a>
+                </li>
+            <% end %>
+            </ul>
+        <% end %>
+    
+
+        </div>
+    </div>

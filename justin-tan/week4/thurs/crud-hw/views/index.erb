@@ -1,0 +1,11 @@
+
+
+<% @results.each do |el| %>
+
+<a href="/profiles/<%= el['id'] %>">
+<img src="<%= el['profile_img'] %>" alt="<%= el['name'] %>">
+<p><strong><%= el['name'] %></strong></p>
+</a>
+
+<% end %>
+

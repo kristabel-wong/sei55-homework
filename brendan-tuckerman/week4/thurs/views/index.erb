@@ -1,0 +1,13 @@
+
+
+
+<div class="distro_list">
+    <h2>All Current Distros</h2>
+    <%# Add all of the names to a list and link to their 'main' page %>
+    <ul>
+    <% @results.each do |distro|  %>
+            <a href="/distros/<%= distro["id"] %>"><li> <%= distro["name"] %> </li></a>
+    <% end  %>
+    </ul>
+
+</div>

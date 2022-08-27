@@ -1,0 +1,10 @@
+<h3>Index of Singers</h3>
+
+<ul class="singer-list">
+<% @singers.each do |singer| %>
+  <li>
+    <a href="/singers/<%= singer.id %>"><%= singer.name %></a>
+    (<%= singer.website %>)
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,30 @@
+<h2>
+    Details for <%= @buyer.name %>
+</h2>
+
+<a href="/buyers/<%= @buyer.id %>/edit">
+    Update Buyer Details
+</a>
+|
+<a href="/buyers/<%= @buyer.id%>/delete">
+Remove Buyer
+</a>
+
+
+
+<p>
+<strong>Email</strong><%= @buyer.email %>
+</p>
+
+<p>
+    <strong>Plants</strong>
+     <ul>
+    <!-- use the .pets association to -->
+    <% @buyer.plants.each do |plant| %>
+        <li>
+            <a href="/plants/<%= plant.id%>">
+            <%= plant.name %></a>, (<%= plant.native_area%>)
+        </li>
+        <% end %>
+    </ul>
+</p>

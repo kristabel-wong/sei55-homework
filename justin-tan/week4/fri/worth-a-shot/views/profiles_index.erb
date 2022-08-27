@@ -1,0 +1,11 @@
+<h2>Certified Alcoholics</h2>
+<div id="profile_index">
+<% @profiles.each do |el| %>
+
+<div class="profile_img">
+<a href="/profiles/<%= el.id %>"><img src="<%= el.profile_img %>" alt="<%= el.name %>"></a>
+<p><%= el.name %></p>
+</div>
+
+<% end %>
+</div>

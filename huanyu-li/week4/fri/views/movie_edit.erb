@@ -1,0 +1,65 @@
+
+
+<h2><%= @movie.title %></h2>
+
+<a href="/movies/<%= @movie.id %>/delete">Delete</a>
+<br>
+<br>
+<form action="/movies/<%= @movie.id %>" method="post" class="addNew">
+
+<label>
+    Title: <br>
+    <input type="text" name="title" value="<%= @movie.title %>">
+</label>
+
+
+<label>
+    Date: <br>
+    <input type="date" name="release_date"  value="<%= @movie.release_date %>">
+</label>
+
+
+<label>
+    Runtime: <br>
+    <input type="text" name="runtime"  value="<%= @movie.runtime %>">
+</label>
+
+
+<label>
+    Score: <br>
+    <input type="number" step="0.1" name="score"  value="<%= @movie.score %>">
+</label>
+
+
+<label>
+    Overview: <br>
+    <textarea name="overview" cols="30" rows="5"><%= @movie.overview %></textarea>
+</label>
+
+
+<label>
+    Poster URL: <br>
+    <textarea name="poster_url" cols="30" rows="5"><%= @movie.poster_url %></textarea>
+</label>
+
+<label>
+    Cast:
+    <select name="cast_id">
+
+    <% Cast.all.each do |cast|  %>
+        <% if @movie.cast == nil %>
+            <option value="<%= cast.id %>">
+            <%= cast.name %>
+        </option>
+        <% else %>
+            <option value="<%= cast.id %>" <%= @movie.cast.id == cast.id ? 'selected' : ''%>>
+            <%= cast.name %>
+            </option>
+        <% end %>
+    <% end  %>
+    <option value="">Not in the List</option>
+    </select>
+</label>
+<br>
+<button>Update</button>
+</form>

@@ -1,0 +1,5 @@
+<% if (@correct_guess) %>
+  <h2>You guessed it!</h2>
+<% else %>
+  <h2>Nope, wrong.. it was <%= @computer_guess %></h2>
+<% end %>
