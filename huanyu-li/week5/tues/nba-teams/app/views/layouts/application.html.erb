@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NBA Teams</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+    <h1>NBA Teams</h1>
+    <nav>
+    <%= link_to 'Home', '/' %>
+    |
+    <%= link_to 'Teams', teams_path %>
+    |
+    <%= link_to 'New Team', teams_new_path %>
+    </nav>
+    <hr>
+    </header>
+    <%= yield %>
+
+    <footer>
+    <hr>
+    &copy; Basketball Production 2022
+    </footer>
+  </body>
+</html>
