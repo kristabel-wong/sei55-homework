@@ -1,0 +1,16 @@
+<h2>>> All Animals <<</h2>
+
+<ul>
+
+    <% @animals.each do |animal| %>
+    <li>
+    <%= link_to animal.name, animal_path(animal.id) %>
+    </li>
+    <% end %>
+
+
+</ul>
+
+    <div id="sunda">
+    <img src="https://parade.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTkwNTgxNDg2ODQ1OTYyMTA4/sunda-flying-lemur.webp" alt="index_image"> 
+    </div>
