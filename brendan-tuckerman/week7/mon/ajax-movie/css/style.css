@@ -1,0 +1,22 @@
+body{
+    
+    color: #5B58EE;
+}
+li {
+    list-style: none;
+}
+
+h1{
+    color: #8102f899;
+}
+
+
+.allMoviesList {
+    text-align: center;
+    line-height: 1.4;
+}
+
+#singleMovieDetails{
+    text-align: center;
+    line-height: 1.4;
+}
