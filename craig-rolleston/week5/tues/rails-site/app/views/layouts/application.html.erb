@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exotic Animals</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+
+  <body>
+    <nav>
+      <h1>Animal Mysteries Of Our Beautiful World</h1>
+      <a href="/">Home</a>
+      |
+      <%= link_to 'All Animals', animals_path %>
+      |
+      <%= link_to 'Add Animal', new_animal_path %>
+      
+    </nav>
+
+    <%= yield %>
+    <hr>
+    <footer>
+      &copy; Attenborough Got Nothin On This 2022
+    </footer>
+  </body>
+</html>

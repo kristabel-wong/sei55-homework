@@ -1,0 +1,12 @@
+Index Page
+<ul>
+
+    <% @employees.each do | employee | %>
+        
+        <li>
+            <%= link_to employee.name, employee_path(employee.id), class: "index_employee_link" %>
+        </li>
+
+    <% end %>
+
+</ul>

@@ -1,0 +1,16 @@
+<h2><%= @member.name %></h2>
+<%= image_tag @member.avatar, alt: @member.name, class: 'avatar' %>
+<p>
+<strong>Member since:</strong>
+<%= @member.created_at %>
+</p>
+<p>
+<strong>Phone:</strong>
+<%= @member.phone %>
+</p>
+<p>
+<strong>Town:</strong>
+<%= @member.town %>
+</p>
+<%= link_to 'Edit', edit_member_path(@member.id) %>
+<%= link_to 'Delete', member_path(@member.id), method: 'delete' %>

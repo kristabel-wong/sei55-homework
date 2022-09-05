@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Octo Magic</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+<div id="whole_page">
+  <header>
+    <h3><em> Your Journey Was Long...</em> </h3>
+    <hr>
+  </header>
+  
+  <body>
+  
+    <%= yield %>
+
+    
+  </body>
+
+  <footer>
+    <hr><em>
+    Eight: Never Too Many - Copyright.2022</em>
+  </footer>
+
+    <%# <script src="/jquery.js"></script>
+    <script src="/main.js"></script> %>
+</div>
+</html>

@@ -1,0 +1,36 @@
+
+<h2><%= @team.name %></h2>
+
+<%= link_to "Edit", edit_path %>
+|
+<%= link_to "Delete", delete_path %>
+
+<div class="container">
+<div class="logo">
+<%= image_tag @team.image_url, alt:@team.name, class:'teamLogo'  %>
+</div>
+<div class="text">
+<p>
+<strong>Founded Year: </strong>
+<%= @team.founded_year %>
+</p>
+
+<p>
+<strong>City: </strong> 
+<%= @team.city %>
+</p>
+
+<p>
+<strong>Arena: </strong>
+<%= @team.arena %>
+</p>
+
+<p>
+<strong>Owner: </strong>
+<%= @team.owner %>
+</p>
+
+</div>
+
+</div>
+
