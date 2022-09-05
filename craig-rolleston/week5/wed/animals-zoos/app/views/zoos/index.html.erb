@@ -1,0 +1,12 @@
+
+<h2>> Index of Zoos <</h2>
+
+<ul>
+ <% @zoos.each do |zoo| %>
+    <li>
+        <%= link_to zoo.name, zoo_path(zoo.id) %>
+    </li>
+    <% end %>
+</ul>
+
+<img src="http://findingbeyond.com/app/uploads/2020/07/tanzania-safari-quide-cover.jpg" alt="coolzoo" class="coolzoo">

@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+
+.lights {
+    max-width: 80%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.piggy {
+    max-width: 70%;
+    border-radius: 10px;
+    margin: 20px;
+    position: right;
+    
+}
+
+.beach {
+    /* max-width: 100%; */
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+img {
+    max-width: 50vw;
+    max-height: 50vw;
+    border-radius: 5px;
+}
+
+body {
+    color: white;
+    font-family: "Aboreto", sans-serif;
+    background: rgb(13,21,22);
+    background: radial-gradient(circle, rgba(13,21,22,1) 1%, rgba(62,68,67,1) 100%);
+    text-align: center;
+
+}
+
+nav {
+    /* background-color: black; */
+    padding-top: 10px;
+    background-color: rgb(13, 14, 15);
+    color:white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a {
+    color:white;
+    margin: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    
+    color: black;
+    background-color: bisque;
+}
+
+ul {
+    list-style-type: none;
+    margin-right: 0;
+    text-align: center;
+}
+
+.form {
+    
+    text-align: left;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+.edit {
+     
+    text-align: left;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(40, 41, 42);
+    color: white;
+    border: 1px solid white;
+}
+
+.new {
+    margin: 10px;
+    padding: 7.5px;
+    background-color: rgb(40, 41, 42);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+button {
+    margin: 10px;
+    padding: 7.5px;
+    background-color: rgb(40, 41, 42);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+li {
+    text-align: center;
+    display: inline-block;
+}
+
+input {
+    margin: 10px;
+    border-radius: 5px;
+    background-color:  rgb(40, 41, 42);
+    color: white;
+    
+}
+
+footer {
+    text-align: left;
+
+}
+
+

@@ -1,0 +1,24 @@
+Register Indentured
+
+<%= form_with model: @employee, local: true do |f|, id="new_employee_form" %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+
+    <%= f.label :orbit %>
+    <%= f.text_field :orbit %>
+    <br>
+
+    <%= f.label :moons %>
+    <%= f.text_field :moons %>
+    <br>
+
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+    <br>
+
+    <%= f.submit %>
+    <br>
+    
+<% end %>

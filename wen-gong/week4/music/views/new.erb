@@ -1,0 +1,73 @@
+<h3>Add New Album</h3>
+
+<form class="new-album" action="/albums" method="post">
+
+  <label class="line">
+    Name: 
+    <input type="text" name="name">
+  </label>
+  <br>
+  <hr>
+
+
+
+  <label class="line">
+    Released: 
+    <input type="text" name="released">
+  </label>
+  <br>
+  <hr>
+
+  <label>
+    Genre: 
+    <input type="text" name="genre">
+  </label>
+  <br>
+  <hr>
+
+  <label>
+    Length: 
+    <input type="text" name="length">
+  </label>
+  <br>
+  <hr>
+
+  <label>
+    Track_listing: 
+    <input type="text" name="track_listing">
+  </label>
+  <br>
+  <hr>
+
+  <label>
+    Image URL: 
+    <input type="text" name="image_url">
+  </label>
+  <br>
+  <hr>
+
+   <label>
+    Singer ID: 
+  
+    <select name="singer_id">
+    
+      <option value="" selected disabled>Please select:</option>
+
+      <% Singer.all.each do |singer| %>
+        <option value="<%= singer.id %>" >
+          <%= singer.name %>
+        </option>
+      <% end %>
+      
+    </select>
+    <hr>
+
+
+
+  </label>
+  <br>
+  <hr>
+
+  <button>Create Album</button>
+
+</form>

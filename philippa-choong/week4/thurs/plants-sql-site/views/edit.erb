@@ -1,0 +1,55 @@
+<h3>
+Update <%= @plant['name'] %>
+</h3>
+
+<%# copy this from form page a.k.a new.erb %>
+
+<form action="/plants/<%= @plant['id'] %>" method="post">
+
+<label>
+Name: 
+<input type="text" name="name" value="<%= @plant['name']%>">
+</label>
+<br>
+
+<label>
+Native Area:  
+<input type="text" name="native_area" value="<%= @plant['native_area']%>">
+</label>
+<br>
+
+<label>
+Perennial (1 for yes, 0 for no):
+<input type="text" name="perennial" value="<%= @plant['perennial']%>">
+</label>
+<br>
+
+
+<label>
+Sun Exposure:
+<input type="text" name="sun_exposure" value="<%= @plant['sun_exposure']%>">
+</label>
+<br>
+
+<label>
+Mature Size (in cm)
+<input type="text" name="mature_size" value="<%= @plant['mature_size']%>">
+</label>
+<br>
+
+<label>
+Toxicity
+<input type="text" name="toxicity" value="<%= @plant['toxicity']%>">
+</label>
+<br>
+
+
+<label>
+Image URL:
+<input type="text" name="image_url" value="<%= @plant['image_url']%>">
+</label>
+<br>
+
+<button>Uproot Plant!</button>
+
+</form>

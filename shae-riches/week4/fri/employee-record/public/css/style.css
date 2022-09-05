@@ -1,0 +1,55 @@
+#nav_bar{
+
+    display: flex;
+
+}
+#nav_image{
+
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    border-radius: 50%;
+
+    padding: 0.5rem;
+
+}
+body {
+
+    background-color: slategray;
+
+}
+
+
+#employees_basic_info{
+    display: inline-flex;
+    flex-direction: column;
+
+}
+
+#new_employee_form {
+
+    display: inline-flex;
+    flex-direction: column;
+
+
+}
+
+.employee_images{
+
+    position: absolute;
+    display: flex;
+    right: 10vw;
+    top: 5vh;
+
+    width: 20vw;
+    height: auto;
+
+
+}
+#image_1{
+    width: 10vw;
+    height: auto;
+
+}

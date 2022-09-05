@@ -1,0 +1,9 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(224, 160, 160);
+}
+
+.national-flag-image {
+    max-width: 40vw;
+}
+

@@ -1,0 +1,96 @@
+ 
+
+
+<div class="box">
+
+      <h2 id="edit_heading">Editing "<%= @distro.name %>"
+</h2>
+    
+    <form action="/distros/<%=  @distro.id %>" method="post" id="new_form">
+    
+    <label>
+        Name:
+        <input type="text" name="name" value ="<%= @distro.name %>">
+    </label>
+    <br>
+
+
+    <label for="">
+        Family / Basis:
+        <select name = "family_id" id="family_id" >
+            <option value="<%= @distro.family_id %>" selected ><%= @distro.family.description %></option>
+
+            <% Family.all.each do |family|  %>
+            <option value = "<%= family.id %>"> <%= family.description %>
+            </option>
+            <% end  %>
+        </select>
+
+    </label>   
+    
+    <br>
+
+    <label>
+        Latest Version:
+        <input type="text" name="latest_version" value ="<%= @distro.latest_version %>">
+    </label>
+    <br>
+
+     <label>
+        Original Release Date:
+        <input type="date" name="release_date" value ="<%= @distro.release_date %>">
+    </label>
+    <br>
+
+      <label>
+        Current?
+        <select name="is_current" id="is_current">
+            <option value="<% @distro.is_current %>" selected >
+            <%= @distro.is_current ? "No" : "Yes" %></option>
+            <option value="1"> Yes</option>
+            <option value="0"> No</option>
+        </select>
+    </label>
+    <br>
+
+
+
+     <label>
+        Website:
+        <input type="text" name="website" value ="<%= @distro.website %>">
+    </label>
+    <br>
+
+     <label>
+        Logo URL:
+        <input type="text" name="logo_url" value ="<%= @distro.logo_url %>">
+    </label>
+    <br>
+
+    <label>
+        Screenshot URL:
+        <input type="text" name="screenshot_url" value ="<%= @distro.screenshot_url %>">
+    </label>
+    <br>
+
+     <label>
+        Description:
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="Please type a brief description here"><%= @distro.description %></textarea>
+    </label>
+    <br>
+
+    <h3>Asociated packages:</h3>
+        <% @packages.each do |package| %>
+            
+            <input type= "checkbox" name="package.package_id" ><%= package.name  %></li>
+            
+        <% end   %>
+
+
+
+    <button>Confirm Edits</button>
+    
+    </form>
+
+
+</div>

@@ -1,0 +1,13 @@
+
+<h2>All Casts</h2>
+
+<ul>
+    <% @results.each do |cast| %>
+
+    <li class="text">
+        <a href="/casts/<%= cast.id %>">
+        <%= cast.name %></a> 
+    </li>
+    <% end %>
+</ul>
+

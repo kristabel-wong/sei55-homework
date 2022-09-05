@@ -1,0 +1,10 @@
+
+<h2><em><%= @zoo.name %></em>, <%= @zoo.country %></h2>
+
+<%= link_to 'Edit', edit_zoo_path(@zoo.id) %>
+|
+<%= link_to 'Delete', zoo_path(@zoo.id), method: 'delete' %>
+<br><br>
+
+<%= image_tag @zoo.image, class: 'zoo' %>
+

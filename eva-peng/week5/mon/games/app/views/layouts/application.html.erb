@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GamesLand</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+  <header>
+  <h1>Here are games you can have fun with</h1>
+  <hr>
+  <nav>
+  <br>
+  </nav>
+  
+  </header>
+    <%= yield %>
+  </body>
+  <footer>
+  <hr>
+  &copy; GamesLand Productions 2022
+  </footer>
+</html>

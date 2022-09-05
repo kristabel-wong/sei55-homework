@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie World</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+  <nav>
+  <h1>Movie World</h1>
+  <%= link_to 'HomePage', root_path %>
+  |
+  <%= link_to 'All Directors', directors_path %>
+  |
+  <%= link_to 'Add New Director', new_director_path %>
+  |
+  <%= link_to 'All Movies', movies_path %>
+  |
+  <%= link_to 'Add Movie', new_movie_path %>
+  </nav>
+    <%= yield %>
+    <footer>
+    <hr>
+    &copy; SEI55 Film Productions 2022
+    </footer>
+  </body>
+</html>

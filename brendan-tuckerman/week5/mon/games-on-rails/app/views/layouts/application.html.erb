@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games-On-Rails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+  <header>
+      <h2>Games - On - Rails </h2>
+      <nav>
+          <ul>
+              <a href="/"><li>Home</li></a>
+              |
+              <a href="/magic"><li>Magic 8 Ball</li></a>
+              |
+              <a href="/secret"><li>Secret Number</li></a>
+              |
+              <a href="/rock_paper_scissors"><li>Rock, Paper, Scissors</li></a>
+          </ul>
+      </nav>
+  
+  </header>
+
+    <section>
+      <%= yield %>
+    </section>
+
+    <footer>&copy; Brendan Tuckerman 2022</footer>
+  </body>
+</html>

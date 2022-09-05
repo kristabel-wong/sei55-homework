@@ -1,0 +1,47 @@
+
+<h2>Movie Info of "<%= @movie_list %>"</h2>
+
+<hr>
+
+Movie Title: <%= @movie_title %>
+<br>
+Release Date: <%= @movie_year %>
+<br>
+<img src="<%= @movie_img %>" alt="movie_poster">
+
+
+<hr>
+
+<h3>List version:</h3>
+
+<ul>
+<% @movie_array.each do |item| %>
+
+    <li>
+
+    <%# tltle %>
+    <a href="/movie/<%=item["id"] %>">
+    <h4><%= item["title"] %></h4>
+    </a>
+    
+    
+
+    <%# release date %>
+    <%= item["release_date"]%>
+    <br>
+
+    <%# overview %>
+    overview: 
+    <br>
+    <%= item["overview"]%>
+
+    <%# img %>
+
+    <img src="https://image.tmdb.org/t/p/w500<%=item["poster_path"]%>" alt="movie_poster">
+
+    </li>
+
+<% end %>
+
+</ul>
+

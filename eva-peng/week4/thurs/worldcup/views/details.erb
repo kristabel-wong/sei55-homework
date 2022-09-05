@@ -1,0 +1,32 @@
+<h3>
+    Details for <%= @team['team'] %>
+
+</h3>
+
+<a href="/teams/<%= @team['id'] %>/edit">Edit</a>
+|
+<a href="/teams/<%= @team['id'] %>/delete">Delete</a>
+
+<p>
+    <strong>Region: </strong>
+    <%= @team['region'] %>
+</p>
+
+<p>
+    <strong>Group: </strong>
+    <%= @team['group_in'] %>
+</p>
+
+<p>
+    <strong>Appearance in Worldcup before Qatar: </strong>
+    <%= @team['time_in'] %>
+</p>
+
+<p>
+    <strong>Host Country: </strong>
+    <%= @team['host'] == 1 ? 'Yes' : 'No'%>
+   
+</p>
+
+
+<img class="national-flag-image" src="<%= @team['image_url'] %>" alt="<%= @team['team'] %>">
