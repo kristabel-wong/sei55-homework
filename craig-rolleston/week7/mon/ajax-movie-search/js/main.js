@@ -8,20 +8,20 @@ const lookupMovie = function( movie ){
 
     xhr.onload = function(){ 
 
-        console.log('available response', xhr.response);
+        // console.log('available response', xhr.response);
 
         const data = JSON.parse( xhr.response );
-        console.log(data);
+        // console.log(data);
 
-        movieInfo = data.results //[i].title
+        movieInfo = data.results 
         
         for (let i = 0; i < movieInfo.length; i++ ){
             
             const getData = movieInfo[i]
-            console.log(getData)
+            console.log(getData.title)
             
-            $('#movieResults').prepend(`<h2>${getData.title}</h2><br>${getData.poster_path}<br>${getData.popularity}<br>${getData.overview}`); // add data to page 
-            
+            $('#movieResults').append(`<a href=""><h2>${getData.title}</h2></a><br><img src="https://image.tmdb.org/t/p/w185${getData.poster_path}"><br><h3>Popularity: ${getData.popularity}</h3><h3>Description:${getData.overview}</h3>`); // add data to page 
+
         }
 
     }; // onload handler
