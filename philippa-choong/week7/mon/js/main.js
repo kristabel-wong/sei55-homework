@@ -30,7 +30,9 @@ const lookupMovie = function (movie) {
         // JSON - commonly used to exchange data to / from a web server.
         // When receiving data from a web server, the data is always a string.
         // Parse the data with JSON.parse(), and the data becomes a JavaScript object.
-        $('#results').empty()
+        $('#results').empty() //remove previous results
+
+
         // loop through array and find title from search 
         const numOfResults = 10
 
@@ -42,13 +44,11 @@ const lookupMovie = function (movie) {
             // console.log(title, popularity, overview)
             $('#results')
                 .append(`
-                <h2>${title}</h2>
+                <h2><a href="#" >${title}</a></h2> 
                 <p>popularity: ${popularity}</p>
                 <p>overview: ${overview}</p>
                 `)
         };
-
-
 
     };
     // this function's code will run when xhr ( XMLHttpRequest() )decides the response has finished loading
@@ -62,6 +62,7 @@ const lookupMovie = function (movie) {
 
 } // lookupMovie()
 
+
 // DOM ready handler
 $(function () {
 
@@ -70,10 +71,64 @@ $(function () {
         console.log('Button clicked!');
 
         const userSearch = $('#movieQuery').val();
+        // The .val() method is primarily used to get the values of form elements such as input, select and textarea. 
+        // When called on an empty collection, it returns undefined.
         console.log(`Button clicked! movie search is `, userSearch);
 
         lookupMovie(userSearch);
+    });
 
-    }); $
+});
 
-}); 
+
+const detailedMovie = function (id) {
+
+    $('#movieResults').html('loading....'); // clear old results and show new results next
+
+
+    const xhr = new XMLHttpRequest(); //// make a new instance, i.e. this is the constructor
+    // XMLHttpRequest() spits out the object for us. A built-in-method for making AJAX request
+
+    //hide the following:
+    $('#movieQuery').hide()
+    $('#submitButton').hide()
+
+
+
+
+    // .onload - Execute a JS immediately after a page has been loaded:
+    // this function's code will run when XHR decides the response has finished loading
+    xhr.onload = function () {
+
+        const data = JSON.parse(xhr.response);
+        // JSON - commonly used to exchange data to / from a web server.
+        // When receiving data from a web server, the data is always a string.
+        // Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+        $('#movieResults').empty() //remove previous results
+
+        const output = data.lookupMovie(movie).id
+        const title = output.title
+        const budget = output.budget
+        const genres = output.genres
+
+        $('#movieResults')
+            .append(`
+                <h2> ${title}</h2> 
+                <p>budget: ${budget}</p>
+                <p>genres: ${genres}</p>
+                `)
+    };
+
+    //declate API key
+    const apiKey = "24d863d54c86392e6e1df55b9a328755"
+    // tell xhr which URL to open, and which method to use (i.e. 'GET')
+    xhr.open('GET', `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`);
+
+    xhr.send(); //send the request
+
+};
+// this function's code will run when xhr ( XMLHttpRequest() )decides the response has finished loading
+
+
+
+
