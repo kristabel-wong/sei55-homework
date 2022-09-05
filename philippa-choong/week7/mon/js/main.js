@@ -30,25 +30,26 @@ const lookupMovie = function (movie) {
         // JSON - commonly used to exchange data to / from a web server.
         // When receiving data from a web server, the data is always a string.
         // Parse the data with JSON.parse(), and the data becomes a JavaScript object.
-
+        $('#results').empty()
         // loop through array and find title from search 
-        for (let i = 0; i < 10; i++) {
-            const title = data.results[i].title
-            const popularity = data.results[i].popularity
-            const overview = data.results[i].overview
-            console.log(title, popularity, overview)
+        const numOfResults = 10
+
+        for (let i = 0; i < numOfResults; i++) {
+            const output = data.results[i]
+            const title = output.title
+            const popularity = output.popularity
+            const overview = output.overview
+            // console.log(title, popularity, overview)
+            $('#results')
+                .append(`
+                <h2>${title}</h2>
+                <p>popularity: ${popularity}</p>
+                <p>overview: ${overview}</p>
+                `)
         };
 
 
 
-        $('#results')
-            .empty() //remove previous result
-            .append(`
-            <h2>${this.title}</h2>
-            <p>${this.popularity}</p>
-            <p>${this.overview}</p>
-
-            `)
     };
     // this function's code will run when xhr ( XMLHttpRequest() )decides the response has finished loading
 
@@ -66,7 +67,9 @@ $(function () {
 
     //Wait till DOM is ready before querying it
     $('#submitButton').on('click', function () {
-        const userSearch = $('movieQuery').attr();
+        console.log('Button clicked!');
+
+        const userSearch = $('#movieQuery').val();
         console.log(`Button clicked! movie search is `, userSearch);
 
         lookupMovie(userSearch);
