@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games on Rails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+    
+      <h1>Games on Rails</h1>
+
+      <nav>
+
+      <a href="/magic8ball">Magic 8 Ball</a>
+      |
+      <a href="/secret_number">Secret Number</a>
+      |
+      <a href="/rock_paper_scissors">Rock Paper Scissors</a>
+      
+      </nav>
+      <hr>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <hr>
+      &copy; Lei's W5D1 Homework
+    </footer>
+  </body>
+</html>

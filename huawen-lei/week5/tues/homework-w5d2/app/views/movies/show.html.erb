@@ -1,0 +1,32 @@
+
+<h2><%= @movie.name %></h2>
+
+<%= link_to 'Edit', edit_movie_path(@movie.id) %>
+|
+<%= link_to 'Destroy', destroy_movie_path(@movie.id) %>
+
+<p>
+    <strong>Release Year: </strong>
+    <%= @movie.release_year %>
+</p>
+
+
+<p>
+    <strong>Director: </strong>
+    <%= @movie.director %>
+</p>
+
+
+<p>
+    <strong>Starring: </strong>
+    <%= @movie.starring %>
+</p>
+
+
+<p>
+    <strong>Running Time: </strong>
+    <%= @movie.running_time %> mins
+</p>
+
+<%= image_tag @movie.image_url, alt: @movie.name %>
+
