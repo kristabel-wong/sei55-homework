@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gift Network</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+    <hr>
+    <nav>
+      [<%= link_to "Home", root_path %>]
+      [<%= link_to "All Members", members_path %>]
+      [<%= link_to "Sign up", new_member_path %>]
+      [<%= link_to "Free Stuff", items_path %>]
+    </nav>
+    <hr>
+  <body>
+    <%= yield %>
+  </body>
+  <footer>
+    &copy; Waste warriors
+  </footer>
+</html>

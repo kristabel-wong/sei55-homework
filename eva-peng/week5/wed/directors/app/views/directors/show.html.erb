@@ -1,0 +1,45 @@
+<h2><%= @director.name %></h2>
+<%= link_to "Edit", edit_director_path%>
+|
+<%= link_to "Delete", director_path(@director.id), method: 'delete' %>
+<hr>
+
+
+<p>
+    <strong>Nationality:</strong>
+    <%= @director.nationality %>
+</p>
+<br>
+
+<p>
+    <strong>Date of Birth:</strong>
+    <%= @director.dob %>
+</p>
+<br>
+
+<p>
+    <strong>Awards:</strong>
+    <%= @director.award %>
+</p>
+<br>
+
+<p>
+    <strong>Movies:</strong>
+    <ul>
+    <% @director.movies.each do |movie| %>
+    <li>
+    
+    
+    
+    <%= link_to movie_path(movie.id) do %>
+        <%= movie.title%>
+        <%= image_tag movie.image, class: "movie_thumbnail"%>
+    <% end %>
+    </li>
+    <% end %>
+    </ul>
+</p>
+<br>
+
+
+<%= image_tag @director.image, alt: @director.name, class: "director_image"%>

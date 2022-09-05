@@ -1,0 +1,8 @@
+<h3>STANS results for "<%= @movie_code %>"</h3>
+<br>
+
+<% @results.each do | movie |  %>
+<li>
+<a href=""><%= movie['title'] %></a>
+</li>
+<% end %>

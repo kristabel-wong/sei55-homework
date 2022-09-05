@@ -1,0 +1,75 @@
+
+<% if @employee.id == 1 %>
+    <h4><strong><%= @employee.name%></strong></h4>
+    <hr>
+    <p>The Company reserves the right to withold information of Managment employees in line with security standards.</p>
+    <img id="image_1" class="employee_images" src="<%=@employee.image_url%>" alt="classified">
+
+<% else %>
+
+    <div id="employees_department">
+        <h4> <%= @employee.department_id %></h4>
+    </div>
+
+    <div id="employees_basic_info">
+        
+        <img id="image_<%= @employee.id %>" class="employee_images" src="<%= @employee.image_url %>" alt="Employee #<%= @employee.id %> personnel image">
+
+        <p> Employee Number: <%= params[:id] %>         </p>
+        <p> Employee Name: <%= @ordered_name %>         </p>
+        <p> Gender: <%= @employee.gender %>             </p>
+        <p> Address: <%= @employee.home_address %>      </p>
+        <p>
+        Age : 
+            <% year_born = @employee.dob.to_s %>
+            <% year_born = year_born.split %>
+            <% year_born = year_born[0].to_i %>
+            <%= 2022 - year_born %>
+        </p>        
+        <p> Accrued Sick Leave (days): <%= @employee.sick_days_accrued %></p>
+        <p> Taken Sick Leave (days): <%= @employee.sick_days_taken %></p>
+        <p> Accrued Leave (hours): <%= @employee.leave_hrs_accrued %></p>
+        <p> Taken Leave (hours): <%= @employee.leave_hrs_taken %></p>
+
+    </div>
+    <hr>
+    <div id="employment_type_details">
+          
+
+        <p> <%# contract  %>
+            <% if @employee.on_contract == true && @employee.contract_length > @employee.months_employed %>
+                Contract - <%= "Employee ##{params[:id]}: contracted for #{@employee.contract_length}, with #{employee.contract_length.to_i - @employee.months_employed.to_i} months remaining."%>
+            <% else %>
+            <% end  %>
+        </p>  <%# closes contract %>
+
+        <p> <%# full time%>
+            <% if @employee.full_time == true %>
+                Full Time - <%= "Employee ##{params[:id]}: has been grateful of employment for #{@employee.months_employed} months - commencement [yy/mm/dd]: #{@employee.start_date}." %>
+            <% else %>
+            <% end  %>
+        </p> <%# closes full time%>
+        
+        <p> <%# casual %>
+            <% if @employee.casual == true %>
+                    Casual - <%= "Employee ##{params[:id]}: has been grateful of casual employment for #{@employee.months_employed} months - commencement [yy/mm/dd]: #{@employee.start_date}." %>
+            <% else %>
+            <% end  %>
+        </p> <%# closes casual %>
+        
+        <p> <%# end date %>
+            <% if @employee.end_date == nil %>
+                Cease of Function - TBD
+            <% else %>
+                Cease of Function [yy/mm/dd]: <%= @employee.end_date %>
+            <% end  %>
+        </p> <%# closes end date %>
+
+    
+    </div> <%# closes 'employment_type_details' %>
+    <hr>
+
+    <a href="/employee_list/<%= @employee.id %>/edit">Edit</a>
+    <a href="/employee_list/<%= @employee.id %>/delete">Delete</a>
+<% end %>
+

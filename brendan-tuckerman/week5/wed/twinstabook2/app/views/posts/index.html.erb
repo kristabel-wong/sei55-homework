@@ -1,0 +1,14 @@
+<div class="container">
+
+    <h2>All Posts</h2>
+    <%= link_to "New Post", new_post_path  %>
+    <ul>
+        <% @posts.each do |post| %>
+            <li><%= link_to post.title, post_path(post.id) %> (Created at: <%= post.created_at %>)</li>
+
+        <% end %>
+    
+    </ul>
+
+
+</div>

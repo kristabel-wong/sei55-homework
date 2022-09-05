@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(174, 247, 229);
+    font-family: cursive;
+    color: dimgrey;
+}
+a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: fantasy;
+  }
+
+  li:hover {
+    cursor: pointer;
+    color: green;
+  }
