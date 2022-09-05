@@ -1,0 +1,19 @@
+Employee List
+
+<% @all_employees.each do | employee | %>
+
+    <li>
+        Employee: 
+        <%# obtains id for linking to individual employee information %>
+        <a href="/employee_list/<%= employee.id %>"> <%="#{employee.id}"%> </a>
+        <%# correctly re-orders the employees name %>
+        <% employee_name = employee.name.split(' ').rotate(-1)%>
+        <%= ": #{employee_name[0]}"%>
+
+    </li> 
+
+<% end %>
+
+<a href="new_employee"><button>Register New Employee</button></a>
+
+       

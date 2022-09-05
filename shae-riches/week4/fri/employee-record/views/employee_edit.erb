@@ -1,0 +1,78 @@
+
+<h3>Adjust Employee Information</h3>
+
+<form id="new_employee_form" action="/employee_list/<%=@employee.id%>" method="post">
+
+    <label>
+        Name: 
+        <input type="text" name="name" value="<%=@employee.name%>">
+    </label>
+
+    <label>
+        Image URL: 
+        <input type="text" name="image_url" value="<%=@employee.image_url%>">
+    </label>
+
+    <label>
+        Home Address:
+        <input type="text" name="home_address" value="<%= @employee.home_address %>">
+    </label>
+
+    <label>
+        Gender (m/f): 
+        <input type="text" name="gender" value="<%=@employee.gender%>">
+    </label>
+
+    <label>
+        On Contract (0 = No / 1 = Yes): 
+        <input id="contract_boolean" type="text" name="on_contract" value="<%=@employee.on_contract%>">
+    </label>
+
+    <label>
+        Contract Length (months): 
+        <input type="text" name="contract_length" value="<%=@employee.contract_length%>">
+    </label>
+
+    <label>
+        Full Time (0 = No / 1 = Yes): 
+        <input type="text" name="full_time" value="<%=@employee.full_time%>">
+    </label>
+
+    <label>
+        Casual (0 = No / 1 = Yes): 
+        <input type="text" name="casual" value="<%=@employee.casual%>">
+    </label>
+
+    <label>
+        Months Employed:
+        <input type="text" name="months_employed" value="<%=@employee.months_employed%>">
+    </label>
+
+    <label>
+        Accrued Sick Leave (days):
+        <input type="text" name="sick_days_accrued" value="<%=@employee.sick_days_accrued%>">
+    </label>
+
+    <label>
+        Taken Sick Leave (days):
+        <input type="text" name="sick_days_taken" value="<%=@employee.sick_days_taken%>">
+    </label>
+
+    <label>
+        Accrued Leave (hours): 
+        <input type="text" name="leave_hrs_accrued" value="<%=@employee.leave_hrs_accrued%>">
+    </label>
+
+    <label>
+        Taken Leave (hours):
+        <input type="text" name="leave_hrs_taken" value="<%=@employee.leave_hrs_taken%>">
+    </label>
+
+    <label for="end_employment_date">Employememt Cease Date:
+        <input type="date" id="end_employment_date" name="end_date" value="21-08-2022"
+        min="01-01-1991" max="21-08-2022">
+    </label>
+
+    <button>Update Employee</button>
+
+</form>
