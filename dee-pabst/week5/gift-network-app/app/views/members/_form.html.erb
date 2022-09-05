@@ -1,0 +1,23 @@
+<%= form_with model: @member, local: true do |f|  %>
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :phone %>
+  <br>
+  <%= f.text_field :phone %>
+  <br>
+  <br>
+  <%= f.label :avatar %>
+  <br>
+  <%= f.text_field :avatar %>
+  <br>
+  <br>
+  <%= f.label :town %>
+  <br>
+  <%= f.text_field :town %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
