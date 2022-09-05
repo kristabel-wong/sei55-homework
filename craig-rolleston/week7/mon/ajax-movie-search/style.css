@@ -1,4 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@600&display=swap');
+
 body {
     background-color: aqua;
+    text-align: center;
+    font-family: 'Proza Libre', sans-serif;
 }
