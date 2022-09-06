@@ -21,9 +21,8 @@ const arrayB = [
 Your function should look like:
 
 ```
-concat(arrayA, arrayB);
+concat(arrayA, arrayB); // output below
 
-console.log(result); // output below
 [
     ["a", "b", "c", 0, 1],
     ["d", "e", "f", 3, 4],
