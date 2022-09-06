@@ -1,0 +1,35 @@
+<% if @department.id == 1 %>
+    <h3><strong><%= @department.name%>:<p id="manager_name">X. Lyppiatt</p></strong></h3>
+    <hr>
+    <p>If a discussion with Management is desired, arrange an appointment through the appropriate channels.</p>
+
+<% else %>
+   <h4>Department of <%= @department.name %></h4>
+    
+    <hr>
+    <a href="/department_list/<%="#{params[:id]}"%>/edit">Edit</a>
+    <a href="/department_list/<%="#{params[:id]}"%>/delete">Delete</a>
+
+    <div>
+        Indentured:
+        <% @employees.each do | employee | %>
+            <% if employee.department_id == @department.id %>
+                <li>    
+                    <a href="/employee_list/<%= employee.id %>">
+                    <%= "Employee ##{employee.id}" %>
+                    </a>
+                    
+                </li>
+            <% else %>    
+            <% end %>
+        <% end %>
+
+    </div>
+
+
+
+<% end  %>
+
+
+
+

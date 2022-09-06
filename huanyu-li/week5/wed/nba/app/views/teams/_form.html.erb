@@ -1,0 +1,31 @@
+
+<%= form_with model:@team, local:true do |f| %>
+
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br><br>
+
+    <%= f.label :founded %>
+    <br>
+    <%= f.number_field :founded, in: 1900..2022%>
+    <br><br>
+
+    <%= f.label :arena %>
+    <br>
+    <%= f.text_field :arena %>
+    <br><br>
+
+    <%= f.label :owner %>
+    <br>
+    <%= f.text_field :owner %>
+    <br><br>
+
+    <%= f.label :logo %>
+    <br>
+    <%= f.text_field :logo %>
+    <br><br>
+
+    <%= f.submit %>
+
+<% end %>

@@ -1,0 +1,35 @@
+Adjust Department Details
+
+<h3>Create New Department</h3>
+
+<form id="new_employee_form" action="/department_list/<%= @department.id %>" method="post">
+
+    <label>
+        Name: 
+        <input type="text" name="name" value="<%= @department.name %>">
+    </label>
+
+    <label>
+        Employee Count: 
+        <input type="text" name="employee_count" value="<%= @department.employee_count %>">
+    </label>
+
+    <label>
+        Budget:
+        <input type="text" name="budget" value="<%= @department.budget %>">
+    </label>
+
+    <label>
+        Profit:
+        <input type="text" name="income" value="<%= @department.income %>">
+    </label>
+
+    <label>
+        Productivity:
+        <input type="text" name="productivity" value="<%= @department.productivity %>">
+    </label>
+
+
+    <button>Update Department</button>
+
+</form>

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=My+Soul&family=Shadows+Into+Light&display=swap');
+
+/* #whole_page{
+    background: linear-gradient(midnightblue, darkslategrey);
+    background-size: cover;
+
+} */
+footer{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h3{
+    font-family: 'Shadows Into Light', cursive;    
+    color: azure;
+    font-size: 30px;
+
+}
+h4{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+}
+h2{
+    font-family: 'My Soul', cursive;
+    font-size: 40px;
+}
+
+body{
+
+    color: beige;
+    margin: auto 1;
+    background: linear-gradient(0.25turn, midnightblue, darkslategrey);
+    background-size: cover;
+    z-index: -1;
+    
+    
+
+}
+
+#octo_h2_greeting{
+    padding: 0 0 0 5vw;
+    
+}
+#greetings_title{
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+    justify-content: center;
+    padding: 0 2vw 0 2vw;
+
+}
+#greetings_interaction{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+
+
+    
+}
+.octo_says{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 50vw;
+    /* justify-content: center; */
+    left: 25vw;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 14pt;
+
+}
+.user_says{
+    position: absolute;
+    right: 0px;
+}
+
+#first_greeting{
+
+}
+#greeting_button_one{
+
+ 
+}
+#secondGreeting{
+    /* display: none; */
+}
+#greetingButtonTwo{
+    /* display: none; */
+}
+#thirdGreeting{
+    /* display: none; */
+}
+#greetingButtonThree{
+    /* display: none; */
+}
+#fourthGreeting{
+    /* display: none; */
+}
+#greetingButtonFour{
+    /* display: none; */
+}
+#fifthGreeting{
+    /* display: none; */
+}
+#greetingButtonFive{
+    /* display: none; */
+}
+#sixthGreeting{
+    /* display: none; */
+}
+#greetingButtonSix{
+    /* display: none; */
+}
+#seventhGreeting{
+    /* display: none; */
+}
+#greetingButtonSeven{
+    /* display: none; */
+}
+#eigthGreeting{
+    /* display: none; */
+}
+#greetingButtonEight{
+    /* display: none; */
+}
+
+#question_page{
+    
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    height: 98vh;
+    width: 98vw;
+
+}
+#question_input{
+    align-self: center;
+    justify-self: center;
+
+}
+#question_text{
+    width: 30vw;
+    height: 7vh;
+    text-align: center;
+
+}
+#question_button{
+    height: 8vh;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#answer_page{
+    
+    display: inline-flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    height: 98vh;
+    width: 98vw;
+
+}
+.answer_buttons{
+
+    position: relative;
+    bottom: 0px;
+
+    
+
+}
+#answer_section{
+
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+
+}
+.answer_text{
+    margin: 0 0 10vh 0;
+    font-family: 'Shadows Into Light', cursive;
+}
+#answer_actual_answer{
+    font-size: 12vh;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+
+
+}
+.answer_form{
+    position: relative;
+    bottom: 0px;
+    margin: 0 5vw 0 5vw;
+    font-family: 'Cormorant Garamond', bold;
+
+}
+#answer_buttons_box{
+    display: inline-flex;
+    position: relative;
+    bottom: 0px;
+    margin: 40vh 0 0 0 ;
+    justify-content: space-between;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#answer_eight_legs{
+    display: inline;
+    position: absolute;
+    bottom: -1vh;
+    right: -15vw;
+    transform: rotate(-0.1turn);
+
+}

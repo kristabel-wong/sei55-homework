@@ -1,0 +1,54 @@
+<h3>Show Page</h3>
+
+<div id="show_main_container">
+    <h2 id="show_id_title">EMPLOYEE REGISTRATION NUMBER: #<%= @employee.id %></h2>
+
+
+    <div class="show_inner_containers" id="show_basic_info_container">
+        
+        <h4><strong>EMPLOYEE DETAILS</strong></h4>
+        
+        <p class="employee_detail" id="detail_name">
+            Name: <%= @employee.name %>
+        </p> <!-- closes detail_name -->
+
+        <p class="employee_detail" id="detail_address">
+            Place of Residence: <%= @employee.address %>
+        </p> <!-- closes detail_address -->
+
+        <p class="employee_detail" id="detail_employment">
+            
+            <% if @employee.contract %>
+            
+                <%= "#{@employee.name}, is presently under contract." %>
+            
+            <% elsif @employee.full_time %>
+
+                <%= "#{@employee.name}, has been grateful of full time employment for #{@employee.months_employed} months."  %>
+            
+            <% else %>
+            
+                <%= "No information available at this time." %>
+            
+            <% end %>
+
+        </p> <!-- closes detail_employment -->
+
+
+    </div> <!-- close basic_info_container -->
+
+    <div class="show_inner_containers" id="show_date_info_container">
+
+        <%= @employee.start_date %>
+        <%= @employee.end_date %>
+
+    </div> <!-- close date_info_container -->
+
+    <div class="show_inner_containers" id="show_employee_img_container">
+        
+        <%= image_tag @employee.image_url, alt: "image of #{@employee.name}", class: 'employee_images' %>
+
+    </div> <!-- close employee_img_container -->
+
+
+</div>

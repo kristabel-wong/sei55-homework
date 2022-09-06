@@ -1,0 +1,19 @@
+<h2>Welcome to the Rock Paper Scissors game!</h2>
+
+<form action="/rps/<%= params[:play] %>">
+
+<h3>Decide your play here:</h3>
+<select name="play">
+<option value="" selected disabled>Choose one</option>
+<option value="rock">Rock</option>
+<option value="paper">Paper</option>
+<option value="scissors">Scissors</option>
+</select>
+
+<h3>And the computer will decide it's play!</h3>
+
+<h3>Click on the button below to look at the outcome below!</h3>
+
+<button>Submit play</button>
+
+</form>
