@@ -25,16 +25,52 @@
 
     <main>
         <section class="search">
-            <label for="query">Enter the number of the images</label>
-            <br>
-            <input type="number" id="query" max="100" min="1">
-            <button id="btn">Get</button>
-            <br>
-            <em>(the number is from 1 to 100)</em>
+            <select name="mode" id="searchType">
+                <option value="100" disabled selected>Please select type</option>
+                <option value="0">Search by Number</option>
+                <option value="1">Search by Date Range</option>
+                <option value="2">Search by Date</option>
+            </select>
+
+            <div id="searchByNumber" hidden>
+                <label for="query">Enter the number of the images</label>
+                <br>
+                <input type="number" id="query" max="100" min="1">
+                <button id="btn">Get</button>
+                <br>
+                <em>(the number is from 1 to 100)</em>
+                <br>
+            </div>
+
+            <div id="searchByDateRange" hidden>
+                <label for="startDate">Enter the Start Date</label>
+                <input type="date" id="startDate">
+                <br>
+                <label for="endDate">Enter the End Date</label>
+                <input type="date" id="endDate">
+                <br>
+                <em>Must be after 1995-06-16</em>
+                <br>
+                <button id="dateBtn">Get</button>
+                <br>
+            </div>
+
+            <div id="searchByDate" hidden>
+                <label for="today">Enter the Start Date</label>
+                <input type="date" id="today">
+                <br>
+                <em>Must be after 1995-06-16</em>
+                <br>
+                <button id="todayBtn">Get</button>
+
+            </div>
+
         </section>
 
+        <div id="errors"></div>
         <div id="results"></div>
         <div id="details" hidden></div>
+
     </main>
 
     <footer>

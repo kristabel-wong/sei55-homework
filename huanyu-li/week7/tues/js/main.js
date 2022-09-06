@@ -28,47 +28,71 @@ const httpByDate = function (date) {
     return `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`
 }
 
+const httpByTwoDates = function (start, end) {
+    return `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&start_date=${start}&end_date=${end}`
+}
+
 
 
 $(function () {
     // DOM ready
     $('#btn').on('click', function () {
+        $('#details').empty().hide()
+        $('#results').empty().show()
         const query = $('#query').val()
         getImagesResults(query)
     }) // query button handler
 
+    $('#dateBtn').on('click', function () {
+        $('#details').empty().hide()
+        $('#results').empty().show()
+        const startDate = $('#startDate').val()
+        const endDate = $('#endDate').val()
+        getImagesByDate(startDate, endDate)
+    }) // dates button handler
+
+    $('#todayBtn').on('click', function () {
+        $('#results').empty().hide()
+        $('#details').empty().show()
+        const today = $('#today').val()
+        getDetails(today)
+    }) // dates button handler
+
+    $('#searchType').change(function(){
+        const type = $(this).val()
+        if(type==='0'){
+            $('#searchByNumber').show()
+            $('#searchByDateRange').hide()
+            $('#searchByDate').hide()
+        } else if (type==='1') {
+            $('#searchByNumber').hide()
+            $('#searchByDateRange').show()
+            $('#searchByDate').hide()
+        } else {
+            $('#searchByNumber').hide()
+            $('#searchByDateRange').hide()
+            $('#searchByDate').show()
+        }
+    })
 }) //DOM ready
 
 const getImagesResults = function (queryNumber) {
     axios.get(httpByNumber(queryNumber))
         .then(function (res) {
             //success
-            console.log(res);
-            $('#results').empty()
-            res.data.forEach(function (ele) {
-                $('#results').append(
-                    `
-                    <img src="${ele.url}" alt="${ele.title}" data-date=${ele.date}>
-                    `
-                )
-            }); // forEach
-
-            $('#results img').on('click', function (e) {
-                const date = $(e.target).data('date')
-                getDetails(date)
-            }) // img click
-
+            const data = res.data
+            showImages(data)
         })
         .catch(function (err) {
             // err
-            console.error(err);
+            showError(err)
         })
 } // getImagesResults
 
 const getDetails = function (queryDate) {
     axios.get(httpByDate(queryDate))
         .then(function (res) {
-            console.log(res.data);
+         
             const data = res.data
             $('#results').hide()
             $('#details').empty().append(`
@@ -83,15 +107,49 @@ const getDetails = function (queryDate) {
                 `).show()
 
             $('.back').on('click', function () {
-                console.log('clicked');
+         
                 $('#details').hide()
                 $('#results').show()
             }) // back button handler
 
         })
         .catch(function (err) {
-            console.error(err);
+            showError(err)
         })
 } // getDetails
 
 
+const getImagesByDate = function (startDate, endDate) {
+    axios.get(httpByTwoDates(startDate, endDate))
+        .then(function (res) {
+            const data = res.data
+            showImages(data)
+        })
+        .catch(function (err) {
+            showError(err)
+        })
+} // getImagesByDate
+
+const showImages = function (data) {
+
+    data.forEach(function (ele) {
+        $('#results').append(
+            `
+                    <img src="${ele.url}" alt="${ele.title}" data-date=${ele.date}>
+                    `
+        )
+    }); // forEach
+
+    $('#results img').on('click', function (e) {
+        const date = $(e.target).data('date')
+        getDetails(date)
+    }) // img click
+}
+
+const showError = function (err) {
+    console.error(err.response.data.error.message);
+            const error = err.response.data.error.message
+            $('#errors').empty().append(`
+              <h4>${error}</h4>
+            `)
+}
