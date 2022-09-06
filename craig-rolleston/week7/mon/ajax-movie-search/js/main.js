@@ -58,11 +58,12 @@ $( function() {
     });
 
     // click enter function for search
-    $('#movieQuery').on('return',function (){
+    $('#movieQuery').on('keypress',function (e){
        
-       
-        const movieSearch = $('#movieQuery').val();
-        lookupMovie( movieSearch );
+        if(e.which == 13){ // 13 corresponds to the return key
+            const movieSearch = $('#movieQuery').val();
+            lookupMovie( movieSearch )
+        };
 
     });
 
