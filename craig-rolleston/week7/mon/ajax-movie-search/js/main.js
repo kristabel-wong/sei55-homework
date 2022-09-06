@@ -58,9 +58,9 @@ $( function() {
     });
 
     // click enter function for search
-    $('#movieQuery').on('keypress',function (e){
+    $('#movieQuery').on('keypress',function (press){
        
-        if(e.which == 13){ // 13 corresponds to the return key
+        if(press.which == 13){ // 13 corresponds to the return key
             const movieSearch = $('#movieQuery').val();
             lookupMovie( movieSearch )
         };
