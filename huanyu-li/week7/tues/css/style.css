@@ -30,6 +30,7 @@ input{
 
 #details img{
     width: 100%;
+    max-width: 2000px;
     display: block;
     margin: 10px auto;
     cursor: pointer;
