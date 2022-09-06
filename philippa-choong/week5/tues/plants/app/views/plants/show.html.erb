@@ -1,0 +1,23 @@
+
+<h2><%= @plant.name %></h2>
+
+<%= link_to 'Edit', edit_plant_path(@plant.id) %>
+|
+<%= link_to 'Delete', destroy_plant_path(@plant.id) %>
+
+<br>
+<%= image_tag @plant.image_url, alt: @plant.name, class: 'plant' %>
+<p>
+    <strong> Sun Exposure: </strong>
+    <%= @plant.sun_exposure %>
+</p>
+
+<p>
+    <strong> Native area:</strong>
+    <%= @plant.native_area %> 
+</p>
+
+<p>
+    <strong> Mature size: </strong>
+    <%= @plant.mature_size %> 
+</p>
