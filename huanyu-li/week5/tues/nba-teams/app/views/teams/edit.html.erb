@@ -1,0 +1,38 @@
+
+<h2><%= @team.name %></h2>
+
+<%= form_with model:@team, local:true do |f| %>
+
+    <div class="row">
+        <%= f.label :name%>
+        <%= f.text_field :name, :required => true, :class => "enter" %>
+    </div>
+
+    <div class="row">
+        <%= f.label :image_url ,"Logo url" %>
+        <%= f.text_field :image_url, :required => true, :class => "enter" %>
+    </div>
+
+    <div class="row">
+        <%= f.label :founded_year %>
+        <%= f.number_field :founded_year, :required => true, :class => "enter" %>
+    </div>
+
+    <div class="row">
+        <%= f.label :city %>
+        <%= f.text_field :city, :required => true, :class => "enter" %>
+    </div>
+
+    <div class="row">
+        <%= f.label :arena %>
+        <%= f.text_field :arena, :required => true, :class => "enter" %>
+    </div>
+
+    <div class="row">
+        <%= f.label :owner %>
+        <%= f.text_field :owner, :required => true, :class => "enter" %>
+    </div>
+
+    <%= f.submit class:'row' %>
+    
+<% end %>

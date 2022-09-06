@@ -1,0 +1,11 @@
+<h2><%= @tree.common_name %></h2>
+<%= image_tag @tree.image_url, alt: @tree.common_name, class: 'tree' %>
+<p>
+<em><%= @tree.botanical_name %></em>
+</p>
+<section>
+<%= @tree.key_id_features %>
+</section>
+<section>
+<%= @tree.distribution %>
+</section>

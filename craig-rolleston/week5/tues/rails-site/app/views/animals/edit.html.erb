@@ -1,0 +1,28 @@
+
+<h2>>> Edit: <%= @animal.name %> <<</h2>
+
+<%= form_with model: @animal, local: true do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+
+    <%= f.label :species %>
+    <%= f.text_field :species %>
+    <br>
+    
+    <%= f.label :region %>
+    <%= f.text_field :region %>
+    <br>
+
+    <%= f.label :life_span  %>
+    <%= f.text_field :life_span %>
+    <br>
+
+    <%= f.label :image_url, 'Image URL' %>
+    <%= f.text_field :image_url %>
+    <br>
+
+    <%= f.submit %>
+
+<% end %>

@@ -1,0 +1,28 @@
+<%= for_with model: @item, local:true do |f| %>
+  <%= f.label :summary %>
+  <br>
+  <%= f.text_field :summary %>
+  <br>
+  <br>
+  <%= f.label :description %>
+  <br>
+  <%= f.text_field :description %>
+  <br>
+  <br>
+  <%= f.label :condition %>
+  <br>
+  <%= f.text_field :condition %>
+  <br>
+  <br>
+  <%= f.label :image, 'Image URL' %>
+  <br>
+  <%= f.text_field :image, placeholder: 'URL here' %>
+  <br>
+  <br>
+  <%= f.label :category %>
+  <br>
+  <%= f.text_field :category %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
