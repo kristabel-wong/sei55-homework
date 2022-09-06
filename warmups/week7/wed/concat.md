@@ -1,6 +1,7 @@
 # Concat my arrays
 
 Given two arrays (below) with the same number of rows, return a concatenated version of the two arrays. 
+Please do this in JavaScript
 
 ```
 const arrayA = [
@@ -22,7 +23,8 @@ Your function should look like:
 ```
 concat(arrayA, arrayB);
 
-const result = [
+console.log(result); // output below
+[
     ["a", "b", "c", 0, 1],
     ["d", "e", "f", 3, 4],
     ["g", "h", "i", 6, 7],
