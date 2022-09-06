@@ -1,0 +1,48 @@
+
+body{
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.search{
+    font-size: 120%;
+    margin-bottom: 30px;
+}
+
+
+input{
+    width: 100px;
+    font-size: 120%;
+    vertical-align:middle;
+}
+
+#btn{
+    height: 32.4px;
+    vertical-align:middle;
+}
+
+#results img{
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+
+#details img{
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+#details{
+    font-size: 120%;
+}
+
+#results img:hover{
+    scale: 110%;
+}
+
+header img:hover{
+    scale: 110%;
+}
