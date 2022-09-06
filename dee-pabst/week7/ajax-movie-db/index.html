@@ -7,17 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJAX Movie DB</title>
     <script src="js/jquery.js"></script>
+    <script src="js/axios.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
-    <h1>Movie Db!</h1>
-    <input type="text" id="movieQuery" placeholder="Enter search term">
+    <h1>Ajax Movie Db!</h1>
+    <input type="text" id="query" placeholder="Enter search term">
     <button id="submitButton">Search</button>
-    <div id="results">
-    </div>
+
+    <div id="results"></div>
+    <button>back</button>
 </body>
 
 </html>
