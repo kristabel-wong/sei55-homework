@@ -1,0 +1,49 @@
+<h2>Edit your restaurant here:</h2>
+
+<div class="form">
+<%= form_with model: @restaurant, local: true do |f| %>
+
+    <p><%= f.label :name %></p>
+    <%= f.text_field :name %>
+    <br>
+
+    <p><%= f.label :chef %></p>
+    <%= f.text_field :chef %>
+    <br>
+
+    <p><%= f.label :location %></p>
+    <%= f.text_field :location %>
+    <br>
+
+    <p><%= f.label :cuisine %></p>
+    <%= f.text_field :cuisine %>
+    <br>
+
+    <p><%= f.label :year %></p>
+    <%= f.text_field :year %>
+    <br>
+
+    <p><%= f.label :price_range %></p>
+    <%= f.text_field :price_range %>
+    <br>
+
+    <p><%= f.label :description %></p>
+    <%= f.text_field :description %>
+    <br>
+
+    <p><%= f.label :restaurant_img %></p>
+    <%= f.text_field :restaurant_img %>
+    <br>
+
+    <p><%= f.label :dish %></p>
+    <%= f.text_field :dish %>
+    <br>
+
+    <p><%= f.label :dish_img %></p>
+    <%= f.text_field :dish_img %>
+    <br>
+
+    <%= f.submit %>
+
+<% end %>
+</div>
