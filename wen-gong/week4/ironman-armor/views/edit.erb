@@ -1,0 +1,53 @@
+
+<h3>
+   Editing <%= @armor['name'] %>
+</h3>
+
+
+<form action="/armors/<%= @armor['id'] %>" method="post">
+
+<label>
+   Name:
+   <input type="text" name="name" value="<%= @armor['name'] %>">
+</label>
+<br>
+
+<label>
+   Users:
+   <input type="text" name="users" value="<%= @armor['users'] %>">
+</label>
+<br>
+
+<label>
+   Appearances:
+   <input type="text" name="appearances" value="<%= @armor['appearances'] %>">
+</label>
+<br>
+
+
+<label>
+   Weapons:
+   <input type="text" name="weapons" value="<%= @armor['weapons'] %>">
+</label>
+<br>
+
+
+
+<label>
+   Special_features:
+   <input type="text" name="special_features" value="<%= @armor['special_features'] %>">
+</label>
+<br>
+
+
+
+<label>
+   Image URL:
+   <input type="text" name="image_url" value="<%= @armor['image_url'] %>">
+</label>
+<br>
+
+
+<button>Edit Armor</button>
+
+</form>

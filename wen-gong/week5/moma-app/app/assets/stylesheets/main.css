@@ -1,0 +1,14 @@
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color:antiquewhite;
+    background-color: black;
+}
+
+a {
+    color:aquamarine;
+}
+
+.artist_image {
+    max-width: 90vw;
+}

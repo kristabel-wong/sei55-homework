@@ -1,0 +1,17 @@
+body {
+    position: relative;
+}
+
+
+img {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100%; 
+}
+
+
+
+nav {   
+    margin: 0 auto;
+}
