@@ -1,0 +1,39 @@
+body {
+    background-color: hsl(170deg 80% 40%);
+    color: hsl(0deg 100% 25%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(60deg 100% 60%);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: hsl(60deg 100% 0%);
+    background-color: hsl(270deg 10% 100%);
+    font-style: italic;
+}
+
+section {
+    padding: 2px 2px 2px 2px;
+}
+
+section:hover {
+    border: 2px solid hsl(90deg 100% 40%);
+    padding: 0px;
+}
+
+h2 {
+    font-style: italic;
+}
+
+img {
+    width: 25vw;
+    border-radius: 10px;
+}
+
+tr td:first-of-type {
+    text-align: right;
+}

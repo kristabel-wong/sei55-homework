@@ -1,0 +1,21 @@
+
+<h2>
+    Index of Movies
+</h2>
+
+<ul>
+<% @results.each do |item| %>
+
+    <li>
+    <a href="/movie/<%= item.id %>">
+    <%= item.name %>
+    </a>
+    </li>
+
+<% end %>
+
+</ul>
+
+
+
+

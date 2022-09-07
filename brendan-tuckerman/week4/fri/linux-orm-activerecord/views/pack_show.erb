@@ -1,0 +1,27 @@
+<div class="box">
+    <h2> Details for the package <span class="show_title"><%= @package.name %></span></h2>
+    
+    <br>
+    <a href="/packages/<%= @package.id %>/edit">Edit</a>
+    |
+    <a href="#" onclick= "checkDelete('packages', <%= @package.id %>)">Delete</a>
+    <br>
+    <ul class="details">
+    
+         <li><strong>Description:</strong><em><%= @package.description %></li></em>
+        
+
+        </ul>
+        <br>
+        <h3>Distros that use this Package:</h3>
+            <ul>
+                <%# <% @package.distros.each do |distros| %> 
+                <%# <li><a href ="/distros/<%= distros.id %>
+                <%# <%= distros.name</a></li> %> 
+                <%# <%  end  %> 
+            </ul>
+        
+    
+    <script src="/js/main.js" type="text/javascript"></script>
+   
+</div>

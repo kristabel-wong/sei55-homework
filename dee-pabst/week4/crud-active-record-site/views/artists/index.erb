@@ -1,0 +1,9 @@
+<h2>List of artists</h2>
+<%# Loop through and list the hits %>
+<table>
+  <% @artists.each do |artist|%>
+    <tr>
+      <td><a href="/artists/<%= artist.id %>"><%= artist.name %></a></td>
+    </tr>
+  <% end %>
+</table>

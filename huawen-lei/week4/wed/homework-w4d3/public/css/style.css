@@ -1,0 +1,9 @@
+body{
+    background-color: aliceblue;
+}
+
+img{
+    width: 20%;
+    position: relative;
+    display: block;
+}

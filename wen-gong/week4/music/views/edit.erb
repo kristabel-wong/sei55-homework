@@ -1,0 +1,73 @@
+<h3>
+  Editing <%= @album.name %>
+</h3>
+
+<form class="edit-album" action="/albums/<%= @album.id %>" method="post">
+
+  <label>
+    Name: 
+    <input type="text" name="name" value="<%= @album.name %>">
+  </label>
+  <br>
+  <hr>
+
+
+  <label>
+    Released: 
+    <input type="text" name="released" value="<%= @album.released %>">
+  </label>
+  <br>
+  <hr>
+
+  <label>
+    Genre: 
+    <input type="text" name="genre"  value="<%= @album.genre %>">
+  </label>
+  <br>
+  <hr>
+
+  <label>
+    Length: 
+    <input type="text" name="length"  value="<%= @album.length %>">
+  </label>
+  <br>
+  <hr>
+
+  <label>
+    Track_listing: 
+    <input type="text" name="track_listing"  value="<%= @album.track_listing %>">
+  </label>
+  <br>
+  <hr>
+
+  <label>
+    Image URL: 
+    <input type="text" name="image_url"  value="<%= @album.image_url %>">
+  </label>
+  <br>
+  <hr>
+
+  <label>
+    Singer ID: 
+  
+    <select name="singer_id">
+    
+      <option value="" selected disabled>Please select:</option>
+
+      <% Singer.all.each do |singer| %>
+        <option value="<%= singer.id %>" >
+          <%= singer.name %>
+        </option>
+      <% end %>
+      
+    </select>
+
+
+
+  </label>
+  <br>
+  <hr>
+
+  <button>Update Album</button>
+
+</form>
