@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@600&display=swap');
+
+body {
+    /* background-image: url('https://api.nasa.gov/assets/img/general/apod.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+    text-align: center;
+    background-color: rgb(50, 49, 49);
+    color:rgb(228, 224, 232);
+    font-family: 'Proza Libre', sans-serif;
+}
+
+button {
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+}
+
+input {
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+
+    border: none;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+img  {
+    max-width: 70vw;
+    max-height: 40vh;
+    border-radius: 30px;
+
+}
+
+#results img {
+    
+    max-width: 30vw;
+    max-height: 30vw;
+    text-align: center;
+    margin: 10px;
+    border-radius: 30px;
+
+}
+
+#details {
+    
+    margin: 40px 20px 20px 20px; 
+    border-radius: 30px;
+    text-align: center;
+
+}
