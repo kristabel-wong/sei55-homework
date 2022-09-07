@@ -89,17 +89,15 @@ const changer = () => {
 });
 }
 
-
 setTimeout(changer, 7000)
 
-
-    
     
 const convertColor = async function( text ) {
     try {
         const res = await axios.get(`https://x-colors.herokuapp.com/api/hex2rgb?value=${text}`)
         
-        return res.rgb
+        
+        return res.data.rgb
         
     }
      catch (err) {
