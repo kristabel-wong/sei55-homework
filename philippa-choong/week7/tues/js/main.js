@@ -33,18 +33,18 @@ const getPokemonSearchResults = function (searchPokemon) {
             const pokemon = response.data
             // console.log(`data:`, response);
 
-            $('#results').append(`
+            $('#results').empty().append(`
             <div>
                 <h3>${pokemon.name}</h3>
                 <p>weight:${pokemon.weight}</p>
-                <img pokemon-id="${pokemon.id}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name}">
+                <img data-pokemon-id="${pokemon.id}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name}">
             </div>
             `);
-            // pokemon-id custom attribute, where you put a -
+            // pokemon-id custom attribute, where you put a data-
 
             $(`#results img`).on('click', function () {
                 console.log('image clicked', this); // this - jQuery's click handler
-                const id = $(this).data$(pokemon.id);
+                const id = $(this).data("pokemon-id");
                 console.log(`ID:`, id); //this is a jQuery. it will know .data selected
                 // getMovieDetailsById(id);
             })
