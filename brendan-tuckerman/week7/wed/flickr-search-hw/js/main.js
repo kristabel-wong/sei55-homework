@@ -49,6 +49,16 @@ $(function(){
 
     })
 
+    //Infinite scroll practice
+    $(window).scroll(function(e){
+        
+      if(e.target.documentElement.scrollTop > e.target.documentElement.scrollTopMax - 200){
+        currentPage++
+        getSearchResults ( query, currentPage );
+      }
+      
+    })
+
 
 }); //DOM readiness 
 
