@@ -1,0 +1,30 @@
+<h2>
+    <%= @countries.name %>
+
+
+</h2>
+<%= link_to 'Edit', edit_country_path(@countries.id) %>
+|
+<%= link_to 'Delete', destroy_country_path(@countries.id) %>
+<p>
+<p>
+    <strong> Location:</strong>
+    <%= @countries.location%> 
+</p>
+
+<p>
+    <strong> Language:</strong>
+    <%= @countries.language%> 
+</p>
+
+<p>
+    <strong> Population:</strong>
+    <%= @countries.population %> 
+</p>
+<p>
+    <strong> Vist:</strong>
+    <%= @countries.vist%> 
+</p>
+
+
+<%= image_tag @countries.image_url, alt: @countries.name, class: 'country' %>
