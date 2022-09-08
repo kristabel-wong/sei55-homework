@@ -14,6 +14,9 @@ $(function () {
 
     $('#searchForm').on('submit', function (ev) {  // ev - events 
         // console.log('Form submitted!');
+        // console.log(ev.target[0].value);
+        // document.querySelector('#query').value
+
         ev.preventDefault(); // stop the form from reloading the page
 
         page = 1; //resetting back to page 1 whenever there's a new search
@@ -27,12 +30,10 @@ $(function () {
         // togglePreviousButton();
     })// form submit handler function 
 
-
-
     $('[aria-label="Previous"]').click(function (ev) {
         const query = $('#query').val(); // grab the search info
         if (page > 1) {
-            page--;
+            page--;//not let or const as reassigning value not creating a new variable
         }
         if (page === 1) { // no more previous pages when at first page
             hidePrevButton = true
@@ -50,7 +51,6 @@ $(function () {
         hidePrevButton = false
         toggleButtonsVisibility()
     });// Next Page
-
 
 })// DOM ready
 
@@ -122,6 +122,9 @@ const generatePages = numberOfPages => {
 
 const generatePaginationEvListeners = () => {
     $('.eachPage').click(function (ev) {
-        console.log(ev.target.text)
+        console.log(ev.target)
+        const query = $('#query').val(); // grab the search info
+        page = ev.target.text //not let or const as reassigning value not creating a new variable
+        getSearchResults(query, page);
     });
 }
