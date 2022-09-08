@@ -1,0 +1,35 @@
+<%# Presents the information for each country %>
+
+<h3>
+Details for <%= @cities.name %>
+</h3>
+
+<%# provides the link to the edit or delete pages for each %>
+<a href="/cities/<%= @cities.id %>/edit">Edit</a>
+|
+<a href="/cities/<%= @cities.id %>/delete">DELETE</a>
+
+<p>
+    <strong>Country: </strong>
+    <a href="/countries/<%= @cities.country_id %>">
+    <%= @cities.country.name %>
+    </a>
+
+<p>
+    <strong> Location: </strong>
+    <%= @cities.location %>
+</p>
+<p>
+    <strong> Population: </strong>
+    <%= @cities.population %>
+</p>
+<p>
+    <strong> Attractions: </strong>
+    <%= @cities.attractions %>
+</p>
+<p>
+<img id="city-image" src="<%= @cities.image_url %>" alt="<%= @cities.name %>" >
+
+</p>
+
+

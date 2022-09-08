@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 20px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+label {
+    margin-left: 15px;
+}
+
+li {
+    margin: 10px;
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.animal {
+    max-width: 40vw;
+    
+}
+
+a:hover {
+    color: aquamarine;
+}
+
+nav {
+    text-align: center;
+}
+
+input {
+    margin: 10px;
+    background-color: rgb(225, 214, 95);
+    border-radius: 5px;
+    text-align: left;
+}
+
+footer {
+    text-align: left;
+    margin-top: 10px;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    color: rgb(159, 8, 240);
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 0, 251);
+}
+
+.home {
+    color: aqua;
+}
+
+.to {
+    color: rgb(0, 13, 255);
+}
+
+.the {
+    color: rgb(255, 0, 255);
+}
+
+.worlds {
+    color: rgb(255, 0, 17);
+}
+
+.most {
+    color: rgb(255, 132, 0);
+}
+
+.exotic {
+    color: rgb(195, 255, 0);
+}
+
+.animals {
+    color: rgb(0, 255, 38);
+}
+
+#sunda {
+    border-radius: 5px;
+}
+
+strong {
+    margin-left: 15px;
+}
+
+.zoo {
+    max-width: 70vw;
+    max-height: 60vh;
+}
+
+.ayeaye {
+    top: 50px;
+    max-width: 40vw;
+    margin-bottom: -20px;
+}
+
+form {
+    margin-bottom: 10px;
+    margin-right: 30px;
+    display: inline-block;
+    
+}
+
+.coolzoo {
+    max-width: 70vw;
+}
+
+.elephants {
+    margin-bottom: -30px;
+}

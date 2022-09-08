@@ -1,0 +1,12 @@
+<h2>
+    Index of Plants
+</h2>
+
+<ul>
+<% @results.each do |plants|%> 
+    <li>
+        <a href="/plants/<%=plants['id'] %>">
+        <%= plants['name'] %> <br>
+    </li>
+<% end %>   
+</ul>

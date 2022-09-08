@@ -1,0 +1,22 @@
+
+<div class="container">
+
+    <h2><%= @post.title %></h2>
+    <%= image_tag @post.image, alt: @post.title, class: "post_image" %>
+    <p><strong>Votes:</strong> <%= @post.votes %></p>
+    <p><strong>Link: </strong><%= @post.link %></p>
+
+    <%= @post.text %>
+
+
+    <p><strong>Posted by: </strong><%= link_to @post.user.first_name, user_path(@post.user_id) %></p>
+ 
+    <%= link_to 'Edit Post', edit_post_path(@post.id) %>
+    |
+    <%= link_to 'Delete Post', post_path(@post.id), method: 'delete' %>
+    
+
+
+
+
+</div>

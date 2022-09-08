@@ -1,0 +1,13 @@
+<h2>
+Index of Armors
+</h2>
+
+<ul>
+<% @results.each do |armor| %>
+  <li>
+    <a href="/armors/<%= armor['id'] %>">
+      <%= armor['name'] %>
+    </a>
+  </li>
+<% end %>
+</ul> 

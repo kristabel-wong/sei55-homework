@@ -1,0 +1,21 @@
+
+<%= form_with model: @zoo, local: true do |f| %>
+
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br><br>
+
+    <%= f.label :country %>
+    <br>
+    <%= f.text_field :country %>
+    <br><br>
+
+    <%= f.label :image, 'Image URL' %>
+    <br>
+    <%= f.text_field :image %>
+    <br><br>
+
+    <%= f.submit %>
+
+<% end %>

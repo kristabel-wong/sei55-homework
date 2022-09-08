@@ -1,0 +1,46 @@
+body{
+    background-color: darkmagenta;
+}
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 100px;
+}
+
+h3{
+    font-family:Arial, Helvetica, sans-serif;
+    color:darkorange;
+    font-size: 60px;
+}
+
+h4{
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(0, 183, 255);
+    font-size: 40px;
+}
+
+a{
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(0, 255, 170);
+    font-size: 20px;
+}
+
+
+.eight-ball{
+    width:30%;
+}
+
+label{
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(200, 255, 0);
+    font-size: 30px;
+}
+
+.spade-image{
+    width:20%;
+}
+
+.rps-image{
+    width:40%;
+}

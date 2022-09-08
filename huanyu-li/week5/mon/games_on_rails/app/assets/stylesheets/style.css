@@ -1,0 +1,18 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+
+body{
+    background-color: blanchedalmond;
+    font-family: 'Silkscreen',cursive;
+}
+
+a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.question p, .answer p{
+    color: brown;
+}

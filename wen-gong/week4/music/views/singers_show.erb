@@ -1,0 +1,30 @@
+<h3>
+  Details for <%= @singer.name %>
+</h3>
+
+<div class="singer-show">
+    <p>
+      <strong>Born:</strong>
+      <%= @singer.born %>
+    </p>
+
+    <p>
+      <strong>Albums:<%= @singer.albums.count %></strong>
+      <ul>
+      <% @singer.albums.each do |album| %>
+        <li>
+          <a href="/albums/<%= album.id %>"><%= album.name %></a>,
+          (<%= album.released %>)
+        </li>
+      <% end %>
+      </ul>
+    </p> 
+
+    <p>
+      <strong>Website:</strong>
+      <a href="justinbiebermusic.com"><%= @singer.website %></a>
+    </p>
+   
+    <img class="singer-image" src="<%= @singer.image_url %>" alt="<%= @singer.name %>">
+   
+</div>

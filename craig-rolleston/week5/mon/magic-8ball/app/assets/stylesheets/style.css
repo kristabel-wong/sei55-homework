@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(52, 218, 163);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+button {
+    padding: 5px;
+    margin: 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.magicball {
+    position:absolute;
+    top: 200px;
+    left: 100px;
+}
+
+img {
+
+   max-width: 200px;
+   border-radius: 5px;
+   border: 2px dotted black;
+
+}
+
+
+.secretnumber {
+    position:absolute;
+    top: 200px;
+    left: 700px;
+}
+
+.rps {
+    position:absolute;
+    top: 400px;
+    left: 400px;
+    display: block;
+}
+
+.rock {
+    top: 300px;
+
+}

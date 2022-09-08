@@ -1,0 +1,48 @@
+<h3>
+All About <%= @plant.name%> 
+</h3> 
+
+<a href="/plants/<%= @plant.id%>/edit">
+    Update Plant
+</a>
+|
+<a href="/plants/<%= @plant.id%>/delete">
+Delete Plant 🥀
+</a>
+
+<p>
+    <strong>Buyer:</strong>
+    <a href="/buyers<%= @plant.buyer.id %>">
+        <%= @plant.buyer.name %>
+    </a>
+</p>
+
+
+<p>
+<strong>Native Area</strong>
+<%= @plant.native_area %>
+</p>
+
+
+<p>
+<strong>Perennial</strong>
+<%= @plant.perennial == 1 ? 'Yes!' : 'No, it will last around a year or so.'  %>
+</p>
+
+<p>
+<strong>Sun Exposure</strong>
+<%= @plant.sun_exposure %>
+</p>
+
+<p>
+<strong>Mature Size (in cm)</strong>
+<%= @plant.mature_size %>
+</p>
+
+<p>
+<strong>Toxicity</strong>
+<%= @plant.toxicity %>
+</p>
+
+
+<img src="<%= @plant.image_url %>" alt="<%= @plant.name%>">

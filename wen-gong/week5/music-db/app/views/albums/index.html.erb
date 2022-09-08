@@ -1,0 +1,13 @@
+
+<h3>All Albums</h3>
+
+<ul>
+ <% @albums.each do |album| %>
+    <li>
+    
+     <%= link_to album.name, planet_path(album.id) %>
+    </li>
+ <% end %>
+
+
+</ul>
