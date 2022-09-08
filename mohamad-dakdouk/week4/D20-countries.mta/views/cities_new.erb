@@ -1,0 +1,45 @@
+<h3>Add new City</h3>
+
+<form action="/cities" method="post">
+
+<label>
+    Name:
+    <input type="text" name="name">
+</label>
+<br>
+
+<label>
+    Location:
+    <input type="text" name="location">
+</label>
+
+<br>
+<label>
+    Population:
+    <input type="text" name="population">
+</label>
+<br>
+<label>
+    Attractions:
+    <input type="text" name="attractions">
+</label>
+<br>
+<label>
+    Image:
+    <input type="text" name="image_url">
+</label>
+<br>
+<label>
+    Country:
+   <select name="country_id">
+   <option value="" selected disabled>Please Select</option>
+   <% Country.all.each do |country|%>
+    <option value="<%= country.id %>"><%= country.name %>
+    </option>
+   <%end%>
+   </select>
+</label>
+
+<button>Create City</button>
+
+</form>

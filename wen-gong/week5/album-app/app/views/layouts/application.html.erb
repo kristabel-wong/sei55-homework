@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AlbumApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+    <nav>
+      <h1>Album Library</h1>
+      <%= link_to 'Home', root_path %>
+      |
+      <%= link_to 'All Singers', singers_path %>
+      |
+      <%= link_to 'Add Singer', new_singer_path %>
+      
+
+      <br>
+
+       <%= link_to 'All Albums', albums_path %>
+       |
+      <%= link_to 'Add Album', new_album_path %>
+
+     
+      
+      <hr>
+    </nav>
+
+    <%= yield %>
+
+    <footer>
+      <hr>
+      &copy; Album Library 2022
+    </footer>
+  </body>
+</html>
