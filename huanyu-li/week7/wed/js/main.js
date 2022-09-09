@@ -1,7 +1,7 @@
 
 const FLICKR_BASE_URL = 'https://www.flickr.com/services/rest/';
 const FLICKR_API_KEY = '2f5ac274ecfac5a455f38745704ad084';
-
+let isDetailPage = false
 
 $(function () {
 
@@ -40,7 +40,7 @@ const getSearchResults = (queryText, queryPage = 1, isScroll = false) => {
       const results = res.data.photos;
       const currentPage = results.page;
       const totalPages = results.pages;
-      renderSearchResults(results, isScroll);
+      renderSearchResults(currentPage,results, isScroll);
 
       renderPagesController(currentPage, totalPages, queryText)
 
@@ -57,7 +57,7 @@ const getSearchResults = (queryText, queryPage = 1, isScroll = false) => {
 }; // getSearchResults()
 
 
-const renderSearchResults = (results, isScroll) => {
+const renderSearchResults = (currentPage,results, isScroll) => {
   // console.log('renderSearchResults():', results);
   if (!isScroll) {
     $('#results').empty(); // clear any previous results
@@ -72,7 +72,7 @@ const renderSearchResults = (results, isScroll) => {
     $('#results').append($img);
     // $img.on('click', )
   });
-
+  $('#results').append(`<h3>==⬆== Page: ${currentPage} ==⬆==</h3>`);
   $('#results img').off().on('click', function (e) {
     e.preventDefault()
     const photoId = $(this).data("photoid")
@@ -131,6 +131,7 @@ const renderPagesController = (currentPage, totalPages, queryText) => {
 }
 
 const showDetails = photoId => {
+  isDetailPage = true
   axios.get(FLICKR_BASE_URL, {
     params: {
       // These key-value pairs turn into querystring &key=value pairs
@@ -156,6 +157,7 @@ const showDetails = photoId => {
     `).show();
 
       $(".back").off().on('click', function () {
+        isDetailPage = false
         $("#details").hide()
         $("#results").show()
       })
@@ -169,14 +171,18 @@ const showDetails = photoId => {
 const renderNextPage = (currentPage, queryText) => {
 
   // scroll down
-  $(window).off().on('scroll', function () {
-    let goToPage = currentPage
-    if ($(window).scrollTop() + $(window).height() === $(document).height()) {
-      console.log("Bottom");
-      getSearchResults(queryText, goToPage + 1, true)
-    }
-  })
-}
+  
+    console.log("is detail:", isDetailPage);
+    $(window).off().on('scroll', function () {
+      const goToPage = currentPage + 1
+      if ($(window).scrollTop() + $(window).height() === $(document).height() && !isDetailPage) {
+        console.log("Bottom");
+        getSearchResults(queryText, goToPage, true)
+      }
+    })
+  }
+  
+
 
 
 //Q1. show detail page will fire scroll down function
