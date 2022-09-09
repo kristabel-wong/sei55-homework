@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+    background-color: rgb(196, 197, 153);
+}
+
+#image{
+    max-width: 90vw;
+    max-height: 50vw;
+}

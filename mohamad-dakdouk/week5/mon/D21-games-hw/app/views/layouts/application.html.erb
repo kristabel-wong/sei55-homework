@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>D21GamesHw</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <body>
+    <nav>
+      <h1> LETS PLAY SOME GAMES</h1>
+      <p>
+        <a href="/games">Home</a>
+        <a href="/magic">Magic 8</a>
+        <a href="/secret">Secret Guess</a>
+        <a href="/rock_paper_scissors">Rock Paper Scissors</a>
+
+      </p>
+    </nav>
+
+
+    <%= yield %>
+  </body>
+</html>
