@@ -20,7 +20,7 @@ $(function () {
 const getSearchResults = (queryText, queryPage = 1, isScroll = false) => {
   // console.log('getSearchResults(): ', queryText);
 
-  $('#results').html('<p>Loading results...</p>'); // replace old results with loading message
+  // $('#results').html('<p>Loading results...</p>'); // replace old results with loading message
 
   // https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=2f5ac274ecfac5a455f38745704ad084&text=ocean+coral&format=json&nojsoncallback=1)
 
@@ -36,7 +36,7 @@ const getSearchResults = (queryText, queryPage = 1, isScroll = false) => {
     }
   })
     .then(res => {
-      
+      console.log(res.data);
       const results = res.data.photos;
       const currentPage = results.page;
       const totalPages = results.pages;
@@ -45,19 +45,23 @@ const getSearchResults = (queryText, queryPage = 1, isScroll = false) => {
       renderPagesController(currentPage, totalPages, queryText)
 
       renderNextPage(currentPage, queryText)
+
+
     })
     .catch(err => {
       console.error('Error loading search results', err);
     });
 
+  
+
 }; // getSearchResults()
 
 
-const renderSearchResults = (results,isScroll) => {
+const renderSearchResults = (results, isScroll) => {
   // console.log('renderSearchResults():', results);
   if (!isScroll) {
     $('#results').empty(); // clear any previous results
-    
+
   }
 
   results.photo.forEach(photo => {
@@ -75,11 +79,6 @@ const renderSearchResults = (results,isScroll) => {
   })
 
   // console.log(results);
-
-
-  
-
-
 }; // renderSearchResults()
 
 
@@ -166,15 +165,17 @@ const showDetails = photoId => {
     });
 }
 
-const renderNextPage = (currentPage, queryText)=>{
+const renderNextPage = (currentPage, queryText) => {
+  let go = true // to limit request times
+  
   // scroll down
   $(window).on('scroll', function () {
-  
-    console.log($(window).scrollTop(), $(window).height(), $(document).height());
-    if ($(window).scrollTop() + $(window).height() === $(document).height() ) {
-     
-      getSearchResults(queryText, currentPage + 1, true)
-      
+    let goToPage = currentPage
+    if ($(window).scrollTop() + $(window).height() === $(document).height() && go) {
+      go = !go
+      console.log("Bottom");
+      getSearchResults(queryText, goToPage + 1, true)
     }
   })
 }
+
