@@ -9,7 +9,7 @@ $(function () {
 
   // EITHER a click of the button OR (yeesss) pressing enter in an input
   // will trigger the form submit
-  $('#searchForm').on('submit', function (ev) {
+  $('#searchForm').off().on('submit', function (ev) {
     ev.preventDefault(); // stop the form from reloading the page
     const query = $('#query').val();
     getSearchResults(query);
@@ -73,7 +73,8 @@ const renderSearchResults = (results, isScroll) => {
     // $img.on('click', )
   });
 
-  $('#results img').on('click', function () {
+  $('#results img').off().on('click', function (e) {
+    e.preventDefault()
     const photoId = $(this).data("photoid")
     showDetails(photoId)
   })
@@ -109,7 +110,7 @@ const renderPagesController = (currentPage, totalPages, queryText) => {
   } //  for
 
   // handler
-  $('.position').on('click', function () {
+  $('.position').off().on('click', function () {
     console.log(this.innerText);
 
     let goToPage = currentPage
@@ -154,7 +155,7 @@ const showDetails = photoId => {
     <button class="back">Back</button>
     `).show();
 
-      $(".back").on('click', function () {
+      $(".back").off().on('click', function () {
         $("#details").hide()
         $("#results").show()
       })
@@ -166,16 +167,17 @@ const showDetails = photoId => {
 }
 
 const renderNextPage = (currentPage, queryText) => {
-  let go = true // to limit request times
-  
+
   // scroll down
-  $(window).on('scroll', function () {
+  $(window).off().on('scroll', function () {
     let goToPage = currentPage
-    if ($(window).scrollTop() + $(window).height() === $(document).height() && go) {
-      go = !go
+    if ($(window).scrollTop() + $(window).height() === $(document).height()) {
       console.log("Bottom");
       getSearchResults(queryText, goToPage + 1, true)
     }
   })
 }
 
+
+//Q1. show detail page will fire scroll down function
+//Q2. show detail page can not return the original position
