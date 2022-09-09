@@ -17,7 +17,7 @@ $( function(){
         
         ev.preventDefault(); // stop the form from reloading the page
         const query = $('#query').val();
-        queryPage = 1; // returns page 1 for new search
+        queryPage = 1;
         getSearchResults( query );
         
     }); // form submit
@@ -109,7 +109,7 @@ const renderSearchResults = (results) => {
             
             const secret = $(ev.target).data('photosecret')
             console.log('Secret:', secret);
-            console.log(photo.server);
+            // console.log(photo.server);
 
             axios.get(`https://live.staticflickr.com/${photo.server}/${id}_${secret}_q.jpg`)
                .then(function( res ){
@@ -127,7 +127,7 @@ const renderSearchResults = (results) => {
                   $('#details').empty()
                   $('#details').hide()
                   $('#results').hide()
-                  $('#query').empty()
+                  $('#query').val('')
 
 
                 }); // click function
