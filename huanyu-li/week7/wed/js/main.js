@@ -40,7 +40,7 @@ const getSearchResults = (queryText, queryPage = 1, isScroll = false) => {
       const results = res.data.photos;
       const currentPage = results.page;
       const totalPages = results.pages;
-      renderSearchResults(currentPage,results, isScroll);
+      renderSearchResults(currentPage, results, isScroll);
 
       renderPagesController(currentPage, totalPages, queryText)
 
@@ -52,12 +52,12 @@ const getSearchResults = (queryText, queryPage = 1, isScroll = false) => {
       console.error('Error loading search results', err);
     });
 
-  
+
 
 }; // getSearchResults()
 
 
-const renderSearchResults = (currentPage,results, isScroll) => {
+const renderSearchResults = (currentPage, results, isScroll) => {
   // console.log('renderSearchResults():', results);
   if (!isScroll) {
     $('#results').empty(); // clear any previous results
@@ -72,11 +72,11 @@ const renderSearchResults = (currentPage,results, isScroll) => {
     $('#results').append($img);
     // $img.on('click', )
   });
-  $('#results').append(`<h3>==⬆== Page: ${currentPage} ==⬆==</h3>`);
+  $('#results').append(`<h3>==⬇== Page: ${currentPage + 1} ==⬇==</h3>`);
+
   $('#results img').off().on('click', function (e) {
-    e.preventDefault()
     const photoId = $(this).data("photoid")
-    showDetails(photoId)
+    showDetails(photoId, $(window).scrollTop())
   })
 
   // console.log(results);
@@ -111,7 +111,6 @@ const renderPagesController = (currentPage, totalPages, queryText) => {
 
   // handler
   $('.position').off().on('click', function () {
-    console.log(this.innerText);
 
     let goToPage = currentPage
     if (this.innerText === 'Next') {
@@ -121,7 +120,6 @@ const renderPagesController = (currentPage, totalPages, queryText) => {
     } else {
       goToPage = Number(this.innerText)
     }
-    console.log(goToPage, totalPages);
 
     if (goToPage > 0 && goToPage <= totalPages) {
       getSearchResults(queryText, goToPage, false)
@@ -130,7 +128,7 @@ const renderPagesController = (currentPage, totalPages, queryText) => {
   }) // handler
 }
 
-const showDetails = photoId => {
+const showDetails = (photoId, position) => {
   isDetailPage = true
   axios.get(FLICKR_BASE_URL, {
     params: {
@@ -160,6 +158,8 @@ const showDetails = photoId => {
         isDetailPage = false
         $("#details").hide()
         $("#results").show()
+
+        $(window).scrollTop(position)
       })
 
     })
@@ -171,19 +171,14 @@ const showDetails = photoId => {
 const renderNextPage = (currentPage, queryText) => {
 
   // scroll down
-  
-    console.log("is detail:", isDetailPage);
-    $(window).off().on('scroll', function () {
-      const goToPage = currentPage + 1
-      if ($(window).scrollTop() + $(window).height() === $(document).height() && !isDetailPage) {
-        console.log("Bottom");
-        getSearchResults(queryText, goToPage, true)
-      }
-    })
-  }
-  
+
+  $(window).off().on('scroll', function () {
+    const goToPage = currentPage + 1
+    if ($(window).scrollTop() + $(window).height() === $(document).height() && !isDetailPage) {
+      console.log("Bottom");
+      getSearchResults(queryText, goToPage, true)
+    }
+  })
+}
 
 
-
-//Q1. show detail page will fire scroll down function
-//Q2. show detail page can not return the original position
