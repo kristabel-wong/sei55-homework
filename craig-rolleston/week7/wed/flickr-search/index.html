@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flickr Search, Ad Free</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/main.js"></script>
+
+    <style>
+        #results {
+            padding-top: 2em;
+        }
+        #results img {
+            padding-left: 3px;
+            padding-right: 3px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Flickr Search</h1>
+    <hr>
+    <br>
+    <form id="searchForm">
+        <input type="text" id="query" placeholder="Enter photo search">
+        <button>Search Flickr</button>
+    </form>
+    
+    <br> 
+    <div id="pageLinks">
+        <button id="back">Back</button>
+        |
+        <button id="next">Next</button>
+
+    </div>
+    
+    <br>
+    <hr>
+    <div id="results"></div>
+    <div id="details"></div>
+
+    
+</body>
+</html>
