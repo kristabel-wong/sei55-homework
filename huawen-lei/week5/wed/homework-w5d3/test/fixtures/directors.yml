@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  Born_year: 1
+  image: MyText
+
+two:
+  name: MyString
+  Born_year: 1
+  image: MyText
