@@ -61,17 +61,24 @@ class Game extends React.Component {
         const history = this.state.history.slice(0, this.state.stepNumber + 1)
         const current = history[history.length - 1]
         const squares = current.squares.slice()
+      
         if (calculateWinner(squares) || squares[i]) {
             return
         }
         squares[i] = this.state.xIsNext ? 'X' : 'O'
+       
         this.setState({ 
-            history:history.concat([{squares:squares}]),
-            squares: squares,
+            history:history.concat(
+                [{
+                    squares:squares,
+                    locations:i
+                }]
+                ),
+           
             xIsNext: !this.state.xIsNext,
-            stepNumber: history.length
+            stepNumber: history.length,
         })
-      
+    
     }
 
     jumpTo(step){
@@ -84,28 +91,16 @@ class Game extends React.Component {
     state = {
         history:[{
             squares: Array(9).fill(null),
+            locations: null,
         }],
         xIsNext: true,
-        stepNumber: 0
+        stepNumber: 0,
     }
 
     render() {
         const history = this.state.history
         const current = history[this.state.stepNumber]
-        
         const winner = calculateWinner(current.squares)
-
-        const moves = history.map((step,move)=>{
-            const desc = move ? `Go to move #${move}` : `Go to game start`
-
-            return (
-                <li key={move}>
-                    <button onClick={()=>{
-                        this.jumpTo(move)
-                    }}>{desc}</button>
-                </li>
-            )
-        })
 
         let status
         if (winner) {
@@ -113,6 +108,27 @@ class Game extends React.Component {
         }else{
             status = `Next Player: ${this.state.xIsNext ? 'X' : 'O'}`
         }
+
+        const moves = history.map((step,move)=>{
+            const player = step.squares[step.locations]
+            const location = step.locations
+            const col = location % 3 + 1
+            const row = Math.floor(location / 3) + 1
+            const desc = move ? `Go to move #${move}: Player: ${player}, Location: row: ${row} | col: ${col}` : `Go to game start`
+
+            const isStrong = move === this.state.stepNumber ? 'bold' : null
+
+            console.log(move + 1,history.length );
+            return (
+                <li key={move}>
+                    <button onClick={()=>{
+                        this.jumpTo(move)
+                    }}  className={isStrong}>{desc}</button>
+                </li>
+            )
+        })
+
+        
         return (
             <div className="game">
                 <div className="game-board">
