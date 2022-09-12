@@ -1,0 +1,27 @@
+<h3>Add New Country</h3>
+
+<%= form_with model:@countries, local: true do |f| %>
+
+<%= f.label :name %>
+<%=  f.text_field :name %>
+<br>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<br>
+<%= f.label :language  %>
+<%= f.text_field :language %>
+
+<br>
+<%= f.label :population %>
+<%= f.text_field :population %>
+<br>
+<br>
+<%= f.label :vist %>
+<%= f.text_field :vist %>
+<br>
+<%= f.label :image_url %>
+<%= f.text_field :image_url %>
+<br>
+
+<%= f.submit %>
+<% end %>

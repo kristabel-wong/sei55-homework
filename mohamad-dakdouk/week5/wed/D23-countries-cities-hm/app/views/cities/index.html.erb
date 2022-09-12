@@ -1,0 +1,12 @@
+<h1>Index of Cities</h1>
+
+<ul>
+<% @cities.each do |city|%>
+<Li>
+<%= link_to city.name, city_path(city.id)%>
+
+</Li>
+<%end%>
+
+
+</ul>

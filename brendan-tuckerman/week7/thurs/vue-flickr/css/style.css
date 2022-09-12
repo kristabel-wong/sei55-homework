@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(184, 200, 228);
+}
+
+header{
+    display: inline-flex;
+    position: fixed;
+    height: 10vh;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100vw;   
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+img{
+    padding: 5px;
+}
+
+.navigation{
+    display:none
+}
+
+
+ul {
+    display: inline-flex
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+}
+
+#results img:hover{
+    cursor: pointer;
+}
+
+#toResults{
+    display: none;
+}
+
+.main{
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+}
+
+a {
+    color: white;
+    padding: 10px;
+    
+}
+
+input{
+    padding: 5px;
+}

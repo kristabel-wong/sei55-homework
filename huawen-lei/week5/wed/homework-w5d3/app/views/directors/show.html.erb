@@ -1,0 +1,14 @@
+
+<h2><%= @director.name %></h2>
+
+<%= link_to 'Edit', edit_director_path(@director.id) %>
+|
+<%= link_to 'Delete', director_path(@director.id), method: 'delete' %>
+
+<p>
+    <strong>Born year: </strong>
+    <%= @director.Born_year %>
+</p>
+
+<%= image_tag @director.image, alt: @director.name, class: 'director_image'%>
+

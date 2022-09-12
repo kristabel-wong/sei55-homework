@@ -37,3 +37,5 @@ node_modules/
 /yarn-error.log
 .byebug_history
 .eslintcache
+# ignore vscode settings files
+.vscode
