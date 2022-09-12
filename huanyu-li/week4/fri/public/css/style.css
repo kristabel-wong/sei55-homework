@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 80%;
+    margin: 3vh auto;
+    background-color: #1F4068;
+    color: #FAF0D7;
+    font-family: 'Silkscreen', cursive;
+}
+
+h1{
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+a{
+    color: #B1BCE6;
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    margin: 3% auto;
+    gap: 3%;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.text{
+    line-height: 25px;
+    font-family: 'DynaPuff', cursive;
+}
+
+h2{
+    margin-top: 25px;
+}
+
+footer {
+    margin-top: 50px;
+    /* position: fixed; */
+    /* bottom: 200px; */
+}
+
+.addNew label {
+    display: block;
+    width: 100%;
+}
+
+label textarea{
+    vertical-align: top;
+}
+
+strong{
+    color:chocolate;
+}
+
+input,textarea{
+    margin-bottom: 10px;
+    width: 35%;
+}
+
+button{
+    display: block;
+    width: 50px;
+}

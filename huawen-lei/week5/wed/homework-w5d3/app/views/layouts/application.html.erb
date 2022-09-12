@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HomeworkW5d2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <nav>
+      <h1>Movie World</h1>
+      <a href="/">Home</a>
+      |
+      <%= link_to 'All Movies', "/movies" %>
+      |
+      <%= link_to 'Add New Movie', new_movie_path %>
+
+      <br>
+
+      <%= link_to 'All Directors', directors_path %>
+      |
+      <%= link_to 'Add New Director', new_director_path %>
+
+      <hr>
+    </nav>
+
+    <%= yield %>
+
+    <footer>
+      <hr>
+      &copy; Lei's W5D2 Homework
+    </footer>
+  </body>
+</html>

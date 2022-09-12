@@ -56,7 +56,7 @@ end # plan_trip
 
 # test trips
 
-# plan_trip( :n, "Times Square", :n, "Union Square" )
+plan_trip( :n, "Times Square", :n, "Union Square" )
 # plan_trip( :n, "Times Square", :n, "8th" )
 # plan_trip( :n, "Times Square", :n, "34th" )
 # plan_trip( :n, "34th", :n, "Times Square" )

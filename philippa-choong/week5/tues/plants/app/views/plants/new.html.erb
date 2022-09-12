@@ -1,0 +1,28 @@
+<h2> Add A New Plant🪴 🌱</h2>
+
+<%= form_with model: @plant, local: true do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+
+    <%= f.label :image_url, 'Image URL '%>
+    <%= f.text_field :image_url %>
+
+    <%= f.label :sun_exposure, 'Sun Exposure' %>
+    <%= f.text_field :sun_exposure  %>
+    <br>
+
+    <%= f.label :native_area,'Native Area' %>
+    <%= f.text_field :native_area%>
+    <br>
+
+    <%= f.label :mature_size, 'Mature Size (cm)' %>
+    <%= f.text_field :mature_size %>
+    <br>
+
+    <br>
+
+    <%= f.submit %>
+
+<% end %>

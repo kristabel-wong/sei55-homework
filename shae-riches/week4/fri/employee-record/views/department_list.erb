@@ -1,0 +1,19 @@
+Department List: 
+<% @all_departments.each do | department |  %>
+
+    <li> 
+        <% if department.id == 1 %>
+            <a href="/department_list/<%= department.id %>"><%="#{department.name}"%></a>
+        <% else %>
+            <%# obtains id for linking to individual department information %>
+            Department of: <a href="/department_list/<%= department.id %>"><%="#{department.name}"%></a>
+            <%# correctly re-orders the employees name %>
+        <% end  %>
+
+    </li> 
+
+<% end %>
+
+
+<a href="/found_department"><button>Found Department</button></a>
+

@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: url("../background.webp");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    
+}
+
+h1{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-size: 40px;
+    font-family:'Aboreto', cursive;
+}
+
+h3{
+    color:rgb(255, 141, 2);
+    font-family:'Aboreto', cursive;
+    text-align: center;
+    margin: 0 auto;
+}

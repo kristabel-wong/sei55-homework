@@ -1,0 +1,30 @@
+<html>
+<head>
+   <title>calculator site</title>
+</head>
+<body>
+  <nav>
+  <h1>Calculator></h1>
+    <a href="/">Home</a>
+    <hr>
+  </nav>
+
+<section>
+<%= yield %>
+</section>
+
+<footer>
+<hr>
+&copy; Calculon Productions 2022
+</footer>
+
+</body>
+</html>
+
+THIS IS THE SITE TEMPLATE, EVERY ROUTE WILL USE IT 
+
+To get both a shared template and the specific erb content, in layout.erb we need this line:
+
+
+The specific template for this request, like ":home"
+or ":calc_about", appears in place of the "yield"

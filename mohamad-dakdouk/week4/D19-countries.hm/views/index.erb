@@ -1,0 +1,14 @@
+<%# Index page loops through to get the countries from the database including new %>
+
+<h2> Index of Countries </h2>
+
+<ul>
+<% @results.each do |country| %>
+    <li>
+    <a href="/countries/<%= country['id'] %>">
+    <%= country['name'] %> 
+    </a>
+    </li>
+<% end %>
+
+</ul>

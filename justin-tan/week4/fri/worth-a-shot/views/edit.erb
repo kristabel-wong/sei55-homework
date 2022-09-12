@@ -1,0 +1,102 @@
+<h2>Alter your Poison Toxicity here</h2>
+
+<form action="/alcohols/<%= @alcohol.id %>" method="post" id="alcohol_edit">
+<label>
+    <p>
+        <strong>Poison Name:</strong> 
+        <input type="text" name="name" value="<%= @alcohol.name %>">
+     </p>    
+</label>
+
+<label>
+    <p>
+    <strong>Poison Type:</strong>
+        <select name="kind">
+        <option value="" select="selected" disabled>Select poison type</option>
+        <option value="Beer">Beer</option>
+        <option value="Whiskey">Whiskey</option>
+        <option value="Wine">Wine</option>
+        <option value="Gin">Gin</option>
+        <option value="Sake">Sake</option>
+        <option value="Mezcal">Mezcal</option>
+        <option value="Vodka">Vodka</option>
+        <option value="Brandy">Brandy</option>
+        <option value="Others">Others</option> 
+    </select>
+     </p>    
+</label>
+
+<label>
+    <p>
+        <strong>Age:</strong>
+        <input type="number" name="age" min="0" value="<%= @alcohol.age %>">
+    </p>
+</label>
+
+<label>
+    <p>
+        <strong>Country:</strong>
+        <input type="text" name="country" value="<%= @alcohol.country %>">
+    </p>
+</label>
+
+<label>
+    <p>
+        <strong>Toxic Level:</strong>
+        <input type="number" name="percentage" min="0" step="0.1" value="<%= @alcohol.percentage %>">
+    </p>
+</label>
+
+<label>
+    <p>
+        <strong>Wallet Damage:</strong>
+        <input type="number" name="price" min="0" step="0.01" value="<%= @alcohol.price %>">
+    </p>
+</label>
+
+<label>
+    <p>
+        <strong>Premiumity:</strong>
+        <br>
+        <input type="radio" name="premium"><label value="1">Yes</label>
+        <br>
+        <input type="radio" name="premium"><label value="0">No</label>
+    </p>
+</label>
+
+<label>
+    <p>
+        <strong>Description:</strong>
+        <br>
+        <textarea name="description" rows="5" cols="30" maxlength="200">"<%= @alcohol.description %>"
+        </textarea>
+    </p>
+</label>
+
+<label>
+    <p>
+        <strong>Poison Image:</strong>
+        <input type="text" name="image_url" value="<%= @alcohol.image_url %>">
+    </p>
+</label>
+
+<label>
+    <p>
+        <strong>Rightful Owner:</strong>
+        <select name="profile_id">
+        
+        <option value="" selected="selected" disabled>Please select:</option>
+
+        <% Profile.all.each do |el| %>
+
+        <option value="<%= el.id %>"><%= el.name %></option>
+
+        <% end %>
+
+        </select>
+    </p>
+</label>
+
+<button>Edit your poison!</button>
+
+</form>

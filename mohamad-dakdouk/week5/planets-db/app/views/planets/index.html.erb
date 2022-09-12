@@ -1,0 +1,14 @@
+<h3>All Planets</h3>
+
+
+<ul>
+<% @planets.each do |planet| %>
+<li>
+   <!--  
+    <a href="/panets/<%= planet.id %>""><%= planet.name %></a>-->
+    <%= link_to planet.name, planet_path(planet.id) %>
+    
+    <!-- "/planets/#{ planet.id }", class:"planets" -->
+</li>
+<% end %>
+</ul>

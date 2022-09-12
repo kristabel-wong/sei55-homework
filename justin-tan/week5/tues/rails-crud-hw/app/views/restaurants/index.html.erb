@@ -1,0 +1,14 @@
+<h2>Eating Lists</h2>
+
+<div id="index">
+<% @restaurants.each do |el| %>
+
+    <div id="res_box">
+    <a href="/restaurants/<%= el.id %>">
+        <img src="<%= el.restaurant_img %>" alt="<%= el.name%>" class="index_img">
+        
+        <p><%= link_to el.name, restaurant_path(el.id) %></p>
+    </a>
+    </div>
+<% end %>
+</div>

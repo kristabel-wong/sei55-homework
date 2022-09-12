@@ -1,0 +1,33 @@
+<h2>The majestic <%= @profile['name'] %> </h2>
+
+<img src=" <%= @profile['profile_img'] %>" alt="">
+
+<p><strong>Name:</strong> 
+<%= @profile['name'] %></p>
+
+<p><strong>Age:</strong> 
+<%= @profile['age'] %></p>
+
+<p><strong>Suffix:</strong> 
+<%= @profile['suffix'] %></p>
+
+<p><strong>Location:</strong> 
+<%= @profile['location'] %></p>
+
+<p><strong>MBTI:</strong> 
+<%= @profile['mbti'] %></p>
+
+<p><strong>Availability:</strong> 
+<%= @profile['availability'] == 1? "Yes" : "No" %></p>
+
+<p><strong>Likes:</strong> 
+<%= @profile['likes'] %></p>
+
+<p><strong>Disikes:</strong> 
+<%= @profile['dislikes'] %></p>
+
+<a href="/profiles/<%= @profile['id'] %>/edit">Edit Profile</a>
+
+<a href="/profiles/<%= @profile['id'] %>/delete">Delete Profile</a>
+
+

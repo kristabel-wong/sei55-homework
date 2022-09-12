@@ -1,0 +1,56 @@
+
+body{
+	margin: 80pt;		
+}
+
+h1{
+ 	font-size : 40px;
+	line-height :17px;
+	font-family: "Times New Roman", serif;
+	color: #9f9f9f;
+}
+
+/* Link Hover Color = #20222a */
+
+h2{
+ 	font-size : 20px;
+	line-height :17px;
+	font-family: "Times New Roman", serif;
+	color: #6b6b6b;
+}
+
+.blue{
+	font-size : 15px;
+	line-height :17px;
+	font-family: "Times New Roman", serif;
+	color: #007afd;
+}
+
+P{
+	font-size : 15px;
+	line-height :17px;
+	font-family: "Times New Roman", serif;
+	color: #9a9a9a;
+}
+
+.brands{
+	
+	padding: 0px 190px 0px 0px;
+	margin: 0px 800px 0px 0px;
+}
+
+.brands-image{
+
+	border:5px solid rgb(205, 205, 205);
+}
+
+.paragraph{
+	padding: 0px 550px 20px 0px;
+	margin: 0px 500px 0px 0px;	
+}
+
+.copyright{
+	margin: 0px,0px;
+	
+
+}

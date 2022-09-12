@@ -1,0 +1,41 @@
+<h2>
+    <%= @travel.location %>
+</h2>
+
+<div class="editdelete">
+<a  href="/travel/<%=@travel.id%>/edit">Edit</a>
+|
+<a href="/travel/<%=@travel.id%>/delete">Delete</a>
+</div>
+
+<p>
+    <strong>Country:</strong>
+    <%= @travel.country %>
+</p>
+
+<p>
+    <strong>Description:</strong>
+    <%= @travel.description %>
+</p>
+
+<p>
+    <strong>Rating out of 10:</strong>
+    <%= @travel.rating %>
+</p>
+
+<p>
+    <strong>Visited:</strong>
+    
+    <%= @travel.visited ? 'Yes' : 'No' %>
+
+</p>
+
+<p>
+    <% @travel.attractions.each do |attraction| %>
+
+    <a href='/attractions/<%= attraction.id %>'><strong><em> <%= attraction.name %></em></strong></a>
+
+    <% end %>
+</p>
+
+<img class="travel-image" src="<%= @travel.image_url %>" alt=" <%= @travel.location %> ">

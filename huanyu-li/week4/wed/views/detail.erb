@@ -1,0 +1,20 @@
+
+<h2><%= @detail_data['title'] %></h2>
+
+<a href="<%= @detail_data["homepage"]%>" target="_blank" class="web"><img src="https://image.tmdb.org/t/p/w185/<%=@detail_data["poster_path"]%>"/> <br></a>
+
+
+<h6>Release Date: <%= @detail_data['release_date'] %></h6>
+
+<a href="<%= @detail_data["homepage"]%>" target="_blank" class="web">Website</a>
+
+<p><%= @detail_data['overview'] %></p>
+
+<h4>Budget: <%= @detail_data['budget'] %></h4>
+<h4>Revenue: <%= @detail_data['revenue'] %></h4>
+<h4>Runtime: <%= @detail_data['runtime'] %></h4>
+<h4>Id: <%= @detail_data['id'] %></h4>
+
+
+<br>
+<br>

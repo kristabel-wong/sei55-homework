@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flickr Search, Ad Free</title>
+    <script src="src/jquery.js"></script>
+    <script src="src/axios.js"></script>
+    <script src="src/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #results {
+            padding-top: 2em;
+        }
+        #results img {
+            padding-right: 5px;
+            /* padding-right: 5px; */
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flicker Search!</h1>
+        <p>Don't know why they drop the E</p>
+    </header>
+
+    <div id="searchAndNav">
+        <form id="searchForm">
+            <input type="text" id="query" placeholder="Enter a search">
+            <button>Search Flickr</button>
+        </form>
+        <br>
+        <div id="pageNav">
+        <button id="previousPage">Previous Page</button>
+        <p id="currentPage"></p>
+        <button id="nextPage">Next Page</button>
+        </div>
+    </div>
+    <div id="pageList"></div>
+    <br>
+
+    <div id="results"></div>
+    <div id="description"></div>
+
+</body>
+</html>

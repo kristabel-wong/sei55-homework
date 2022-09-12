@@ -1,0 +1,26 @@
+
+
+<h2><%= @album.name %></h2>
+
+<%= link_to 'Edit', edit_album_path(@album.id) %>
+<%= link_to 'Delete', destroy_album_path(@album.id) %>
+
+
+<p>
+  <strong>Released:</strong>
+  <%= @album.mass %> released
+</p>
+
+
+<p>
+  <strong>Genre:</strong>
+  <%= @album.orbit %> genre
+</p>
+
+
+<p>
+  <strong>Length:</strong>
+  <%= @album.length %> 
+</p>
+
+<%= image_tag @album.image_url, alt: @album.name %>

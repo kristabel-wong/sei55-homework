@@ -1,0 +1,71 @@
+
+
+body {
+    background-image: 100%;
+    background-color:aquamarine;
+    z-index: -1;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cat {
+
+    position: absolute; 
+    max-width: 300px;
+    top: 0; 
+    border: 5px solid rgb(237, 173, 9);
+    background-color: rgb(237, 173, 9);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.kangaroo {
+    position: absolute; 
+    top: 300px;
+    width: 300px; 
+    border: 5px solid rgb(228, 181, 10);
+    background-color: rgb(228, 181, 10);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.dinosaur {
+
+    position: absolute;
+    top: 450px;
+    left: 300px; 
+    width: 485px; 
+    border: 5px solid rgb(7, 236, 76);
+    background-color: rgb(7, 236, 76);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mice {
+    position: absolute;
+    top: 550px;
+    left: 100px; 
+    max-width: 200px; 
+    text-align: center;
+    border: 5px solid rgb(13, 66, 225);
+    background-color: rgb(13, 66, 225);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.moose {
+    position: absolute; 
+    top: 650px;
+    width: 300px; 
+    border: 5px solid rgb(188, 13, 223);
+    background-color: rgb(188, 13, 223);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+} 

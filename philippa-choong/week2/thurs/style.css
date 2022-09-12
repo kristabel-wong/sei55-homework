@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+body{
+    background-image:url("../thurs/image/tumblr_owngzpR9zU1vsjcxvo1_540.gif");
+    padding: 0 8%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:100%;
+}
+
+h1 {
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 60px;
+}

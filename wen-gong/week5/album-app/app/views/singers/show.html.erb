@@ -1,0 +1,19 @@
+
+<h2><%= @singer.name %></h2>
+
+<%= link_to 'Edit', edit_singer_path(@singer.id) %>
+
+<%= link_to 'Delete', singer_path(@singer.id) , method: 'delete' %>
+
+<p>
+  <strong>Born:</strong>
+  <%= @singer.born %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @singer.website %>
+</p>
+
+
+<%= image_tag @singer.image, alt: @singer.name, class: 'singer_image' %>

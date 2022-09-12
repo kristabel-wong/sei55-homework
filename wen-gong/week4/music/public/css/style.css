@@ -1,0 +1,219 @@
+
+* {
+    /* margin: 0; */
+    padding: 0;
+}
+body {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url("/images/background4.jpg");
+    /* background-size: cover; */
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+} 
+.welcome-text {
+    /* font-family: "Sacramento"; */
+    position: absolute;
+    margin: 20% 30%;
+    text-align: center;
+}
+.welcome-text h1{
+    text-align: center;
+    color:rgb(199, 197, 197);
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.welcome-text p{
+    text-align: center;
+    color: rgb(145, 142, 142);
+    text-transform: lowercase;
+    font-size: 40px;
+}
+.header {
+    width: 1170px;
+    margin: auto;
+}
+.nav-area {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+
+.nav-area li {
+    display: inline-block;
+}
+
+.nav-area li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+.nav-area li a:hover{
+    background: #fff;
+    color: #333;
+
+}
+
+
+footer{
+    /* position: absolute; */
+    color:rgb(43, 42, 42);
+    float: right;
+    list-style: none;
+    margin-top: 1000px;
+    text-align: center;
+}
+
+.a-list{
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    color: #fff;
+
+}
+.a-list li{
+    
+    display: block;
+}
+.a-list li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 50px;
+}
+.a-list li a:hover{
+    background: #fff;
+    color: #333;
+}
+
+.singer-list{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    color:#fff;
+
+}
+
+.singer-list li{
+
+    display: block;
+}
+.singer-list li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 30px;
+
+}
+.singer-list li a:hover{
+    background: #fff;
+    color: #333;
+}
+
+.new-album{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    color:#fff;
+    margin: 20px auto;
+}
+.new-album line{
+    margin: 20px, auto;
+}
+
+.new-album hr{
+    visibility: hidden;
+}
+
+.new-album button{
+
+}
+
+.albums-show{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    color:#fff;
+
+}
+
+.albums-show a{
+    color:#fff;
+    text-decoration: none;
+}
+.albums-show a:hover{
+    background: #fff;
+    color: #333;
+}
+.albums-show p{
+    color:#fff;
+
+}
+.albums-show img{
+    position: absolute;
+    top: -40%;
+    left: -25%;
+}
+.singer-show{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color:#fff;
+}
+.singer-show img{
+    position: absolute;
+    left: -110%;
+    top: -70%
+   
+} 
+.singer-show li{
+    display: block;
+    margin: 20px 0;
+}
+.singer-show li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.singer-show li a:hover{
+    background: #fff;
+    color: #333;
+}
+.singer-show a{
+    color:#fff;
+}
+.edit-album {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    color:#fff;
+
+}
+.edit-album hr{
+    visibility: hidden;
+}
+
+select,button{
+    opacity: 0.7;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.9);
+    font-size: 0.9rem;
+    padding: 0.4em 1.8em 0.4em 0.5em;
+    background: #1b1a1a;
+    color: #e8e4ef;
+    border: 0;
+}
+select{
+    border:rgb(43, 42, 42);
+}
+input{
+    opacity: 0.8;
+}
+
+        
+      
+    
+
