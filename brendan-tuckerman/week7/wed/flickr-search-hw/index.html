@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Flickr Search</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Flickr Search</h1>
+        
+        <form id="searchForm">
+            <input id="query" type="text" placeholder="enter search term">
+            <button>Search!</button>
+
+
+        </form>
+        
+        <a href="#" id="toTop">Back to Top</a>
+        <a href="#" id="toResults" >Back to results</a>
+        
+        <div id="pageLinks">
+            
+    
+            <a href="#" id="back" class="navigation">Back</a>
+            <ul id="pageList">
+
+                
+            </ul>
+            <a href="#" id="next" class="navigation">Next</a>
+        </div>
+    </header>
+        
+    <div class="main">
+        
+       
+        
+        <div id="results"></div>
+        
+        <div id="singleImage"></div>
+    </div>  
+        
+</body>
+</html>

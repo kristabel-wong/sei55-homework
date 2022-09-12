@@ -1,0 +1,27 @@
+
+<h2>
+    Details for <%= @buyer.name %>
+</h2>
+
+<%= link_to 'Edit', edit_buyer_path(@buyer.id) %>
+|
+<%= link_to 'Delete', buyer_path(@buyer.id), method: 'delete' %>
+
+
+
+<p>
+<strong>Email</strong><%= @buyer.email %>
+</p>
+
+<p>
+    <strong>Plants</strong>
+     <ul>
+    <!-- use the .plants association to -->
+    <% @buyer.plants.each do |plant| %>
+        <li>
+            <%= link_to plant.name, plant_path(plant.id) %>
+            
+        </li>
+        <% end %>
+    </ul>
+</p>

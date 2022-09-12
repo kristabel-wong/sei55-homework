@@ -1,0 +1,31 @@
+
+<%= form_with model: @movie, local: true do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+
+    <%= f.label :release_year %>
+    <%= f.text_field :release_year %>
+    <br>
+
+    <%= f.label :starring %>
+    <%= f.text_field :starring %>
+    <br>
+
+    <%= f.label :running_time %>
+    <%= f.text_field :running_time %>
+    <br>
+
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+    <br>
+
+    <%= f.label :director_id, 'Director' %>
+    <%= f.collection_select :director_id, Director.all, :id, :name, include_blank: true %>
+    <br><br>
+
+    <%= f.submit %>
+
+
+<% end %>

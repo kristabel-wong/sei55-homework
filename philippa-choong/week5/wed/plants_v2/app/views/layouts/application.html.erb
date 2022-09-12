@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlantsV2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+    <nav> 
+      <h1>• • Botanica Collection • •</h1>
+        <a href="/">Home</a>
+        |
+        <%= link_to 'All Plants', plants_path  %>
+        |
+        <%= link_to 'Add a New Plant', new_plant_path %>
+        |
+        <%= link_to 'All Buyers', buyers_path %>
+        |
+        <%= link_to 'Add a Human', new_buyer_path %>
+    </nav>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

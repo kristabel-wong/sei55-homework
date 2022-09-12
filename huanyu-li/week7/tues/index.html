@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/main.js"></script>
+    <title>NASA APOD</title>
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <img src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg" alt="NASA">
+        </a>
+
+        <h2>NASA - APOD</h2>
+        <em>Astronomy Picture of the Day</em>
+        <hr>
+    </header>
+
+    <main>
+        <section class="search">
+            <select name="mode" id="searchType">
+                <option value="100" disabled selected>Please select type</option>
+                <option value="0">Search by Number</option>
+                <option value="1">Search by Date Range</option>
+                <option value="2">Search by Date</option>
+            </select>
+
+            <div id="searchByNumber" hidden>
+                <label for="query">Enter the number of the images</label>
+                <br>
+                <input type="number" id="query" max="100" min="1">
+                <button id="btn">Get</button>
+                <br>
+                <em>(the number is from 1 to 100)</em>
+                <br>
+            </div>
+
+            <div id="searchByDateRange" hidden>
+                <label for="startDate">Enter the Start Date</label>
+                <input type="date" id="startDate">
+                <br>
+                <label for="endDate">Enter the End Date</label>
+                <input type="date" id="endDate">
+                <br>
+                <em>Must be after 1995-06-16</em>
+                <br>
+                <button id="dateBtn">Get</button>
+                <br>
+            </div>
+
+            <div id="searchByDate" hidden>
+                <label for="today">Enter the Start Date</label>
+                <input type="date" id="today">
+                <br>
+                <em>Must be after 1995-06-16</em>
+                <br>
+                <button id="todayBtn">Get</button>
+
+            </div>
+
+        </section>
+
+        <div id="errors"></div>
+        <div id="results"></div>
+        <div id="details" hidden></div>
+
+    </main>
+
+    <footer>
+        <hr>
+        &copy; NASA Fans Productions 2022
+    </footer>
+
+
+</body>
+
+</html>
