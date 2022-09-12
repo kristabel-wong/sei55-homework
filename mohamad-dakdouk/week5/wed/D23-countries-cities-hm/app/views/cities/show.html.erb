@@ -1,0 +1,29 @@
+<h1><%= @city.name%></h1>
+
+<h3>
+    By:
+    <%= link_to @city.country.name, country_path(@city.country.id) %>
+</h3>
+<h4>
+    <%= link_to 'Edit', edit_city_path(@city.id) %>
+    |
+    <%= link_to 'Delete', city_path(@city.id), method: 'delete' %>
+</h4>
+
+<p>
+    <strong>Capital:</strong>
+    <%= @city.capital %>
+</p>
+<p>
+    <strong>population:</strong>
+    <%= @city.population %>
+</p>
+<p>
+    <strong>attractions:</strong>
+    <%= @city.attractions %>
+</p>
+<p>
+ 
+</p>
+<%= image_tag @city.image, alt:@city.name, class:'city_image'%>
+

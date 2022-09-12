@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.P.O.D.</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>A.P.O.D.</h1>
+        <p>Astronomy Photo on Demand</p>
+    </header>
+    <hr>
+    <nav>
+        <p>A search site for NASA's photo of the day.</p>
+        <p>There is an amazing photo for each day that is posted by NASA, everyday.</p>
+        <p>Start your search by selecting a start date, followed by an end date. The results will show the total number of photos within the range of your chosen date.</p>
+    
+        <p>Start Date
+            <input type="date" id="startDate">
+        </p>
+        <p>End Date
+            <input type="date" id="endDate">
+        </p>
+        <button id="searchButton">Search Photos</button>
+    </nav>
+    <hr>
+
+    <div id="results">
+    </div>
+    
+    <div id="details">
+    </div>
+
+    <div id="errors">
+    </div>
+    
+</body>
+</html>

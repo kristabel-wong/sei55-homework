@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(158,158,158);
+}
+
+.planet {
+    max-width: 95vw;
+}

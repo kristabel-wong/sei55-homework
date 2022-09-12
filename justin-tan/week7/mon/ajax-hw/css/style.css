@@ -1,0 +1,19 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    text-align: center;
+}
+
+header p {
+    font-size: 24pt;
+}
+
+h1 {
+    font-size: 38pt;
+}
+
+nav {
+    text-align: center;
+}

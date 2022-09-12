@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Intro</title>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/main.js" defer></script>
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    
+    <div id="app">
+        <header>
+            <h1>Flickr on Vue</h1>
+
+            <input type="text" v-model="queryText" placeholder="enter search term"> 
+        <!-- The vmodelabove is a two way binding -->
+            <button v-on:click="getSearchResults">Find Images</button>
+
+            <p>searching for: {{ queryText }} </p>
+
+            <a href="#" id="back" v-if = "!showResults" v-on:click="toggleResults()">Back to Results</a>
+            <a href="#" id="next" v-on:click="moveUp">Next Page</a>
+
+        </header>
+
+        <!-- <dog-info name="Minnie" roundness="5"></dog-info>
+        <h3>{{ message }}</h3>
+
+        <h4>{{ message }}</h4> -->
+
+        <!-- <p v-bind:title="hoverText">
+            Hover on this text to get a message
+        </p> -->
+
+        
+        <!-- <img v-bind:src="billUrl" v-on:mouseover=" hoverHandler "> -->
+
+        <!-- <div v-if="showMessage" v-bind:class="errorStatus">
+            These contents might disappear!
+        </div> -->
+
+        <div id="results" class="main">
+            <img v-for="item in photos.photo" v-bind:src="generateImageUrl(item)" v-on:click="toggleResults(item)" v-if="showResults">
+        </div>      
+        
+        <div id="singleResults" v-if="!showResults" class="main">
+                <img v-bind:src="singlePhotoUrl">
+                <h3>{{singlePhoto.photo.title._content}} </h3>
+                <p> Taken: {{ singlePhoto.photo.dates.taken }} by {{singlePhoto.photo.owner.realname}}</p>
+                <p><em> {{ singlePhoto.photo.description._content }}</em></p>
+
+                </photo-info>
+        </div>
+
+
+
+    </div>  <!-- end of app -->
+    
+</body>
+</html>

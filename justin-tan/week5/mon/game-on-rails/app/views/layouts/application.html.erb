@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game On Rails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>GAMES ON RAILS!</h1>
+    </header>
+
+    <nav>
+      <a href="/eight">Magic 8 Ball</a>
+      |
+      <a href="/secret">Secret Number</a>
+      |
+      <a href="/rps">Rock Paper Scissors</a>
+    </nav>
+
+    <hr>
+    <%= yield %>
+    <hr>
+
+    <footer>
+    &copy; SEI55 Gambling Ptd Ltd 2022
+    </footer>
+  </body>
+</html>
