@@ -14,7 +14,7 @@ To get started, look at the examples on the package page linked to above (but no
 ```
 cd ~/sei/homework
 
-git pull upstream main
+git pull (if this doesn't work use git pull upstream main)
 
 # copy the previous solution to where ever you keep your warmups
 # make sure these paths are correct for you
