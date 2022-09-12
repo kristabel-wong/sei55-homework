@@ -15,9 +15,10 @@ class SearchForm extends React.Component {
 
     handleSubmit = (e)=>{
         e.preventDefault()
-        console.log('Form submit:', this.state.searchText);
 
-        this.props.onSubmit(this.state.searchText)
+        // this.props.onSubmit(this.state.searchText)
+
+        this.props.history.push(`/search/${this.state.searchText}`)
     }
 
     render() {
