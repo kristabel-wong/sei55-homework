@@ -2,6 +2,7 @@ import React from "react";
 import '../App.css'
 import SearchForm from "./SearchForm";
 import SearchResults from "./SearchResults";
+import Details from "./Details";
 
 import { Route, HashRouter as Router, Link } from "react-router-dom"
 
@@ -27,6 +28,8 @@ class FlickrSearch extends React.Component {
                     } */}
 
                     <Route exact path="/search/:query" component={SearchResults} />
+
+                    <Route exact path="/details/:id" component={Details} />
 
                 </Router>
             </div>
