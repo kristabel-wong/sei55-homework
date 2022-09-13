@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>D23Countries</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <body>
+      <nav>
+        <h1>Tour of the World</h1>
+        <%= link_to 'Home', '/countries' %>
+        |
+        <%= link_to 'All Countries', '/countries/index' %>
+        |
+        <%= link_to 'Add Country', '/countries/new' %>
+        |
+        <%= link_to 'All Cities', cities_path %>
+        |
+        <%= link_to 'Add City', new_city_path %>
+
+
+       </nav>
+      </nav>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<body>
+    
+
+<h2>
+    Travel Destinations
+</h2>
+
+<ul>
+<% @travel.each do |travel| %>
+    <li>
+        <a href="/travel/<%= travel['id']%>">
+        <%= travel['location'] %><br>
+        </a>
+    </li>
+<% end %>
+</ul>
+<br>
+<img class="piggy" src="https://absolutely.london/wp-content/uploads/2017/06/animals-hero-1068x668.jpg" alt="">
+</body>

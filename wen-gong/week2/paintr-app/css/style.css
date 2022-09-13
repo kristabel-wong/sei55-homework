@@ -1,0 +1,14 @@
+body {
+
+  background-color: black;
+  overflow: hidden;
+}
+
+
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  /* background: url(http://media1.giphy.com/media/1b4mV7p0DBR08/giphy.gif);
+  background-size: contain; */
+}

@@ -1,0 +1,23 @@
+
+<h3>
+    Information of <%= @genre_single.name %>
+</h3>
+
+<a href="/genres/<%= @genre_single.id %>/delete">Delete</a>
+
+<p>
+    <strong>Movies</strong>
+    <ul>
+        <% @genre_single.movies.each do |item| %>
+            <li>
+                <a href="/movie/<%= item.id %>">
+                <%= item.name %>
+                </a>
+            </li>
+    
+        <% end %>
+    </ul>
+
+
+</p>
+

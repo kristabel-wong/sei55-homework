@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/* CSS custom properties AKA variables */
+:root {
+    --heading-color: rgb(0, 33, 200);
+    --standard-border: 1px;
+}
+
+* {
+    /* border: var(--standard-border) solid red; */
+}
+
+h1 {
+    color:mediumturquoise;
+}
+
+div, span {
+    border: 1px solid red;
+}
+
+span {
+    /* display: block; */
+    /* margin: 10px;
+    padding: 5px; */
+}
+
+div {
+    /* display: inline; */
+}
+
+div.inlineExample {
+    display: inline;
+    width: 200px;
+}
+
+div.blockExample {
+    display: block;
+    width: 200px;
+}
+
+div.displayNoneExample {
+    display: none;
+    /* visibility: hidden; */
+    background-color: red;
+}
+
+div.inlineBlockExample {
+    display: inline-block;
+    width: 50%;
+    height: 100px;
+    /* border: none; */
+    /* white-space: nowrap; */
+}
+
+.box {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid grey;
+}
+
+.staticExample {
+    position: static;
+    left: 10px; 
+}
+
+.relativeExample {
+    position: relative;
+    left: 100px;
+    top: 50px;
+    /* margin: 20px; */
+}
+
+.absoluteExample {
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    background-color: orange;
+}
+
+.anotherAbsoluteExample {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.parentOfAbsolute {
+    position: relative;
+}
+
+.fixedExample {
+    position: fixed;
+    top: 0;
+    left: 200px;
+    background-color:aqua;
+    z-index: -100;
+}
+
+
+.staticExample strong {
+    color: var(--heading-color);
+}
+
+code {
+    color: var(--heading-color);
+}
+
+div {
+    font-family: "Montserrat"
+}
+
+/* MEDIA QUERIES - responsive design for different screen sizes */
+
+@media screen and (max-width: 600px) {
+
+    div {
+        background-color: green;
+    }
+
+    code {
+        color: rgb(251, 0, 255);
+    }
+
+} /* end of @media block */

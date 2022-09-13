@@ -1,0 +1,30 @@
+<h3>Add new Attraction</h3>
+
+<form action="/attractions" method="post">
+
+    <label>
+    Name:
+        <input type="text" name="name">
+    </label>
+    <br>
+    <label>
+    Image URL:
+        <input type="text" name="image_url">
+    </label>
+    <br>
+
+    <label>
+    Destination:
+        <select name="travel_id">
+            <option>--</option>
+            <% Travel.all.each do |travel| %>
+            <option value="<%= travel.id %>">
+            <%= travel.location %>
+            </option>
+            <% end %>
+        </select>
+    </label>
+
+    <button>Add Attraction</button>
+
+</form>

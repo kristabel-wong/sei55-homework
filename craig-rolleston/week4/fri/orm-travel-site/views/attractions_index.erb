@@ -1,0 +1,13 @@
+<h3>Attractions</h3>
+
+<ul>
+  <% @attractions.each do |attraction| %>
+    <li>
+        <br>
+        <a href="/attractions/<%= attraction.id %>"><%= attraction.name %></a>
+        <br>
+        <img class="attraction-image" src="<%= attraction.image_url %>">
+    </li>
+    <br>
+  <% end %>
+</ul>

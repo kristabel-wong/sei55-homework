@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+section{
+    font-family: 'Aboreto';
+    /* border: 10px solid red; */
+}
+
+h1{
+    font-family: 'Aboreto';
+    text-align: center;
+    
+
+}
+
+
+#nav_bar{
+    text-align: center;
+
+
+}
+
+.nav_link{
+    text-align: center;
+    
+
+}
+
+#nav_image{
+
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.5rem;
+
+}
+
+
+#main_CT_container{
+
+    display: inline-flex;
+    /* flex-flow: column; */
+    width: 100vw;
+    height: auto;
+
+}
+.single-clip-data{
+
+    padding: 0.5rem;
+    flex-flow: row;
+
+}
+
+/* the following two .css blocks control the size of the video player so that it will always have the correct aspect ratio of 16:9 */
+#video-container {
+
+    width: 100%;
+    padding-top: 56.25%;
+    height: 0px;
+    position: relative;  
+    /* border: 10px solid red */
+}
+#single-clip-video{
+
+    width: 100%;
+    padding-bottom: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 2vw;
+
+};
+
+#rank-interactivity{
+    display: inline;
+    position: absolute;
+    top: -10vh;
+}
+
+#full-page{
+    /* border: 5px solid red; */
+    background-color: antiquewhite;
+    background-image: url("/videos/ClearcutMelodicGreatwhiteshark-max-1mb.gif") ;
+    background-size: cover;
+    color: aliceblue;
+
+}

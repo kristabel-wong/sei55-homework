@@ -1,0 +1,16 @@
+
+.jerry{
+    position:relative;
+    z-index: -1;
+    animation: spin 5s linear infinite;
+    padding: 300px;
+}
+
+@keyframes spin {
+    0%{
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+}}
+

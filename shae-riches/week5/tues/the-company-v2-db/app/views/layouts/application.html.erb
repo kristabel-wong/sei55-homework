@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheCompanyV2Db</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head> <!-- closes head-->
+
+  <body>
+
+    <header id="main_header">
+      <nav>
+        <h2 id="main_header">The Company</h2>
+        |
+        <%= link_to 'Home', root_path, class: "nav_link"  %>
+        |
+        <%= link_to 'Employees', employees_path, class: "nav_link"  %>
+
+      </nav>
+      <hr>
+    </header> <!-- closes #main_header -->
+
+    <%= yield %>
+
+    <footer id="main_footer">
+      <hr>
+       &copy;1600. The Company
+    </footer> <!-- closes #main_footer -->
+
+  </body> <!-- closes body -->
+
+</html>

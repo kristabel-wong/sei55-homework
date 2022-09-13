@@ -1,0 +1,52 @@
+<h2>Edit your profile</h2>
+
+<form action="/profiles/<%= @profile.id %>" method="post" id="profile_edit">
+
+<label>
+    <p><strong>Name:</strong>
+    <input type="text" name="name" value="<%= @profile.name %>">
+    </p>
+</label>
+
+<label>
+    <p><strong>Age:</strong>
+    <input type="number" name="age" min="0" value="<%= @profile.age %>">
+    </p>
+</label>
+
+<label>
+    <p><strong>Occupation:</strong>
+    <input type="text" name="occupation" value="<%= @profile.occupation %>">
+    </p>
+</label>
+
+<label>
+    <p><strong>Net Worth:</strong>
+    <input type="number" name="net_worth" min="0" value="<%= @profile.net_worth %>">
+    </p>
+</label>
+
+<label>
+    <p><strong>Toxicity:</strong>
+    <input type="range" name="toxicity" id="toxicity" min="0" max="100" value="<%= @profile.toxicity %>">
+    </p>
+</label>
+
+<label>
+    <p>
+    <strong>Interest:</strong>
+    <br>
+    <textarea name="interests" rows="5" cols="30" maxlength="200"><%= @profile.interests %>
+    </textarea>
+    </p>
+</label>
+
+<label>
+    <p><strong>Profile image:</strong>
+    <input type="text" name="profile_img" value="<%= @profile.profile_img %>">
+    </p>
+</label>
+
+<button>Edit profile</button>
+
+</form>

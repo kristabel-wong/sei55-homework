@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/main.js"></script>
+    <title>Flickr Search</title>
+
+    <style>
+        #results {
+            padding-top: 2em;
+        }
+
+        #results img {
+            padding-right: 5px;
+        }
+
+         ul {
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Flickr Search </h1>
+    <form id="searchForm">
+    <input type="text" id="query" placeholder="Enter photo search text">
+    <button> search Flickr </button>
+    </form>     
+    <div id="results"></div>    
+    
+    <nav>
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous" id="Previous">Previous</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" id="Next">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="pageList"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+
+<%= form_with model: @album, local: true do |f| %>
+
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br><br>
+
+    <%= f.label :released %>
+    <br>
+    <%= f.text_field :released %>
+    <br><br>
+
+    <%= f.label :genre %>
+    <br>
+    <%= f.text_field :genre %>
+    <br><br>
+
+    <%= f.label :length %>
+    <br>
+    <%= f.text_field :length %>
+    <br><br>
+
+    <%= f.label :image, 'Image URL' %>
+    <br>
+    <%= f.text_field :image, placeholder: 'URL here' %>
+    <br><br>
+
+    <%= f.label :singer_id, 'Singer' %>
+    <%= f.collection_select :singer_id, Singer.all, :id, :name, include_blank: true %>
+
+    <%= f.submit %>
+
+<% end %>
