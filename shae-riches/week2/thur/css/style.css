@@ -5,7 +5,8 @@
 
 .grid_row {
     border: 1px  red;
-    position:relative
+    position:relativebackground-image: url("../../media/examples/star.png"),
+    url("../../media/examples/lizard.png")
 
 }
 
