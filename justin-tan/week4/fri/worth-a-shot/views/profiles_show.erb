@@ -1,0 +1,42 @@
+<h2>Alcoholic's Profile</h2>
+
+<div id="profile_show">
+<img src="<%= @profile.profile_img %>" alt="<%= @profile.name %>" id="profile_detail_img">
+
+<h3><strong>Name</strong></h3>
+<p><%= @profile.name %></p>
+
+<h3><strong>Age</strong></h3>
+<p><%= @profile.age %></p>
+
+<h3><strong>Occupation</strong></h3>
+<p><%= @profile.occupation %></p>
+
+<h3><strong>Net Worth</strong></h3>
+<p>$<%= @profile.net_worth %></p>
+
+<h3><strong>Toxicity</strong></h3>
+<p><%= @profile.toxicity %>%</p>
+
+<h3><strong>Interests</strong></h3>
+<p><%= @profile.interests %></p
+>
+<h3><strong>Poison(s) own</strong></h3>
+<p>
+    <% @profile.alcohols.each do |el| %>
+
+    <a href="/alcohols/<%= el.id %>">
+        <img src="<%= el.image_url  %>" id="avatar">
+
+    </a>
+
+    <% end %>
+</p>
+
+<nav class="show_nav">
+<a href="/profiles/<%= @profile.id %>/edit">Edit Profile</a>
+
+<a href="/profiles/<%= @profile.id %>/delete" class="delete">Delete Profile</a>
+</nav>
+
+</div>

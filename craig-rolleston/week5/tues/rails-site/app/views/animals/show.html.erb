@@ -1,0 +1,28 @@
+<h2>
+    <%= @animal.name %>
+</h2>
+
+<%= link_to 'Edit', edit_animal_path(@animal.id) %>
+|
+<%= link_to 'Delete', destroy_animal_path(@animal.id) %>
+
+<p>
+    <strong>Species:</strong>
+    <em><%= @animal.species %></em> 
+</p>
+
+<p>
+    <strong>Region:</strong>
+    <em><%= @animal.region %></em> 
+</p>
+
+<p>
+    <strong>Life Span:</strong>
+    <em><%= @animal.life_span %></em> 
+</p>
+
+<%= image_tag @animal.image_url, alt: @animal.name, class: 'animal' %>
+
+
+
+

@@ -14,7 +14,8 @@ const generateImageUrl = (p, size = 'b') => {
 class Details extends React.Component {
 
     state = {
-        photo: {}
+        photo: {},
+        loading: true
     }
 
     performDetailSearch = (query) => {
@@ -33,7 +34,8 @@ class Details extends React.Component {
             .then(res => {
                 // console.log(res.data.photo.title._content);
                 this.setState({
-                    photo: res.data.photo
+                    photo: res.data.photo,
+                    loading: false
                 })
             })
             .catch(err => {
@@ -50,7 +52,7 @@ class Details extends React.Component {
 
     componentWillUnmount() {
         console.log('Unmounted');
-
+        // this.props.history.goBack()
     }
 
     componentDidUpdate(prevProps) {
@@ -60,12 +62,24 @@ class Details extends React.Component {
         // 
     }
 
+    showDetails() {
+        return (
+            <div>
+                <strong>Title:{this.state.photo.title._content} </strong>
+                <br />
+                <img src={generateImageUrl(this.state.photo)} alt={this.state.photo.id} />
+                <br />
+                <button onClick={()=>{
+                    this.props.history.goBack()
+                }}>Back</button>
+            </div>
+        )
+    }
+
     render() {
         return (
             <div>
-                <strong>Title:{console.log(this.state.photo.title)} </strong>
-                <img src={generateImageUrl(this.state.photo)} alt={this.state.photo.id} />
-               
+                {!this.state.loading && this.showDetails()}
             </div>
         )
     }

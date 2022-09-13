@@ -1,0 +1,77 @@
+<form action="/profiles/<%= @profile['id'] %>" method="post">
+
+<label>
+    Name:
+    <input type="text" name="name" placeholder="Enter your name here" value="<%= @profile['name'] %>">
+</label>
+
+<label>
+    Age:
+    <input type="number" name="age" value="<%= @profile['age'] %>">
+</label>
+
+<label>
+    Suffix:
+    <select name="suffix">
+    <option selected="true" disabled="disabled">Please choose an option</option>
+    <option value="he/him">he/him</option>
+    <option value="she/her">she/her</option>
+    <option value="they/them">they/them</option>
+    </select>
+</label>
+
+<label>
+    Location:
+    <input type="text" name="location" placeholder="Enter location here" value="<%= @profile['location'] %>">
+</label>
+
+<label>
+    MBTI Type:
+    <select name="mbti">
+    <option selected="true" disabled="disabled">Please choose your MBTI type</option>
+    <option value="INTJ">INTJ</option>
+    <option value="INTP">INTP</option>
+    <option value="ENTJ">ENTJ</option>
+    <option value="ENTP">ENTP</option>
+    <option value="INFJ">INFJ</option>
+    <option value="INFP">INFP</option>
+    <option value="ENFJ">ENFJ</option>
+    <option value="ENFP">ENFP</option>
+    <option value="ISTJ">ISTJ</option>
+    <option value="ISFJ">ISFJ</option>
+    <option value="ESTJ">ESTJ</option>
+    <option value="ESFJ">ESFJ</option>
+    <option value="ISTP">ISTP</option>
+    <option value="ISFP">ISFP</option>
+    <option value="ESTP">ESTP</option>
+    <option value="ESFP">ESFP</option>
+    </select>
+</label>
+
+<label id="radio">
+    Availability:
+    <input type="radio" id="yes" name="availability" value="1">
+    <label for="yes">Yes</label>
+
+    <input type="radio" id="no" name="availability" value="0">
+    <label for="no">No</label>
+</label>
+
+<label>
+    Likes:
+    <input type="text" name="likes" placeholder="Enter what you like here" value="<%= @profile['likes'] %>">
+</label>
+
+<label>
+    Dislikes:
+    <input type="text" name="dislikes" placeholder="Enter what you dislike here" value="<%= @profile['dislikes'] %>">
+</label>
+
+<label>
+    Upload your beautiful photo here!
+    <input type="text" name="profile_img" placeholder="Enter img URL here" value="<%= @profile['profile_img'] %>">
+</label>
+
+<button>Edit profile!</button>
+
+</form>

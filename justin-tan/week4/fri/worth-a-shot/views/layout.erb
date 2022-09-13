@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Worth a Shot!</title>
+</head>
+<body>
+    <header>
+        <h1>Worth a Shot</h1>
+        <p><strong>Exquisite Tavern for Liver Damage</strong></p>
+    </header>
+    <hr>
+    <nav>
+        <a href="/">Front Door</a>
+        
+        <a href="/alcohols">Browse Poison</a>
+        
+        <a href="/alcohols/new">Add your Toxic</a>
+        
+        <a href="/profiles">Exquisite Profiles</a>
+        
+        <a href="/profiles/new">Join the Damage</a>
+    </nav>
+    <hr>
+    
+    <div id="content">
+        <%= yield %>
+    </div>
+
+    <hr>
+    <footer>
+        &copy; Drunk Matez SEI55 estd 2022
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

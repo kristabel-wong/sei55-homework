@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+header {
+    background-image: url('https://64.media.tumblr.com/082b81f5b85487874cbba894dbee9e25/tumblr_oh35otV0un1u9ooogo1_540.gifv');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Della Respira', serif;
+    font-size: 50px;
+}
+
+header p {
+    font-size: 30px;
+}
+
+nav {
+    font-family: 'Della Respira', serif;
+    margin: 10px;
+}
+
+nav a {
+    font-family: 'Raleway', sans-serif;
+    padding: 0 40px;
+}
+
+#home_img {
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+#index {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.alcohol_img {
+    border: 1px solid rgb(147, 147, 147);
+    width: 25%;
+    margin: 10px;
+    display: block;
+    border-radius: 40px;
+}
+
+.alcohol_img img {
+    width: 180px;
+    margin-top: 30px;
+}
+
+#alcohol_detail_img {
+    width: 30%;
+}
+
+#profile_detail_img {
+    width: 30%;
+}
+
+#avatar {
+    width: 100px;
+    border-radius: 20%;
+    border: 2px solid rgb(198, 190, 143);
+    margin-top: 15px;
+    
+}
+
+#report {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#report h3{
+    font-family: 'Della Respira', serif;
+    margin-bottom: -10px;
+    font-size: 20px;
+}
+
+#profile_show h3{
+    font-family: 'Della Respira', serif;
+    margin-bottom: -10px;
+    font-size: 20px;
+}
+
+
+.show_nav a {
+    font-family: 'Della Respira', serif;
+    font-size: 20px;
+}
+
+#alcohol_form input, select {
+    display: block;
+    margin: 10px auto;
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    background-color:rgb(67, 66, 65);
+    border: none;
+    color: white;
+}
+
+#alcohol_form input[type="radio"] {
+    display: inline;
+    width: 20px;
+    margin: auto;
+    vertical-align: middle;
+}
+
+#alcohol_edit input, select {
+    display: block;
+    margin: 10px auto;
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    background-color:rgb(67, 66, 65);
+    border: none;
+    color: white;
+}
+
+#alcohol_edit input[type="radio"] {
+    display: inline;
+    width: 20px;
+    margin: auto;
+    vertical-align: middle;
+}
+
+#profile_form input, select {
+    display: block;
+    margin: 10px auto;
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    background-color:rgb(67, 66, 65);
+    border: none;
+    color: white;
+}
+
+#profile_edit input, select {
+    display: block;
+    margin: 10px auto;
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    background-color:rgb(67, 66, 65);
+    border: none;
+    color: white;
+}
+
+#profile_index {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.profile_img {
+    border: 1px solid rgb(147, 147, 147);
+    width: 25%;
+    margin: 10px;
+    display: block;
+    border-radius: 40px;
+}
+
+.profile_img img {
+    width: 180px;
+    height: 250px;
+    margin-top: 30px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+h2 {
+    font-family: 'Della Respira', serif;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+a:visited {
+    color: white;
+}

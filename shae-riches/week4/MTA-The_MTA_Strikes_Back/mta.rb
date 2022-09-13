@@ -43,12 +43,20 @@ the_MTA = {
 
 # -------------------------------------------------------------------------------------------------- #
 
+customer_information_and =  [2, :n, 5, :n]
+
+def travel_info_from customer_information_and, the_MTA 
+    
+    travelling_from customer_information_and[0], the_MTA, customer_information_and[1], customer_information_and[2], customer_information_and[3] 
+
+end         #       closes travel_info_from
+
 # STEP TWO 
 # a) use hard-coded input data to create a start point on the_MTA system. 
 # a)i)      starting station = the_MTA[:n][0]...
 
-# plan_trip( :n, "Times Square", :l, "1st" )
 def travelling_from station, of_the_MTAs, line, to_other_station, of_other_line 
+    
     # store argumen values into new variables
     starting_station_index      =   station 
     the_MTA                     =   of_the_MTAs
@@ -60,15 +68,15 @@ def travelling_from station, of_the_MTAs, line, to_other_station, of_other_line
     # - and then store them into new variables
     current_station             =   the_MTA[starting_line_symbol][starting_station_index]
     destiation_station          =   the_MTA[ending_line_symbol][ending_station_index]
-    starting_line_length        =   the_MTA[starting_line_symbol].length
+    and_end_line_here           =   the_MTA[starting_line_symbol].length
     array_will_start_at         =   the_MTA[starting_line_symbol]
 
-    array_from_starting_station =   array_will_start_at[starting_station_index..starting_line_length]
+    array_from_starting_station =   array_will_start_at[starting_station_index..and_end_line_here]
 
     array_from_starting_station.each do | el |
         
         current_station = el
-        p current_station       #       check = true
+        #p current_station       #       check = true
 
         if      current_station == destiation_station && starting_line_symbol == ending_line_symbol
             
@@ -87,7 +95,8 @@ def travelling_from station, of_the_MTAs, line, to_other_station, of_other_line
 
 end         #   closes travelling_from
 
-commence_trip = travelling_from 2, the_MTA, :n, 5, :n
+
+commence_trip_with = travel_info_from customer_information_and, the_MTA
 
 
 

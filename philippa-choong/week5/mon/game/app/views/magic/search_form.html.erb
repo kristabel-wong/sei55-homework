@@ -1,0 +1,12 @@
+<h3> Ask the Magic 8 Ball, anything!  </h3>
+
+<%= image_tag 'eight_ball.jpg', alt:'Eight Ball Image', class:'eight-ball'%>
+
+<form action="/magic/magic_results">
+    <label>
+    Questions:
+    <input type="text" name="query">
+    </label>
+    <br>
+
+    <button> Submit </button>

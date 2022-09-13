@@ -1,25 +1,28 @@
 
 
 
+<h4>Search Results: <%= params[:movie_name]%></h4>
 
 <% @array_movies[1..5].each do |movie| %> 
 <ul>
     <li>
     <div> 
-        <img src="https://image.tmdb.org/t/p/w300<%= movie["poster_path"] %>">
+
+        <a href="/movie/<%= movie["id"] %>">
+            <img src="https://image.tmdb.org/t/p/w200<%= movie["poster_path"] %>">
+        </a>
     </div>
-    <h4>Movie name: <%= movie["title"] %></h4>
-    <h4>Movie date: <%= movie["release_date"]%></h4>
-    <p>Overview: <%= movie["overview"]%></p>
+    <h4><%= movie["title"] %></h4>
+    <%# [0,4] to remove the month and date %>
+    <p><%= movie["release_date"][0,4]%></p>
+    <p><%= movie["overview"]%></p>
     </li>
     <br>
-
-    
 
 </ul>
 <% end %>
 
 
-<%= params[:movie_name]%>
-
-
+<%# things to consider: %>
+<%# float the serch output images with div %>
+<%# how to do the next search? %>

@@ -1,0 +1,42 @@
+<h3>
+  Details for <%= @album.name %>
+</h3>
+<div class="albums-show">
+    <a href="/albums/<%= @album.id %>/edit">Edit</a>
+
+    <a href="/albums/<%= @album.id %>/delete">Delete</a>
+
+    <%if @album.singer %>
+    <p>
+      <strong>Singer:</strong>
+      <a href="/singers/<%= @album.singer.id %>">
+        <%= @album.singer.name %>
+      </a>
+    </p>
+    <% end %>
+
+
+    <p>
+      <strong>Released:</strong>
+      <%= @album.released %>
+    </p>
+
+    <p>
+      <strong>Genre:</strong>
+      <%= @album.genre %>
+    </p>
+
+    <p>
+      <strong>Length:</strong>
+
+      <%= @album.length %>
+    </p>
+
+    <p>
+      <strong>Track_listing:</strong>
+      <%= @album.track_listing %>
+    </p>
+
+    <img class="album-image" src="<%= @album.image_url %>" alt="<%= @album.name %>">
+
+</div>

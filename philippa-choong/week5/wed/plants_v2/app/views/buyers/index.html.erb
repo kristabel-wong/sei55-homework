@@ -1,0 +1,9 @@
+<h2> List of Buyers <h2>
+
+<ul>
+<% @buyers.each do |buyer| %>
+    <li>
+       <%= link_to buyer.name, buyer_path(buyer.id) %>
+    </li>
+<% end %>
+</ul>

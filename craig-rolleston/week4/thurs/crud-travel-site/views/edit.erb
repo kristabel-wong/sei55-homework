@@ -1,0 +1,45 @@
+<h3>
+    Edit <%= @travel['name'] %>
+</h3>
+
+<form class="edit" action="/travel/<%= @travel['id'] %>" method="post">
+
+    <label>
+        Location:
+        <input type="text" name="location" value="<%=@travel['location']%>">
+    </label>
+    <br>
+
+    <label>
+        Country:
+        <input type="text" name="country" value="<%=@travel['country']%>">
+    </label>
+    <br>
+
+    <label>
+        Description:
+        <input type="text" name="description" value="<%=@travel['description']%>">
+    </label>
+    <br>
+
+    <label>
+        Rating out of 10:
+        <input type="text" name="rating" value="<%=@travel['rating']%>">
+    </label>
+    <br>
+
+    <label>
+        Visited: (1 for yes, 0 for no):
+        <input type="text" name="visited" value="<%=@travel['visited']%>">
+    </label>
+    <br>
+
+    <label>
+        Image URL:
+        <input type="text" name="image_url" value="<%=@travel['image_url']%>">
+    </label>
+    <br>
+
+    <button>Update Destination</button>
+
+</form>

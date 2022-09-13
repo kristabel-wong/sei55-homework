@@ -61,9 +61,8 @@ class SearchResults extends React.Component {
         // 
     }
 
-    handleClick = (p) => {
-        console.log('clicked', p);
-        this.props.history.push(`/details/${p.id}`)
+    handleClick = (id) => {
+        this.props.history.push(`/details/${id}`)
     }
 
     render() {
@@ -77,7 +76,7 @@ class SearchResults extends React.Component {
             <div>
                 {
                     this.state.resultPhotos.map(p =>
-                        <img key={p.id} src={generateImageUrl(p)} alt={p.title} onClick={() => { this.handleClick(p) }} />
+                        <img key={p.id} src={generateImageUrl(p)} alt={p.title} onClick={() => { this.handleClick(p.id) }} />
                     )
                 }
             </div>

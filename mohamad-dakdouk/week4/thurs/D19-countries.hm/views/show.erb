@@ -1,0 +1,33 @@
+<%# Presents the information for each country %>
+
+<h3>
+Details for <%= @country['name'] %>
+</h3>
+
+<%# provides the link to the edit or delete pages for each %>
+<a href="/countries/<%= @country['id'] %>/edit">Edit</a>
+|
+<a href="/countries/<%= @country['id'] %>/delete">DELETE</a>
+
+<p>
+    <strong> Location: </strong>
+    <%= @country['location'] %>
+</p>
+
+<p>
+    <strong> Language: </strong>
+    <%= @country['language']%>
+</p>
+<p>
+    <strong> Population: </strong>
+    <%= @country['population']%>
+</p>
+<p>
+    <strong> Attractions: </strong>
+    <%= @country['attractions']%>
+</p>
+<p>
+    <strong> visit: </strong>
+    <%= @country['visit'] == 1 ? 'Yes' : 'No' %>
+</p>
+<img src="<%= @country['image_url'] %>" alt="<%= @country['name'] %>" >

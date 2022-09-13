@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color:aquamarine;
+}
+
+.planet{
+   max-width: 96vw;
+}
