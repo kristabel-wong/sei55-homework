@@ -14,13 +14,15 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <header>
-
-            <Route component={FlickrSearch} />
-            <Route exact path="/flickr/search/:query" component={FlickrSearch}/>
+            
+          
+          <Route component={FlickrSearch} />
+            
 
           </header>
 
-           
+         
+          <Route exact path="/flickr/search/:query" component={FlickrSearchResults}/>
           
 
 
