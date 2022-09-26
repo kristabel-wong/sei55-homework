@@ -1,0 +1,23 @@
+<h2>
+    Mixtape: <%= @mixtape.name %>
+</h2>
+
+<p>
+    <em>
+        Last Updated at <%= @mixtape.updated_at %>
+    </em>
+</p>
+
+
+<% if @current_user.present? && @current_user.id == @mixtape.user_id %>
+    <%= link_to 'Edit', edit_mixtape_path(@mixtape) %>
+<% end %>
+
+<p>
+    Song list here
+</p>
+
+<!-- Saves pages from breaking-->
+<% if @mixtape.image.present? %>
+    <%= image_tag @mixtape.image, alt: @mixtape.name %>
+<% end %>

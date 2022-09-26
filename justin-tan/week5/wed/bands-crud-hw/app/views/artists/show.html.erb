@@ -1,0 +1,29 @@
+<h2><%= @artist.name %> Profile</h2>
+
+<%= image_tag @artist.image, alt: @artist.name, class: 'artist_show_img' %>
+
+<h4>Name:</h4>
+<p><%= @artist.name %></p>
+
+<h4>Age:</h4> 
+<p><%= @artist.age %></p>
+
+<h4>Nationality:</h4>
+<p><%= @artist.nationality %></p>
+
+<h4>Hobbies:</h4>
+<p><%= @artist.hobbies %></p>
+
+<h4>Biography:</h4> 
+<p><%= @artist.bio %></p>
+
+<h4>Member of:</h4>
+<%= link_to @artist.band.name, band_path(@artist.band.id) %>
+
+
+<nav>
+<%= link_to 'Edit Artist', edit_artist_path %>
+
+<%= link_to 'Delete Artist', artist_path(@artist.id), method: 'delete' %>
+
+</nav>

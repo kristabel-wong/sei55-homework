@@ -10,4 +10,4 @@ const warning = function() {
     })
 }
 
-console.log(warning())
+warning()

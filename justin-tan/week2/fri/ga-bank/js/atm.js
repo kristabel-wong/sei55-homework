@@ -47,7 +47,7 @@ let $savingsBalance = 0
 
 
 //function for CHECKING ACCOUNT deposit
-const checkingDeposit = function(accBalance) {
+const checkingDeposit = function() {
     //set input value into a number
     const $checkingValue = $('#checking-amount').val();
     const $checkingAmount = parseInt($checkingValue);
