@@ -1,0 +1,58 @@
+body{
+    
+    display: block;
+    position: relative;
+    margin: auto 0;    
+
+}
+#positioningContainer{
+    display: flex;
+    justify-content: space-around;
+
+}
+#mainContainer{
+
+    display: inline-block;
+    position: relative;
+    top: 2.5vh;
+
+    height: 95vh;
+    width: 37.5vw;
+
+    /* background-color: aquamarine; */
+    border-radius: 2%;
+    background-image: url("../images/background_img.png"); 
+    background-size: cover;   
+    background-repeat: no-repeat;
+    box-shadow: 4px 8px 5px;
+    
+
+
+}
+#queryText{
+    /* positioning */
+    position: absolute;
+    height: 2.75vh;
+    width: 14vw;
+    bottom: 16.9vh;
+    right: 9.1vw;
+
+    /* styling */
+    border-radius: 5%;
+
+}
+#submitButton{
+    /* positioning */
+    position: absolute;   
+    height: 9vh;
+    width: 9vh;
+    left: 18.7vw;
+    top: 34.9vh;
+
+    /* styling */
+    font-size: 15pt;
+    border-radius: 100%;
+    background: linear-gradient( 0.33turn, #8c8c8c, #dddbdb );    
+
+
+}

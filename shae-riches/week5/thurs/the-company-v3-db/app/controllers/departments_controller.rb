@@ -1,11 +1,13 @@
 class DepartmentsController < ApplicationController
 
   def new
-    @department = Department.new    
+    @department = Department.new 
+    
   end
 
   def create
     Department.create department_params
+
   end
 
   def index
@@ -29,6 +31,7 @@ class DepartmentsController < ApplicationController
 
   def destroy
     Department.destroy params[:id]
+
     redirect_to departments_path
   end
 
