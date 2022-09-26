@@ -1,0 +1,54 @@
+
+#nav_container{
+
+
+}
+#skyline_container{
+    position: absolute;
+    display: block;
+    height: 10vh;
+    width: 60vw;
+    z-index: -1;
+    top: 0px;
+    overflow: hidden;
+    object-fit: cover;
+
+}
+#building_skyline{
+    position: relative;
+    opacity: 100%;
+    z-index: -1;
+    /* margin: -30% 20% 30% 20%; */
+    object-fit: cover;
+
+
+}
+#main_header{
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 24pt;
+    padding: 0 0.5vw 0 0.5vw;
+    margin: 0 0.5vh 0 .5vh
+
+}
+#main_header_hr{
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    left: 23vw;
+    top: -1vh;
+    width: 50vw;
+
+
+}
+#home_link{
+    font-size: 16pt;
+
+}
+.nav_link{
+    display: inline;
+    position: relative;
+    font-size: 12pt;
+}

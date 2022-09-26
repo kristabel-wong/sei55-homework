@@ -1,0 +1,14 @@
+
+body {
+    background-color: black;
+}
+
+#words {
+    display: none;
+}
+
+
+.singleWord {
+    font-size: 40px;
+    display: none;
+}
