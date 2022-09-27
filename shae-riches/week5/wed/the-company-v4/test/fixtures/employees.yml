@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image_url: MyText
+  dob: 2022-08-24
+  address: MyText
+  gender: MyString
+  start_date: 2022-08-24
+  contract: false
+  full_time: false
+  months_employed: 1
+  sick_days_accrued: 1
+  sick_days_taken: 1
+  leave_accrued_hours: 1
+  leave_taken_hours: 1
+  end_date: 2022-08-24
+
+two:
+  name: MyString
+  image_url: MyText
+  dob: 2022-08-24
+  address: MyText
+  gender: MyString
+  start_date: 2022-08-24
+  contract: false
+  full_time: false
+  months_employed: 1
+  sick_days_accrued: 1
+  sick_days_taken: 1
+  leave_accrued_hours: 1
+  leave_taken_hours: 1
+  end_date: 2022-08-24

@@ -20,22 +20,19 @@ const queryMovieDatabase = function( movieTitle ) {
         $(`#results`)
             .empty()    //                  remove previous results    
             .prepend(`
-                <h2>'${ '#movieSearchInput' }' Search Results</h3>
-                ${ for (let i = 0; i < array.length; i++) {
-                    const element = array[i];
-                    
-                    }
+                <h2>'${ `${movieSearchInput}` }' Search Results</h3>
+                
 
-
-                }
                 <h4>${ data }</h4>
 
-            `);         //                  output of queryData to index.html page as #results div
- 
+            
+                `            
+                );         //                  output of queryData to index.html page as #results div
+        
 
     };    
     //              Tell XML-HTTP-Request which URL to open and HOW
-    xhr.open('GET', `https://api.themoviedb.org/3/search/movie?api_key=24d863d54c86392e6e1df55b9a328755&query=${movieTitle}?json` )
+    xhr.open('GET', `https://api.themoviedb.org/3/search/movie?api_key=24d863d54c86392e6e1df55b9a328755&query=${ movieTitle }?json` )
 
     xhr.send();     //                  SENDS request & does NOT block - unlike Ruby        
     

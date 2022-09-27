@@ -14,7 +14,7 @@
 // Fade the text in to make it appear, and then fade it out to disappear, to stop the page getting too dense with texty text.
 // Try random colours, random font sizes, rotation, whatever floats your boat.
 
-
+console.log('dat gui', dat.GUI);
 // gimme a random number
 const getRandomInt = function(num) {
     return Math.floor(Math.random() * num)
@@ -31,6 +31,24 @@ const content = $('#words').html();
 const onlyWords = content.split(" ");
 
 console.log(onlyWords)
+
+// Add control and the dat.gui controllers
+
+const controls = {
+    fadeIn: 2000,
+    fadeOut: 2000,
+    fontSize: 20,
+    //BONUS
+    color: '#FFFFFF'
+}
+
+
+const gui = new dat.GUI();
+gui.add(controls, 'fadeIn', 0, 5000) // range 0 and 5000 milliseconds
+gui.add(controls, 'fadeOut', 0, 5000) // range 0 and 5000 milliseconds
+gui.add(controls, 'fontSize', 0, 200) 
+gui.addColor(controls, 'color') 
+
 
 const textSoup = function() {
 
@@ -51,9 +69,11 @@ const textSoup = function() {
         top: ypos,
         left: xpos,
         position: 'absolute',
-        color: `rgb(${getRandomInt(256)}, ${getRandomInt(256)}, ${getRandomInt(256)})`,
+        // color: `rgb(${getRandomInt(256)}, ${getRandomInt(256)}, ${getRandomInt(256)})`,
+        color: controls.color,
         transform: `rotate(${getRandomInt(361)}deg)`,
-        fontSize: `${getRandomInt(100) + 20}px` //no smaller than 20px
+        fontSize: `${controls.fontSize}pt`
+        // fontSize: `${getRandomInt(100) + 20}px` //no smaller than 20px
     })
 
 
@@ -62,7 +82,7 @@ const textSoup = function() {
     $('body').append($wordDiv)
 
     // fade in and fade out words
-    $wordDiv.fadeIn(2000).fadeOut(2000, function () {
+    $wordDiv.fadeIn(controls.fadeIn).fadeOut(controls.fadeOut, function () {
         $(this).remove();
     })
     

@@ -1,0 +1,84 @@
+<%= form_with model: @employee, local: true do | f | %>
+
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br><br>
+
+    <%= f.label :image_url, 'Identification Image URL' %>
+    <br>
+    <%= f.text_field :image_url %>
+    <br><br>
+
+    <%= f.label :dob, 'Date of Birth' %>
+    <br>
+    <%= f.date_field :dob %>
+    <br><br>
+
+    <%= f.label :address %>
+    <br>
+    <%= f.text_field :address %>
+    <br><br>
+    
+    <%= f.label :gender %>
+    <br>
+    <%= f.text_field :gender %>
+    <br><br>
+
+    <%= f.label :start_date %>
+    <br>
+    <%= f.date_field :start_date %>
+    <br><br>
+
+    <%= f.label :contract %>
+    <br>
+    <%= f.check_box :contract %>
+    <br><br>   
+
+    <%= f.label :full_time %>
+    <br>
+    <%= f.check_box :full_time %>
+    <br><br>
+
+    <%= f.label :months_employed %>
+    <br>
+    <%= f.number_field :months_employed %>
+    <br><br>
+
+    <%= f.label :sick_days_accrued %>
+    <br>
+    <%= f.number_field :sick_days_accrued %>
+    <br><br>
+
+    <%= f.label :sick_days_taken %>
+    <br>
+    <%= f.number_field :sick_days_taken %>
+    <br><br>
+
+    <%= f.label :leave_accrued_hours %>
+    <br>
+    <%= f.number_field :leave_accrued_hours %>
+    <br><br>
+
+    <%= f.label :leave_taken_hours %>
+    <br>
+    <%= f.number_field :leave_taken_hours %>
+    <br><br>
+
+    <%= f.label :end_date %>
+    <br>
+    <%= f.date_field :end_date %>
+    <br><br>
+
+
+    
+    <!-- *MAGIC* :fills all form details with data already provided -->
+    <%= f.label :department_id, 'Department' %>
+    <%= f.collection_select :department_id, Department.all, :id, :title, include_blank: true, disabled: 'disabled_option_1' %>
+    <!---------------------------  ----------------------------------->
+
+    <br><br>
+
+    <%= f.submit %>
+
+<% end %>
