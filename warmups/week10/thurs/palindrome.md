@@ -1,7 +1,9 @@
 # Palindrome
 Write a function in JavaScript where given an integer x, return true if x is palindrome integer.
 An integer is a palindrome when it reads the same backward as forward.
-For example, 121 is a palindrome while 123 is not. Please install the below!
+For example, 121 is a palindrome while 123 is not. 
+
+For this warmup, we'll provide a Node project with an existing test suite, and you will be running the test suite to check if your solution works.
 
 ## Test Suite
 Follow the instructions below to test out your solution!
