@@ -6,7 +6,9 @@ import FlightSearch from '@/components/FlightSearch'
 import FlightSearchResults from '@/components/FlightSearchResults'
 import ShowFlight from '@/components/ShowFlight'
 
-Vue.use(Router)
+if(!process || process.env.NODE_ENV !== 'testing'){
+  Vue.use(Router)
+}
 
 export default new Router({
   routes: [

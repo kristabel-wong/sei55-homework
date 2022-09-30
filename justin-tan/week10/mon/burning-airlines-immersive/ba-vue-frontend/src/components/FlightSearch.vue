@@ -4,7 +4,7 @@
 
     
     <label>Origin:
-      <select v-model="origin" v-on:@change="validate">
+      <select class="origin" v-model="origin" v-on:@change="validate">
         <option value="">Please select:</option>
         <option value="SYD">Sydney</option>
         <option value="MEL">Melbourne</option>
@@ -14,7 +14,7 @@
     </label>
 
     <label>Destination:
-      <select v-model="destination" @change="validate">
+      <select class="destination" v-model="destination" @change="validate">
         <option value="">Please select:</option>
         <option value="SYD">Sydney</option>
         <option value="MEL">Melbourne</option>

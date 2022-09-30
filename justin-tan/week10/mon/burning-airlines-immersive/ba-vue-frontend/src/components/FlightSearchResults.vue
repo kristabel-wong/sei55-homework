@@ -2,17 +2,28 @@
   <div>
     <h2>Search Results for {{origin}} to {{destination}}</h2>
 
-    <div v-if="loading">
+    <div v-if="error !== null" class="error">
+      We were unable to process your flight search. Please try again shortly.
+    </div>
+    <div v-else-if="loading" class="loading">
       Loading results...
     </div>
     <div v-else>
 
-      <div v-for="flight in flights" class="searchResults">
-        
-        Flight number: <router-link :to="`/flights/${id}`">{{ flight.flight_number }}</router-link><br/>
-        Departure Date: {{ formatDate(flight.departure_date) }}<br/>
-        Origin: {{ flight.origin }}<br/>
-        Destination: {{ flight.destination }}<br/>
+      <div 
+        v-for="flight in flights" 
+        v-bind:key="flight.id" 
+        class="searchResults"
+        @click="selectFlight( flight.id )"
+      >
+      
+        <div>
+          <router-link :to="`/flights/${flight.id}`">{{ flight.flight_number }}</router-link> ({{flight.airplane.name}})
+          -
+          {{ formatDate(flight.departure_date) }}
+
+        </div>
+
       </div>
 
     </div>
@@ -52,7 +63,10 @@ export default {
       this.loading = false;
     } catch( err ){
       console.error('Error loading flight search results:', err);
-      this.error = err;
+      console.dir(err)
+      // debugger; // this will work because the dev server publishes a 'source map'
+      // this.error = err.response.data.error;
+      this.error = err
       this.loading = false;
     }
 
@@ -63,13 +77,28 @@ export default {
       return moment(date).format('MMMM Do YYYY, h:mm:ss a')
     },
 
-  }
+    selectFlight( id ){
+      console.log('Selected flight!', id);
+      // this.props.history.push(`/flights/${id}`)
+      this.$router.push({
+          name: 'ShowFlight',
+          params: {id : id} 
+        })
+    }, // selectFlight()
+
+  } // methods
 }
 </script>
 
 <style scoped>
-.searchResults {
-  margin-bottom: 20px;
+.searchResults div {
+  cursor: pointer;
+}
+
+.searchResults div:hover {
+  text-decoration: underline;
+  /* font-weight: bold; */
+  background-color: lightblue;
 }
 
 </style>

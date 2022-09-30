@@ -6,7 +6,7 @@
         <nav>
           <router-link to="/">Home</router-link>
           |
-          <router-link to="Search">Flight Search</router-link>
+          <router-link :to="{ name: 'Search'}">Flight Search</router-link>
         </nav>
     </header>
     <hr/>
