@@ -3,7 +3,7 @@
 The rules for a valid phone number in this exercise are as follows:
 
 - If the phone number has any non-numerals in it they should be removed/ignored
-- If the phone number is 11 digits and the first number is 1 trim the 1 and the remaining first 10 digits
+- If the phone number is 11 digits and the first number is 1 trim the 1 and the remaining 10 digits
 - If the phone number is 11 digits and the first number is not 1 then it is an invalid number
 - If the phone number is 10 digits long it is valid; if not it is invalid
 
