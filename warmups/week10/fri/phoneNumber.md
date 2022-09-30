@@ -23,5 +23,5 @@ followed by a dash  then then the last four numbers.
 ```
 phoneNumberCheck.getFormattedNumber('11234567890'))         // (123) 456-7890
 phoneNumberCheck.getFormattedNumber('D112s3456!789?0sdf')   // (123) 456-7890
-phoneNumberCheck.getFormattedNumber('71234567890');         // (000) 000-00
+phoneNumberCheck.getFormattedNumber('71234567890');         // (000) 000-0000
 ```
