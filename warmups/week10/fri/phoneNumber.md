@@ -9,7 +9,7 @@ The rules for a valid phone number in this exercise are as follows:
 
 ## Exercise
 
-1. Write a Javascript function which takes a phone number as a string and returns the cleaned-up version of the number if it is valid (ie. with non-numerals removed) or if not valid returns '00000000' (ten zeroes)
+1. Write a Javascript function which takes a phone number as a string and returns the cleaned-up version of the number if it is valid (ie. with non-numerals removed) or if not valid returns '0000000000' (ten zeroes)
 2. Write a Javascript function which returns a formatted version of the given phone number ie:
 
 ```plain
