@@ -1,0 +1,43 @@
+<%= form_with model: @department, local: true do | f | %>
+
+    <%= f.label :title %>
+    <br>
+    <%= f.text_field :title %>
+    <br><br>
+
+    <%= f.label :employee_count %>
+    <br>
+    <%= f.text_field :employee_count %>
+    <br><br>
+
+    <%= f.label :budget %>
+    <br>
+    <%= f.number_field :budget %>
+    <br><br>
+
+    <%= f.label :income %>
+    <br>
+    <%= f.number_field :income %>
+    <br><br>
+    
+    <%= f.label :productivity %>
+    <br>
+    <%= f.number_field :productivity %>
+    <br><br>
+
+    <%= f.label :image, 'Image URL' %>
+    <br>
+    <%= f.number_field :image, placeholder: 'Url Here' %>
+    <br><br>    
+
+
+    <!-- *MAGIC* :fills all form details with data already provided -->
+    <%= f.label :department_id, 'Department' %>
+    <%# <%= f.collection_select :department_id, Department.all, :id, :title, include_blank: true %> %>
+    <!---------------------------  ----------------------------------->
+
+    <br><br>
+
+    <%= f.submit %>
+
+<% end %>
