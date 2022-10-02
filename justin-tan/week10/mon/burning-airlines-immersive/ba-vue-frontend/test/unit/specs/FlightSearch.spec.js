@@ -91,6 +91,10 @@ describe('FlightSearch.vue', () => {
     // check the arguments it was given
     // expect( $router.push ).to.have.been.called;
 
+    // What should happen after that?
+    // We need to check that the component tried to navigate to
+    // a new frontend route, AND that the route params use the 
+    // origin and destination we selected above from the dropdowns
     expect( $router.push ).to.have.been.calledWith({
       name: 'SearchResults',
       params: {
@@ -99,17 +103,11 @@ describe('FlightSearch.vue', () => {
       }
     })
 
-    // What should happen after that?
-    // We need to check that the component tried to navigate to
-    // a new frontend route, AND that the route params use the 
-    // origin and destination we selected above from the dropdowns
-
   });
 
   it('should show a validation error instead of pushing to the search results when fields are left blank', async () => {
 
     const wrapper = mount(FlightSearch)
-
     const button = wrapper.find('button')
     
     await wrapper.find('select.origin option[value=""]').setSelected()
