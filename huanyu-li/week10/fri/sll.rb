@@ -283,13 +283,11 @@ class SLL
   # ...simplest case will be like .to_a
   def map
     current_node = @head
-    arr = []
     while current_node != nil
-      temp = yield(current_node.data) if block_given?
-      arr.push(temp)
+      current_node.data = yield(current_node.data) if block_given?
       current_node = current_node.next
     end
-    arr
+    @head
     # list.map{|cur| cur+'!!'}
   end
 
