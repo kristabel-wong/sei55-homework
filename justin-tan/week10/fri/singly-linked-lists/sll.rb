@@ -35,9 +35,12 @@ class SLL
     # data; then store this new first node
     # in the @head attribute
 
-    new_node = Node.new val
-    @head = new_node
-    @tail = new_node
+    # ----- TRYING OUT TAIL
+    # new_node = Node.new val
+    # @head = new_node
+    # @tail = new_node
+
+    @head = Node.new val
 
   end
 
@@ -76,20 +79,20 @@ class SLL
 
     # start looping at the start of the list, using a
     # variable to keep track of where we are in the list
-    # current_node = @head
+    current_node = @head
 
-    # # as long as we haven't reached the last node..
-    # while current_node.next != nil
-    #   # ...advance the loop pointer to the next node in the list
-    #   current_node = current_node.next # i++
-    # end # while
+    # as long as we haven't reached the last node..
+    while current_node.next != nil
+      # ...advance the loop pointer to the next node in the list
+      current_node = current_node.next # i++
+    end # while
 
-    # # current_node is now the last node in the list
-    # # ie its .next is nil
-    # # current_node.next = new_node # new_node is the new end!
+    # current_node is now the last node in the list
+    # ie its .next is nil
+    current_node.next = new_node # new_node is the new end!
 
-    @tail.next = new_node
-    @tail = new_node
+    # @tail.next = new_node
+    # @tail = new_node
 
   end # append
 
@@ -221,20 +224,19 @@ class SLL
   # list to which it's applied, i.e. changes 'self'
   def reverse!
 
-    current_node = @head
-
-    while current_node != nil
-  
-      current_node.next = current_node
-
-    end
-
+    # is this cheating??
+    @head = reverse.at_index(0)
 
   end
 
   # Remove the first node from the list (destructively)
   # and return the node
   def shift
+  
+    # is this also cheating??
+    second_node = @head.next 
+    @head = second_node
+
   end
 
   # remove the specified node from the list;
@@ -243,13 +245,41 @@ class SLL
   # find the node BEFORE the one we're deleting
   # (this wouldn't be necessary in a Doubly-Linked List)
   def delete( node_to_delete )
-  end
+
+    current_node = @head
+    delete_node = self.find node_to_delete
+
+    while current_node != nil 
+      if current_node.next == delete_node
+
+        current_node.next = current_node.next.next
+
+      end
+    current_node = current_node.next
+
+    end
+
+  end # delete
 
   # Remove the node at the specified position
   # (i.e. you don't already have a node from the list)
   # - make sure you don't break the chain
   # - this one can use at_index() for
   def delete_at( n )
+
+    current_node = @head
+    delete_node = self.at_index n
+
+    while current_node != nil
+      if current_node.next == delete_node
+
+        current_node.next = current_node.next.next
+
+      end
+    current_node = current_node.next
+
+    end
+
   end
 
   # Implement the each method: your version of .each
@@ -260,6 +290,15 @@ class SLL
 
   # If you get that working, look into the 'Enumerable' mixin
   def each
+
+    current_node = @head
+    
+    # replaces "yield" code with the block code when it is looped each time
+    while current_node != nil
+      yield current_node.data if block_given?
+      current_node = current_node.next
+    end
+
     # while loop, plus yield
   end
 
@@ -269,6 +308,18 @@ class SLL
   #
   # ... simplest case will be like .to_a
   def map
+
+    current_node = @head
+    array = []
+
+    # how to use .to_a?
+    while current_node != nil
+
+      array.push yield current_node.data if block_given?
+      current_node = current_node.next
+
+    end
+    array
     
   end
 
@@ -313,6 +364,26 @@ list.prepend 'Summer'
 list.append 'Jerry'
 
 # Summer -> Rick -> Morty
+
+# test yield
+
+# def yield_with_arguments
+#   hello = "Hello"
+#   world = "World"
+
+#   yield(hello, world)
+# end
+
+# def each 
+#   puts "hello"
+#   yield
+#   puts "world"
+# end
+
+# each { |el| puts "#{el} there"}
+
+# yield_with_arguments { |hello| puts "#{hello} #{hello}" }
+
 
 require 'pry'
 binding.pry; # pause here in pry
