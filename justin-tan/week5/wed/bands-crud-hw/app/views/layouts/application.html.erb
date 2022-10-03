@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stopify</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>STOPIFY</h1>
+      <p>Stop the Music. Admire the Artist.</p>
+    <nav>
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'View Bands', bands_path %>
+    <%= link_to 'Add Band', new_band_path %>
+    <%= link_to 'All Artists', artists_path %>
+    <%= link_to 'Add Artist', new_artist_path %>
+    </nav>
+    
+    </header>
+    <%= yield %>
+  </body>
+</html>

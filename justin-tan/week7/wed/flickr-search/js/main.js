@@ -5,6 +5,7 @@ const FLICKR_API_KEY = '2f5ac274ecfac5a455f38745704ad084';
 
 let pageNum = 1
 let query = ''
+// create global variable for array
 
 $( function(){
 
@@ -57,13 +58,14 @@ $( function(){
         }
     }
     
-    $('.pageTag').on('click', function(){
-        const pageId = $('.pageTag').attr('id')
-        console.log(`page button clicked!`, pageId, query);
-        // getPage(pageId, query)
-    })
-
+    
     pageList(10) 
+
+    $('.pageTag').on('click', function(ev){
+        const pageNum = $(ev.target).attr('id')
+        console.log(`page button clicked!`, pageNum, query);
+        getPage(pageNum, query)
+    })
 
     $(window).scroll(function(){
         //INFINITE SCROLL CHECKED!!!!!
@@ -73,7 +75,7 @@ $( function(){
         //First of all, i need to know when the user scrollbar touches the bottom of the page.
         //use Window Scroll Event to check this.
 
-        if ($(document).height() - $(this).height() == $(this).scrollTop()) {
+        if ($(document).height() - $(window).height() == $(window).scrollTop()) {
             console.log('scrolled to Bottom');
             getNextPageForScrolling(pageNum += 1, query)
         }
@@ -155,7 +157,7 @@ const renderSearchResults = (results) => {
 
     $('#results').empty();
 
-    results.photo.forEach( photo => {
+    results.photo.forEach( photo => { //i
         const imageUrl = generateImageUrl( photo )
         console.log('photo:', imageUrl);
         const $img = $(`<a href="#" class="thumbnail_img" id="${photo.id}"><img src="${imageUrl}" alt="${photo.title}"></a>`)
@@ -167,7 +169,7 @@ const renderSearchResults = (results) => {
         const imgId = $(this).attr('id')
         console.log(`image id:`, imgId);
         
-        showImage(imgId)
+        showImage(imgId) //array index
 
     })
 }
