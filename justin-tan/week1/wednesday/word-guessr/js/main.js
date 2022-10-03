@@ -4,17 +4,8 @@
 // Create two global arrays: one to hold the letters of the word (e.g. 'F', 'O', 'X'), and one to hold the current guessed letters (e.g. it would start with '_', '_', '_' and end with 'F', 'O', 'X').
 
 
-const string = "hangman"; //place word selection here
-const wordChoice = string.split("");
-console.log(wordChoice)
-
-const wordGuess = [];
-for (var i = 0; i < wordChoice.length; i++) {
-    wordGuess[i] = "_"
-}
-console.log(wordGuess)
-
-const remainingLetters = wordChoice.length
+const wordGuess = ["A", "R", "R", "A", "Y"]
+const toGuess = ["_", "_", "_", "_", "_"]
 
 
 // Write a function called guessLetter that will:
@@ -26,42 +17,35 @@ const remainingLetters = wordChoice.length
 // Pretend you don't know the word, and call guessLetter multiple times with various letters to check that your program works.
 
 
+const guessLetter = function (letter) {
 
+    for (let i = 0; i < wordGuess.length; i++) {
+        // console.log(wordGuess[i])
 
-
-
-const guessLetter = function(letter) {
-    for (let j = 0; j < wordChoice.length; j++) {
-            console.log(j)
-        if ( wordChoice[j] === letter ) {
-            wordGuess[j] = letter
-            console.log (`${wordGuess} Congratulations you guessed a letter!`)
+        if (wordGuess[i] === letter) {
+            toGuess[i] = letter
         } 
     }
-}
+
+    if ( toGuess.includes("_") === false && wordGuess.includes(letter) ) {
+        return `${toGuess}, congratulations you win the word guess!`
         
 
+    } else if ( wordGuess.includes(letter) === false) {
+        return `Try to guess another letter`
 
+    } else if ( wordGuess.includes(letter) ) {
+        return `${toGuess}, congratulations you guessed a letter!`
+        
+    }
 
-guessLetter("a")
-guessLetter("n")
-guessLetter("h")
-guessLetter("a")
+}
 
-
-
-
-
-
-// for (k = remainingLetters; k > 0; k--) {
-//     if (remainingLetters > 0) {
-//     guessLetter(letterInput);
-//     } else {
-//         console.log (`you win the game!`)
-//     }
-// }
-
-
+console.log(guessLetter("A"))
+console.log(guessLetter("R"))
+console.log(guessLetter("E"))
+console.log(guessLetter("T"))
+console.log(guessLetter("Y"))
 
 
 // Bonus: Make it more like Wheel of Fortune:
@@ -70,6 +54,44 @@ guessLetter("a")
 // When they guess the word, log their final reward amount.
 
 
+const fortuneWordGuess = ["A", "R", "R", "A", "Y"]
+const fortuneToGuess = ["_", "_", "_", "_", "_"]
+
+let reward = 0
+
+const wheelFortune = function (letter) {
+    let letterGuessed = 0
+    const randomAmount = Math.floor( Math.random() * 100 )
+
+    for (let i = 0; i < fortuneWordGuess.length; i++) {
+        // console.log(fortuneWordGuess[i])
+
+        if (fortuneWordGuess[i] === letter) {
+            fortuneToGuess[i] = letter
+            letterGuessed ++
+        } 
+    }
+
+    if ( fortuneToGuess.includes("_") === false && fortuneWordGuess.includes(letter) ) {
+        return `${fortuneToGuess}, congratulations you win the word guess! Your total win amount is $${reward}!`
+        
+    } else if ( fortuneWordGuess.includes(letter) === false) {
+        reward -= randomAmount
+        return `Try to guess another letter. You are deducted ${randomAmount} from your reward. Your total reward is now ${reward}`
+
+    } else if ( fortuneWordGuess.includes(letter) ) {
+        reward += randomAmount * letterGuessed
+        return `${fortuneToGuess}, congratulations you guessed a letter! You are rewarded ${randomAmount} with a letter guessed multiplier of ${letterGuessed} ! Your total reward is now ${reward}`
+        
+    }
+
+}
+
+console.log(wheelFortune("A"))
+console.log(wheelFortune("R"))
+console.log(wheelFortune("E"))
+console.log(wheelFortune("T"))
+console.log(wheelFortune("Y"))
 
 
 // Bonus: Make it like Hangman:
@@ -78,6 +100,50 @@ guessLetter("a")
 // Once the number reaches 6 (a reasonable number of body parts for a hangman), inform the user that they lost and show a hangman on the log.
 
 
+const hangmanWordGuess = ["A", "R", "R", "A", "Y"]
+const hangmanToGuess = ["_", "_", "_", "_", "_"]
+
+let chancesLeft = hangmanToGuess.length 
+
+
+const hangman = function (letter) {
+
+
+    for (let i = 0; i < hangmanWordGuess.length; i++) {
+        // console.log(hangmanWordGuess[i])
+
+        if (hangmanWordGuess[i] === letter) {
+            hangmanToGuess[i] = letter
+
+        }
+    }
+
+    if ( hangmanToGuess.includes("_") === false && hangmanWordGuess.includes(letter) ) {
+        return `${hangmanToGuess}, congratulations you guessed the word before the man is hanged!`
+
+    } else if ( hangmanWordGuess.includes(letter) === false && chancesLeft === 0) {
+        return `Sorry you have used up all your chances. You lost the game.    >-->-o-----|  `
+        
+    } else if ( hangmanWordGuess.includes(letter) === false) {
+        chancesLeft --
+        return `Try to guess another letter. You have ${chancesLeft} chances left`
+
+    } else if ( hangmanWordGuess.includes(letter) ) {
+        return `${hangmanToGuess}, congratulations you guessed a letter!`
+        
+    }
+
+}
+
+console.log(hangman("A"))
+console.log(hangman("R"))
+console.log(hangman("E"))
+console.log(hangman("T"))
+console.log(hangman("S"))
+console.log(hangman("U"))
+console.log(hangman("M"))
+console.log(hangman("N"))
+// console.log(hangman("Y"))
 
 
 

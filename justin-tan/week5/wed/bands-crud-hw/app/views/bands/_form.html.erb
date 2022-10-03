@@ -1,0 +1,31 @@
+<%= form_with model: @band, local: true do |f| %>
+
+    <p><%= f.label :name %><p>
+    <%= f.text_field :name %>
+
+    <p><%= f.label :year %><p>
+    <%= f.number_field :year %>
+
+    <p><%= f.label :country %><p>
+    <%= f.text_field :country %>
+
+    <p><%= f.label :songs, 'Notable songs' %><p>
+    <%= f.text_field :songs %>
+
+    <p><%= f.label :genre %><p>
+    <%= f.text_field :genre %>
+
+    <p><%= f.label :album_number, 'Number of Albums' %><p>
+    <%= f.number_field :album_number %>
+
+    <p><%= f.label :description %><p>
+    <%= f.text_area :description %>
+
+    <p><%= f.label :image, 'Image URL' %><p>
+    <%= f.text_field :image %>
+    <br><br>
+
+    <%= f.submit %>
+
+
+<% end  %>

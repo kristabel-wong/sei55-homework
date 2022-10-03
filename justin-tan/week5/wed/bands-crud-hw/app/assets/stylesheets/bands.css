@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:wght@500&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background: #252525;
+    color: whitesmoke;
+}
+
+h1, h2, h3 {
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.band {
+    width: 50vw;
+}
