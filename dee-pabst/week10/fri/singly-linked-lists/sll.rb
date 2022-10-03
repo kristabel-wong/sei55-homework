@@ -170,6 +170,13 @@ class SLL
   #destructive version of reverse, DOES change
   #the list to which it's applied i.e changes 'self'
   def reverse!
+    # find the last node (i.e. next value == nil)
+    tail = self.at_index(@length - 1)
+    puts tail
+    # set the last node's next value to the second last node
+    # continue up the chain setting next values to the parent
+    # stop when you reach the head
+    # set the last node to be the new head
   end
 
   # Remove the first node from the list (destructively)
