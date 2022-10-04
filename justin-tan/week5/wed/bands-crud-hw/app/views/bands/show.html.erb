@@ -1,0 +1,31 @@
+<h2>Band Profile</h2>
+
+<%= image_tag @band.image, alt: @band.name, class: 'show_img' %>
+
+<h4>Name:</h4>
+<p><%= @band.name %></p>
+
+<h4>Year:</h4> 
+<p><%= @band.year %></p>
+
+<h4>Country:</h4>
+<p><%= @band.country %></p>
+
+<h4>Genre:</h4>
+<p><%= @band.genre %></p>
+
+<h4>Notable songs:</h4> 
+<p><%= @band.songs %></p>
+
+<h4>Number of albums:</h4> 
+<p><%= @band.album_number %></p>
+
+<h4>Description:</h4> 
+<p><%= @band.description %></p>
+
+<nav>
+<%= link_to 'Edit Band', edit_band_path %>
+
+<%= link_to 'Delete Band', band_path(@band.id), method: 'delete' %>
+
+</nav>

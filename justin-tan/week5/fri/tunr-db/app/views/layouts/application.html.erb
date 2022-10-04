@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tunr Music DB</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+  <nav>
+    <h1>Tunr Music Database</h1>
+
+    <% if @current_user.present? %>
+      Welcome, <%= @current_user.name %>
+      |
+      <%= link_to 'Logout', login_path, method: 'delete' %>
+    <% else %>
+      <%= link_to 'Login', login_path %>
+      |
+      <%= link_to 'Sign Up', new_user_path %>
+
+    <% end  %>
+
+    <br>
+
+    <%= link_to 'Home', root_path %>
+    |
+    <%= link_to 'All Mixtapes', mixtapes_path %>
+    <% if @current_user.present? %>
+      |
+      <%= link_to 'Create Mixtape', new_mixtape_path %>
+    <% end %>
+
+    <hr>
+  </nav>
+
+    <%= yield %>
+
+    <footer>
+      <hr>
+      &copy; Music Snob productions 2022
+    </footer>
+  </body>
+</html>
