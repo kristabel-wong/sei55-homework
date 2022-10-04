@@ -1,7 +1,6 @@
 # Markov Text
 **YOUR TASK** is to create a page in HTML and Javascript which loads a local text file using AJAX (it should be a book or at least something coherent, 250Kb to 1Mb; [Project Gutenberg](https://www.gutenberg.org/browse/scores/top) is your friend), then from the words of the text builds a Markov table: i.e., an object whose keys are each word in the text, and for each key its value is an array which lists all the words that follow that word. 
 
-**Don't worry about storing numbers which represent the probabilities of each following word! Just adding the following words to an array, allowing duplicates, will do what we want.**
 
 Having completed the analysis, the next step is generation! For a random starting word, generate a new text of 60-100 words by starting the process with a random word and then choosing a next word in the sequence from your Markov table.
 
